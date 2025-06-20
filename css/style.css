@@ -161,7 +161,7 @@ header h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 17rem;
+    width: 14rem;
 }
 
 #head_left p span{
@@ -242,7 +242,7 @@ footer {
 }
 
 
-
+/* ********************************************************************************* */
 
 
 @media screen and (min-width: 768px) {
