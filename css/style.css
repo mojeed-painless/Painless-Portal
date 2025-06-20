@@ -94,7 +94,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 4.25rem;
+    /* padding-right: 4.25rem; */
     position: fixed;
     top: 0;
     left: 0;
@@ -102,7 +102,7 @@ h4 {
     
 }
 
-#header #logo {
+#logo {
     height: 100%;
     display: flex;
     align-items: center;
@@ -110,7 +110,7 @@ h4 {
     width: 330px;
 }
 
-#header #logo img{
+#logo img{
     width: 8rem;
     /* height: 100%; */
     display: flex;
@@ -119,16 +119,43 @@ h4 {
     width: 330px; */
 }
 
+#logos {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 1.2rem;
+}
+
+#logos img {
+    width: 1.8rem;
+}
+
+
+
 header {
-    margin: 6rem 0 2.5rem 0;
+    margin: 4rem 0 2.5rem 0;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1;
-    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 0 1.5rem;
+}
+
+header img {
+    width: 16rem;
+    height: 16rem;
 }
 
 header h1 {
     color: var(--para_color2);
+}
+
+header p {
+    /* text-align: justify; */
+    margin-top: 0.8rem;
+    line-height: 1.5rem;
 }
 
 /*********************************************************************/
@@ -241,15 +268,48 @@ footer {
     z-index: 1;
 }
 
+footer p {
+    font-size: 12px;
+}
 
 /* ********************************************************************************* */
 
 
 @media screen and (min-width: 768px) {
-    #header #logo img {
+    #logo img {
         width: 10rem;
     }         
     
+    #logos img {
+        width: 2.0rem;
+    }
+
+    header {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        align-items: center;
+        /* padding: 0 1.5rem; */
+        
+    }
+
+    header img {
+        width: 25rem;
+        height: 25rem;
+        text-align: right;
+        /* border-radius: 50%;
+        box-shadow: var(--main_shadow); */
+    }
+
+    header h1 {
+        text-align: left;
+        width: 33rem;
+    }
+
+    header p {
+        text-align: left;
+        width: 33rem;
+    }
+
     .head {
         padding: 0 1.5rem;
     }
@@ -265,6 +325,9 @@ footer {
         width: 50rem;
     }
 
+    footer p {
+        font-size: 16px; 
+    }
 
 
 
