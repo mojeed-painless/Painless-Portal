@@ -140,7 +140,7 @@ header {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 header img {
@@ -154,7 +154,7 @@ header h1 {
 
 header p {
     /* text-align: justify; */
-    margin-top: 0.8rem;
+    margin-top: 1.5rem;
     line-height: 1.5rem;
 }
 
