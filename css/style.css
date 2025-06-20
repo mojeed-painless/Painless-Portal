@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+
+:root {
+      --head_color: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff);
+      --para_bg: #140524;
+      --para_bg2: #1b082f;
+      --para_bg3: #2f1d43;
+
+      --para_color: #8964b0;
+      --para_color2: #a18aba;
+      
+
+      --active_color: #7925d3;
+      --active_test_color: #ebe7ef;
+
+      --main_shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      --main_shadow2: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --main_filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+html {
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.5;
+    background: radial-gradient(#280a48, #20043d);
+    color: #ebe7ef;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    /* height: 100vh; */
+    /* overflow: hidden;  */
+    display: flex;
+    justify-content: center; 
+    position: relative;
+    margin-bottom: 3rem;
+    /* top: 3rem;
+    padding-top: 2rem; */
+}
+
+#cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    /* background: red; */
+}
+
+.spacing {
+    height: 100%;
+    width: 90%;
+    overflow: hidden;
+    /* background: rgb(94, 218, 12);   */
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+#header {
+    background: var(--para_bg3);
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+}
+
+#header #logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1.2rem;
+    width: 330px;
+}
+
+#header #logo img{
+    width: 8rem;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    /* padding-left: 1.8rem;
+    width: 330px; */
+}
+
+header {
+    margin: 6rem 0 2.5rem 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    
+}
+
+header h1 {
+    color: var(--para_color2);
+}
+
+/*********************************************************************/
+
+.head {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background: var(--para_color);
+    cursor: pointer;
+}
+
+#head_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#head_left i {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: greenyellow;
+}
+
+#head_left p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 17rem;
+}
+
+#head_left p span{
+    font-weight: 800;
+}
+
+#head_right i {
+    color: var(--para_bg);
+}
+
+#content {
+    border-right: 1px solid var(--para_color2);
+    border-left: 0.25rem solid greenyellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hide {
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 400ms ease;
+}
+
+.hide.active {
+    max-height: 500px;
+}
+
+#content div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0 1.2rem;
+    height: 3rem;
+    border-bottom: 1px solid var(--para_color2);
+}
+
+#content i {
+    color: greenyellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    text-align: center;
+    background: var(--para_bg3);
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    z-index: 1;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    #header #logo img {
+        width: 10rem;
+    }         
+    
+    .head {
+        padding: 0 1.5rem;
+    }
+    
+    #head_left {
+        gap: 1rem;
+    }
+    
+    #head_left p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 50rem;
+    }
+
+
+
+
+}
