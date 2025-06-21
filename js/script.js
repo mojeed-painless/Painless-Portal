@@ -21,3 +21,24 @@ head.forEach((item) => {
         
     });
 });
+
+
+
+// Course page script
+
+let runButton = document.querySelectorAll('.run-btn');
+
+
+runButton.forEach((item) => {
+    item.addEventListener('click', () => {
+        // Go up to the closest .example-code parent
+        let exampleCode = item.closest('.example-code');
+        if (exampleCode) {
+            // Find the next sibling .example-output
+            let codeOutput = exampleCode.nextElementSibling;
+            if (codeOutput && codeOutput.classList.contains('example-output')) {
+                codeOutput.classList.add('active-output');
+            }
+        }
+    });
+})
