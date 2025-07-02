@@ -93,6 +93,22 @@ h4 {
     border-left: 3px solid greenyellow;
 }
 
+.code {
+    background: var(--para_bg);
+    padding: 0.5rem;
+    margin: 1.5rem 0;
+    /* font-size: 0.9rem; */
+}
+
+pre {
+    background: var(--para_bg);
+    padding: 0 1rem;
+    border-left: 3px solid greenyellow;
+    margin-top: 0.5rem;
+    overflow-x: auto;
+    /* font-size: 0.9rem; */
+}
+
 
 .lists li {
     font-size: 13px;
@@ -117,7 +133,30 @@ section#navigator {
     border-radius: 0.2rem;
 }
 
+h3.bold {
+    text-align: center;
+    color: greenyellow;
+}
 
+hr {
+    margin: 1.5rem 0;
+}
+
+.watch {
+    margin-top: 1rem;
+}
+
+video {
+    width: 100%;
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+}
+
+.visit_link {
+    color: rgb(66, 66, 255);
+    font-style: italic;
+    font-size: 13px;
+}
 
 
 
@@ -168,7 +207,7 @@ section#navigator {
 }
 
 header {
-    margin: 4rem 0 2.5rem 0;
+    margin: 6rem 0 2.5rem 0;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1;
@@ -299,6 +338,11 @@ footer p {
 
 
 @media screen and (min-width: 768px) {
+    pre, code {
+        
+        font-size: 1rem;
+    }
+
     #logo img {
         width: 10rem;
     }         
