@@ -158,7 +158,11 @@ video {
     font-size: 13px;
 }
 
-
+.exercise li {
+    list-style-type: disc;
+    padding: 0.2rem;
+    margin-left: 1rem;
+}
 
 
 article {
