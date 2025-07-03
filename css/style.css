@@ -93,7 +93,7 @@ h4 {
     border-left: 3px solid greenyellow;
 }
 
-.code {
+code {
     background: var(--para_bg);
     padding: 0.5rem;
     margin: 1.5rem 0;
@@ -102,7 +102,7 @@ h4 {
 
 pre {
     background: var(--para_bg);
-    padding: 0 1rem;
+    padding: 1rem;
     border-left: 3px solid greenyellow;
     margin-top: 0.5rem;
     overflow-x: auto;
