@@ -181,6 +181,7 @@ article img {
 .example {
     border: 1px solid var(--para_bg3);
     border-radius: 0.3rem;
+    max-width: 100%;
 }
 
 .code-header {
