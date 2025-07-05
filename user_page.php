@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +27,21 @@
 
         <div id="header">
             <div id="logo">
-                <a href="#index.html" target="_self"><img src="img/logo.png" alt="Painless Portal Logo"></a>
+                <a href="#user_page.php" target="_self"><img src="img/logo.png" alt="Painless Portal Logo"></a>
             </div>
+
+            <!-- <div class="user-name">
+                <h4>Welcome, <span><?= $_SESSION['name']; ?></span></h4>
+            </div> -->
 
             <div id="logos">
                 <a href="#"><img src="img/html_logo.png" alt="HTML logo"></a>
                 <a href="#"><img src="img/css_logo.png" alt="CSS logo"></a>
                 <a href="#"><img src="img/js_logo.png" alt="JS logo"></a>
+                <button class="logout" onclick="window.location.href='logout.php'" 
+                style="background: var(--para_color2); padding: 0.2rem 1rem; border-radius: 0.2rem; border: none; color: white; cursor: pointer;">
+                    Logout
+                </button>
             </div>
         </div>
 
@@ -44,20 +62,6 @@
             </div>
         </header>
 
-            <!-- <pre>
-                <code>
-                    &lt;div&gt;
-                        &lt;h1&gt;Hello World&lt;/h1&gt;
-                        &lt;ul&gt;
-                            &lt;li&gt;Item 1&lt;/li&gt;
-                            &lt;li&gt;Item 2&lt;/li&gt;
-                            &lt;li&gt;Item 3&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/div&gt;
-                    
-                </code>
-            </pre> -->
-
 
         <main>
             <section id="intro">
@@ -76,28 +80,28 @@
 
                         <div id="content" class="hide">
 
-                            <a href="./pages/general.html" target="_self">
+                            <a href="./pages/general.php" target="_self">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>General Overview</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/why.html" target="_self">
+                            <a href="./pages/why.php" target="_self">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>Why should I learn Coding</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/course.html" target="_self">
+                            <a href="./pages/course.php" target="_self">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>Course Overview</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/editors.html">
+                            <a href="./pages/editors.php">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>Code Editors</p>
@@ -124,49 +128,49 @@
 
                         <div id="content" class="hide">
 
-                            <a href="./pages/html_pages/structure.html" target="_self">
+                            <a href="./pages/html_pages/structure.php" target="_self">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>HTML Page Structure</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/html_pages/lists.html">
+                            <a href="./pages/html_pages/lists.php">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>HTML List</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/html_pages/tables.html">
+                            <a href="./pages/html_pages/tables.php">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>HTML Tables</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/html_pages/images.html">
+                            <a href="./pages/html_pages/images.php">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>HTML Images</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/html_pages/hyperlinks.html">
+                            <a href="./pages/html_pages/hyperlinks.php">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>HTML Hyperlinks</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/html_pages/inline.html">
+                            <a href="./pages/html_pages/inline.php">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>HTML Inline & Block Elements</p>
                                 </div>
                             </a>
 
-                            <a href="./pages/html_pages/forms.html">
+                            <a href="./pages/html_pages/forms.php">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>HTML Forms, Types & Fields</p>

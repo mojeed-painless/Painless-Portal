@@ -21,6 +21,10 @@ header p {
     line-height: 1.5rem;
 }
 
+button.logout {
+    background: var(--para_color2); padding: 0.2rem 1rem; border-radius: 0.2rem;
+}
+
 
 
 @media screen and (min-width: 768px) {

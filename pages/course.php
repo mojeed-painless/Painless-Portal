@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    header("Location: ../index.php");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +27,7 @@
 
         <div id="header">
             <div id="logo">
-                <a href="../index.html" target="_self"><img src="../img/logo.png" alt="Painless Portal Logo"></a>
+                <a href="../user_page.php" target="_self"><img src="../img/logo.png" alt="Painless Portal Logo"></a>
             </div>
 
             <div id="logos">
@@ -151,12 +162,12 @@
             <section id="navigator">
                 <div id="cover">
                     <div class="spacing navigator">
-                       <a href="./why.html" target="_self">
+                       <a href="./why.php" target="_self">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>previous</span>
                        </a>
 
-                       <a href="./editors.html" target="_self">
+                       <a href="./editors.php" target="_self">
                         <span>next</span>
                         <i class="fa-solid fa-arrow-right"></i>
                        </a>
