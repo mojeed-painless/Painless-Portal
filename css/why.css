@@ -1,0 +1,19 @@
+
+
+
+
+h5 {
+    color: greenyellow;
+}
+
+blockquote {
+    font-style: italic; 
+    border-left: 3px solid greenyellow; 
+    padding: 0.5rem; 
+    margin-left: 0;
+    background: var(--para_color);
+}
+
+p {
+    margin: 1rem 0;
+}
