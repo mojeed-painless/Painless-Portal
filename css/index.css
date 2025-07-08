@@ -34,7 +34,7 @@ header p {
     top: 0;
     left: 0;
     /* z-index: 1000; */
-    padding: 0 15px;
+    padding: 0 8px;
 }
 
 .login-container .spacing {
