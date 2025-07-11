@@ -63,6 +63,7 @@ section {
 .spacing {
     height: 100%;
     width: 90%;
+
     overflow: hidden;
     /* background: rgb(94, 218, 12);   */
 }
@@ -406,6 +407,14 @@ footer p {
 
 
 @media screen and (min-width: 768px) {
+    .spacing {
+    width: 70%;
+}
+    
+#header {
+        padding: 0 11.5rem;
+    }
+    
     pre, code {
         
         font-size: 1rem;
