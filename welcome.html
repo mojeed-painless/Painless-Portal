@@ -387,7 +387,7 @@
     <script>
         const username = localStorage.getItem('username');
         if (username) {
-            document.getElementById('welcome-user').textContent = username;
+            document.getElementById('welcome-user').textContent = username.charAt(0).toUpperCase() + username.slice(1);
         }
     </script>
 </body>
