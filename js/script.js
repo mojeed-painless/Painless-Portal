@@ -144,6 +144,16 @@ document.addEventListener('DOMContentLoaded', () => {
             users.push({ name, email, username, password, role });
             localStorage.setItem('users', JSON.stringify(users));
 
+
+            // After successful registration
+            emailjs.send("service_s05wzaj", "template_zsp0wpl", {
+                to_email: email,
+                to_name: name.charAt(0).toUpperCase() + name.slice(1),
+                subject: "Registration Successful",
+                message: "You have successfully registered for this course. The admin has to approve your registration before you can gain access to the portal. Kindly exercise patience or contact the admin."
+            });
+
+
             successMsg.style.display = 'block';
                 setTimeout(() => {
                     successMsg.style.display = 'none';
@@ -192,6 +202,24 @@ function approveUser(index) {
     users[index].approved = true;
     localStorage.setItem('users', JSON.stringify(users));
     location.reload();
+    // In approveUser function, after setting approved to true
+    emailjs.send("service_s05wzaj", "template_fvft3eo", {
+        to_email: users[index].email,
+        to_name: users[index].name,
+        subject: "Registration Approved",
+        username: users[index].username,
+        password: users[index].password,
+        // login_link: "https://painless-portal.vercel.app/index.html",
+        message: "Your registration has been approved. You can now proceed to login and begin the course. Your login details are;"
+}).then(() => {
+        alert('User approved and notified via email.');
+    }).catch((error) => {
+        console.error('Error sending approval email:', error);
+        alert('User approved but failed to send notification email.');
+    }   )
+
+    
+
 }
 
 // Delete user function for admin
@@ -239,3 +267,13 @@ function openWebsite() {
         }, 3000);
     }
 }
+
+
+
+//EmailJS integration for registration and approval notifications
+
+
+
+
+
+//Service ID: service_s05wzaj

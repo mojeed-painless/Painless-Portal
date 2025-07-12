@@ -47,7 +47,7 @@ th:last-child, td:last-child {
     border-right: none;
 }
 
-tbody tr:nth-child(odd) {
+tbody tr:nth-child(even) {
     background-color: #ddd;
 }
 
