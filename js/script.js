@@ -24,6 +24,10 @@ const regUsers = [
 
 window.regUsers = regUsers;
 
+const welcome = document.getElementById('welcome-user');
+
+
+
 
 
 // let users = JSON.parse(localStorage.getItem('users') || '[]');
@@ -240,41 +244,41 @@ document.addEventListener('DOMContentLoaded', () => {
     
 )
     
-    // Admin page: restrict access to admins only and show all info
-    if (window.location.pathname.endsWith('admin.html')) {
-    // Get current user from localStorage
-    const currentUserUsername = localStorage.getItem('username');
-    let users = JSON.parse(localStorage.getItem('users') || '[]');
-    const currentUser = users.find(u => u.username === currentUserUsername);
+//     // Admin page: restrict access to admins only and show all info
+//     if (window.location.pathname.endsWith('admin.html')) {
+//     // Get current user from localStorage
+//     const currentUserUsername = localStorage.getItem('username');
+//     let users = JSON.parse(localStorage.getItem('users') || '[]');
+//     const currentUser = users.find(u => u.username === currentUserUsername);
 
-    if (!currentUser || currentUser.role !== 'admin') {
-        alert('Access denied. Only admins can view this page.');
-        window.location.href = 'index.html';
+//     if (!currentUser || currentUser.role !== 'admin') {
+//         alert('Access denied. Only admins can view this page.');
+//         window.location.href = 'index.html';
         
-    } else {
+//     } else {
 
-    // Show all users info in table
-    const tableBody = document.getElementById('users-table-body');
-    if (tableBody) {
-        tableBody.innerHTML = users.map((u, idx) => `
-            <tr>
-                <td>${u.name}</td>
-                <td>${u.email}</td>
-                <td>${u.username}</td>
-                <td>${u.password}</td>
-                <td>${u.role}</td>
-                <td>
-                    <span class="approved-status">${u.approved ? 'Approved' : 'Pending'}</span>
-                </td>
-                <td>
-                    <button onclick="approveUser('${u.username}')" class="approve">Approve</button>
-                    <button onclick="deleteUser('${u.username}')" class="delete">Delete</button>
-                </td>
-            </tr>
-        `).join('');
-        }
-    }
-}
+//     // Show all users info in table
+//     const tableBody = document.getElementById('users-table-body');
+//     if (tableBody) {
+//         tableBody.innerHTML = users.map((u, idx) => `
+//             <tr>
+//                 <td>${u.name}</td>
+//                 <td>${u.email}</td>
+//                 <td>${u.username}</td>
+//                 <td>${u.password}</td>
+//                 <td>${u.role}</td>
+//                 <td>
+//                     <span class="approved-status">${u.approved ? 'Approved' : 'Pending'}</span>
+//                 </td>
+//                 <td>
+//                     <button onclick="approveUser('${u.username}')" class="approve">Approve</button>
+//                     <button onclick="deleteUser('${u.username}')" class="delete">Delete</button>
+//                 </td>
+//             </tr>
+//         `).join('');
+//         }
+//     }
+// }
 
 // Approve user function for admin (localStorage version)
 function approveUser(username) {
@@ -315,15 +319,12 @@ function openWebsite() {
             passwordValue === regUsers[i].password)
         {
             found = true;
-            // document.getElementById('welcome-user').textContent = name.charAt(0).toUpperCase() + name.slice(1);
-            localStorage.setItem('name', regUsers[i].name);
+            const userNameParam = encodeURIComponent(regUsers[i].name);
             if (regUsers[i].role === 'user') {
-                window.location.href = 'welcome.html';
-                
+                window.location.href = `welcome.html?name=${userNameParam}`;
             } else if (regUsers[i].role === 'admin') {
-                window.location.href = 'admin.html';
+                window.location.href = `admin.html?role=admin`;
             }
-            localStorage.setItem('username', userName);
             break;
         }
     }

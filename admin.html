@@ -62,8 +62,42 @@
 
     <script>
         document.getElementById('logout-btn').onclick = function() {
-            localStorage.removeItem('username');
-            window.location.href = 'index.html';
+            const params = new URLSearchParams(window.location.search);
+            const role = params.get('role');
+            if (role !== 'admin') {
+                alert('Access denied. You are not an admin.');
+                window.location.href = 'index.html';
+            } else {
+                if (window.location.pathname.endsWith('admin.html')) {
+    const params = new URLSearchParams(window.location.search);
+    const role = params.get('role');
+    if (role !== 'admin') {
+        alert('Access denied. Only admins can view this page.');
+        window.location.href = 'index.html';
+    } else {
+        // Show all users info in table
+        const tableBody = document.getElementById('users-table-body');
+        if (tableBody) {
+            tableBody.innerHTML = regUsers.map((u, idx) => `
+                <tr>
+                    <td>${u.name}</td>
+                    <td>${u.email}</td>
+                    <td>${u.username}</td>
+                    <td>${u.password}</td>
+                    <td>${u.role}</td>
+                    <td>
+                        <span class="approved-status">${u.approved ? 'Approved' : 'Pending'}</span>
+                    </td>
+                    <td>
+                        <button onclick="approveUser('${u.username}')" class="approve">Approve</button>
+                        <button onclick="deleteUser('${u.username}')" class="delete">Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+    }
+}
+            }
         };
     </script>
 </body>

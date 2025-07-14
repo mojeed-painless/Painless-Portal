@@ -392,10 +392,15 @@
     
     <script src="js/script.js"></script>
     <script>
-        const name = localStorage.getItem('name');
-        if (name) {
-            document.getElementById('welcome-user').textContent = name.charAt(0).toUpperCase() + name.slice(1);
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            if (name) {
+                document.getElementById('welcome-user').textContent = name.charAt(0).toUpperCase() + name.slice(1);
+            } else {
+                document.getElementById('welcome-user').textContent = 'Guest';
+            }
+        });
     </script>
 </body>
 </html>
