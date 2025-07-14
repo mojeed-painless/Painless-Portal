@@ -1,0 +1,367 @@
+const regUsers = [
+    {
+        name: 'admin',
+        email: '',
+        username: 'admin',
+        password: 'admin123',
+        role: 'admin',
+    },
+    {
+        name: 'grey',
+        email: 'markgrey385@gmail.com',
+        username: 'grey',
+        password: '1111',
+        role: 'user',
+    }
+]
+
+window.regUsers = regUsers;
+
+
+// let users = JSON.parse(localStorage.getItem('users') || '[]');
+//             if (!users.some(u => u.role === 'admin')) {
+//                 users.push({
+//                     name: 'admin',
+//                     email: 'admin@portal.com',
+//                     username: 'admin',
+//                     password: 'admin123', // You can change this to a more secure password
+//                     role: 'admin',
+//                     approved: true
+//                 });
+//                 localStorage.setItem('users', JSON.stringify(users));
+//             }
+
+            // Ensure two default users exist
+            // if (!users.some(u => u.username === 'faith')) {
+            //     users.push({
+            //         username: '',
+            //         password: '0000',
+            //         approved: false
+            //     });
+            //     localStorage.setItem('users', JSON.stringify(users));
+            // }
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let head = document.querySelectorAll('.head');
+
+head.forEach((item) => {
+    item.addEventListener('click', () => {
+
+        // Find the corresponding content element
+           let contentElement = item.nextElementSibling;
+
+        // Toggle the 'active' class on the content element
+        if (contentElement) {
+            contentElement.classList.toggle('active');
+        }
+
+
+         // Find the arrow icon inside the clicked header
+        let arrowIcon = item.querySelector('.fa-angle-right, .fa-angle-down');
+        if (arrowIcon) {
+            arrowIcon.classList.toggle('fa-angle-right');
+            arrowIcon.classList.toggle('fa-angle-down');
+        }
+        
+    });
+});
+
+
+
+// Course page script
+
+let runButton = document.querySelectorAll('.run-btn');
+
+
+runButton.forEach((item) => {
+    item.addEventListener('click', () => {
+        // Go up to the closest .example-code parent
+        let exampleCode = item.closest('.example-code');
+        if (exampleCode) {
+            // Find the next sibling .example-output
+            let codeOutput = exampleCode.nextElementSibling;
+            if (codeOutput && codeOutput.classList.contains('example-output')) {
+                codeOutput.classList.add('active-output');
+            }
+        }
+    });
+})
+
+
+
+
+function showForm(formId) {
+    document.querySelectorAll('.form-box').forEach(form => form.classList.remove('active'));
+    document.getElementById(formId).classList.add('active');
+}
+
+
+
+
+
+
+
+// Function to toggle password visibility
+
+// function togglePasswordVisibility() {
+//     const passwordInput = document.getElementById('password');
+//     const toggleButton = document.querySelector('.toggle-password');
+
+//     if (passwordInput.type === 'password') {
+//         passwordInput.type = 'text';
+//         toggleButton.classList.add('fa-eye-slash');
+//         toggleButton.classList.remove('fa-eye');
+//     } else {
+//         passwordInput.type = 'password';
+//         toggleButton.classList.add('fa-eye');
+//         toggleButton.classList.remove('fa-eye-slash');
+//     }
+// }
+
+
+
+            
+
+
+// Registration form input storage
+document.addEventListener('DOMContentLoaded', () => {
+    const registerForm = document.querySelector('#register-form form');
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = registerForm.querySelector('input[name="name"]').value.toLowerCase();
+            const email = registerForm.querySelector('input[name="email"]').value.toLowerCase();
+            const username = registerForm.querySelector('input[name="username"]').value.toLowerCase();
+            const password = registerForm.querySelector('input[name="password"]').value.toLowerCase();
+            const role = registerForm.querySelector('select[name="role"]').value.toLowerCase();
+
+            const successMsg = document.querySelector('.success-message')
+            const errorMsg2 = document.querySelector('.error-message2');
+            const errorMsg3 = document.querySelector('.error-message3');
+
+            
+            
+            // Save user and check for duplicate email or username
+            // let users = JSON.parse(localStorage.getItem('users') || '[]');
+            
+            for (let i = 0; i < regUsers.length; i++) {
+                if (email === regUsers[i].email) {
+                    errorMsg2.style.display = 'block';
+                    setTimeout(() => {
+                        errorMsg2.style.display = 'none';
+                    }, 3000);
+                    return;
+                }
+
+                if (username === regUsers[i].username) {
+                    errorMsg3.style.display = 'block';
+                    setTimeout(() => {
+                        errorMsg3.style.display = 'none';
+                    }, 3000);
+                    return;
+                }
+            }
+
+            // if (users.some(u => u.email === email)) {
+            //     errorMsg2.style.display = 'block';
+            //     setTimeout(() => {
+            //         errorMsg2.style.display = 'none';
+            //     }, 3000);
+            //     return;
+            // }
+            // if (users.some(u => u.username === username)) {
+            //     errorMsg3.style.display = 'block';
+            //     setTimeout(() => {
+            //         errorMsg3.style.display = 'none';
+            //     }, 3000);
+            //     return;
+            // }
+
+            // users.push({ name, email, username, password, role });
+            // localStorage.setItem('users', JSON.stringify(users));
+
+
+            // After successful registration
+            emailjs.send("service_s05wzaj", "template_zsp0wpl", {
+                to_email: email,
+                to_name: name.charAt(0).toUpperCase() + name.slice(1),
+                subject: "Registration Successful",
+                message: "You have successfully registered for this course. The admin has to approve your registration before you can gain access to the portal. Kindly exercise patience or contact the admin."
+            });
+
+            emailjs.send("service_s05wzaj", "template_fvft3eo", {
+
+                from_name: name.charAt(0).toUpperCase() + name.slice(1),
+                from_email: email,
+                username: username,
+                password: password,
+                role: role,
+                subject: "New Registration",
+            });
+
+
+            // console.log('All registered users:', users);
+
+            successMsg.style.display = 'block';
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 3000);
+
+            showForm('login-form');
+        })
+    }
+}
+    
+)
+    
+    // Admin page: restrict access to admins only and show all info
+    if (window.location.pathname.endsWith('admin.html')) {
+    // Get current user from localStorage
+    const currentUserUsername = localStorage.getItem('username');
+    let users = JSON.parse(localStorage.getItem('users') || '[]');
+    const currentUser = users.find(u => u.username === currentUserUsername);
+
+    if (!currentUser || currentUser.role !== 'admin') {
+        alert('Access denied. Only admins can view this page.');
+        window.location.href = 'index.html';
+        
+    } else {
+
+    // Show all users info in table
+    const tableBody = document.getElementById('users-table-body');
+    if (tableBody) {
+        tableBody.innerHTML = users.map((u, idx) => `
+            <tr>
+                <td>${u.name}</td>
+                <td>${u.email}</td>
+                <td>${u.username}</td>
+                <td>${u.password}</td>
+                <td>${u.role}</td>
+                <td>
+                    <span class="approved-status">${u.approved ? 'Approved' : 'Pending'}</span>
+                </td>
+                <td>
+                    <button onclick="approveUser('${u.username}')" class="approve">Approve</button>
+                    <button onclick="deleteUser('${u.username}')" class="delete">Delete</button>
+                </td>
+            </tr>
+        `).join('');
+        }
+    }
+}
+
+// Approve user function for admin (localStorage version)
+function approveUser(username) {
+    let users = JSON.parse(localStorage.getItem('users') || '[]');
+    users = users.map(u => u.username === username ? { ...u, approved: true } : u);
+    localStorage.setItem('users', JSON.stringify(users));
+    location.reload();
+}
+
+// Delete user function for admin
+function deleteUser(username) {
+    if (confirm('Are you sure you want to delete this user? This action cannot be undone.')) {
+        let users = JSON.parse(localStorage.getItem('users') || '[]');
+        users = users.filter(u => u.username !== username);
+        localStorage.setItem('users', JSON.stringify(users));
+        location.reload();
+    }
+}
+
+
+// Login logic: check username and password, redirect by role
+function openWebsite() {
+    const userInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+
+    const userName = userInput.value.toLowerCase();
+    const passwordValue = passwordInput.value.toLowerCase();
+    const errorMsg = document.querySelector('.error-message');
+
+<<<<<<< HEAD
+    let found = false;
+    for (let i = 0; i < regUsers.length; i++) {
+        if (
+            userName === regUsers[i].username &&
+            passwordValue === regUsers[i].password
+=======
+    if (
+        userName === 'mjd' && passwordValue === '0000'
+|| userName === 'waleo' && passwordValue === '0000'
+>>>>>>> 9531111a3ff6aa4d88a9936d586c28b058ac0601
+        ) {
+            found = true;
+            if (regUsers[i].role === 'user') {
+                window.location.href = 'welcome.html';
+                
+            } else if (regUsers[i].role === 'admin') {
+                window.location.href = 'admin.html';
+            }
+            localStorage.setItem('username', userName);
+            break;
+        }
+    }
+    if (!found) {
+        errorMsg.textContent = 'Invalid username or password.';
+        errorMsg.style.display = 'block';
+        setTimeout(() => {
+            errorMsg.style.display = 'none';
+            errorMsg.textContent = '';
+        }, 3000);
+    }
+
+    
+
+
+   
+
+    // let users = JSON.parse(localStorage.getItem('users') || '[]');
+    // const user = users.find(u => u.username === userName && u.password === passwordValue);
+
+    // if (!user) {
+    //     errorMsg.textContent = 'Invalid username or password.';
+    //     errorMsg.style.display = 'block';
+    //     setTimeout(() => {
+    //         errorMsg.style.display = 'none';
+    //         errorMsg.textContent = '';
+    //     }, 3000);
+    //     return;
+    // }
+
+    // if (!user.approved && user.role !== 'admin') {
+    //     errorMsg.textContent = 'Your account is not yet approved by admin.';
+    //     errorMsg.style.display = 'block';
+    //     setTimeout(() => {
+    //         errorMsg.style.display = 'none';
+    //         errorMsg.textContent = '';
+    //     }, 3000);
+    //     return;
+    // }
+
+    // localStorage.setItem('username', user.username);
+
+    // if (user.role === 'admin') {
+    //     window.location.href = 'admin.html';
+    // } else {
+    //     window.location.href = 'welcome.html';
+    // }
+}
+

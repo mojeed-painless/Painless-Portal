@@ -1,0 +1,221 @@
+<script>
+    if (!localStorage.getItem('username')) {
+    window.location.href = '../../index.html'; // Change to your login page filename
+}
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TABLES</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/html_styles/tables.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <a href="../../welcome.html" target="_self"><img src="../../img/logo.png" alt="Painless Portal Logo"></a>
+            </div>
+
+            <div id="logos">
+                <a href="#"><img src="../../img/html_logo.png" alt="HTML logo"></a>
+                <a href="#"><img src="../../img/css_logo.png" alt="CSS logo"></a>
+                <a href="#"><img src="../../img/js_logo.png" alt="JS logo"></a>
+            </div>
+        </div>
+
+        <header>
+            <h1>HTML Tables</h1>
+        </header>
+
+        <main>
+
+            <section id="tables">
+                <div id="cover">
+                    <div class="spacing tables">
+                       <p>
+                            Tables in HTML are used to organize data into <strong>rows</strong> and <strong>columns</strong>, just like a spreadsheet. They are especially helpful for displaying tabular information like schedules, reports, and product data.
+                       </p>
+
+  <h3>Basic Structure</h3>
+  <p>Here's the minimum structure of a table:</p>
+
+  <p>Click <i><b>"Run code"</b></i> to display output</p>
+
+<article>
+    <div class="example example-code">
+        <div class="code-header">
+            <div>HTML code</div>
+            <button class="run-btn">Run code</button>
+        </div>
+
+        <div class="code-content">
+<pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 1&lt;/td&gt;
+    &lt;td&gt;Data 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+        </div>
+    </div>
+
+    <div class="example example-output hide-output">
+        <div class="output-header">
+            <div>Output</div>
+        </div>
+
+        <div class="output-content">
+            <img src="../../img/table1.png" alt="">
+        </div>
+    </div>
+</article>
+
+
+  <h3>Table Tags Explained</h3>
+  <ul>
+    <li><strong>&lt;table&gt;</strong> – wraps all your rows and cells</li>
+    <li><strong>&lt;tr&gt;</strong> – defines a single row</li>
+    <li><strong>&lt;th&gt;</strong> – creates a header cell, bold and centered by default</li>
+    <li><strong>&lt;td&gt;</strong> – creates a standard data cell</li>
+  </ul>
+
+<hr>
+
+<p>It obvious that the output of the table code above doesn't really look much like a table. This requires us
+    to add some borders to make it look more structured like a table.
+</p>
+
+  <h3>Adding Borders</h3>
+  <p>
+    To quickly apply borders, you can add <code>border="1"</code> to your <code>&lt;table&gt;</code> tag like this:
+  </p>
+
+  <p>Click <i><b>"Run code"</b></i> to display output</p>
+<article>
+    <div class="example example-code">
+        <div class="code-header">
+            <div>HTML code</div>
+            <button class="run-btn">Run code</button>
+        </div>
+
+        <div class="code-content">
+<pre>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 1&lt;/td&gt;
+    &lt;td&gt;Data 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+        </div>
+    </div>
+
+    <div class="example example-output hide-output">
+        <div class="output-header">
+            <div>Output</div>
+        </div>
+
+        <div class="output-content">
+            <img src="../../img/table2.png" alt="">
+        </div>
+    </div>
+</article>
+
+
+    <p>
+        This adds a simple border around each cell, making it look more like a traditional table. 
+        <i><b>Still doesn't look cool? Don't worry you can use CSS to style it further.</b></i>       
+    </p>
+
+
+  <h3>Summary</h3>
+  <p>
+    HTML tables are easy to understand and use. As you advance, you’ll learn to use CSS for improved layout, color, and responsiveness. 
+  </p>
+
+  <h3 class="bold">But even as a beginner, tables give you a powerful way to display and structure information neatly on your webpage.</h3>
+
+  <div class="watch">
+    <p>🎥 Watch: HTML Table tags</p>
+    <video controls>
+      <source src="#" type="video/mp4">
+    </video>
+  </div>
+
+
+
+
+  <hr>
+
+
+
+
+  <div class="exercise">
+    
+    <h3>Practice Exercise</h3>
+
+    <p>Create a table that displays the following information:</p>
+
+    <ul>
+      <li>3 students' names</li>
+      <li>Their respective scores in Math, English, and Science</li>
+      <li>Add a border around the table</li>
+    </ul>
+
+    <p><strong>Challenge:</strong> Make the first row bold using the appropriate tag.</p>
+
+  </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="navigator">
+                <div id="cover">
+                    <div class="spacing navigator">
+                       <a href="./lists.html" target="_self">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>previous</span>
+                       </a>
+
+                       <a href="./images.html" target="_self">
+                        <span>next</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <p>&copy; 2025 Painless Portal. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

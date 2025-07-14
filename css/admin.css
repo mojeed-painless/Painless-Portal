@@ -1,0 +1,115 @@
+section#admin {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    margin-top: 9rem;
+}
+
+.spacing {
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ebe7ef;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.table-container {
+    overflow-x: scroll;
+    width: 100%;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* border-radius: 10px; */
+    background: white;
+    color: #000;
+   border: none;
+   
+}
+
+th, td {
+    padding: 4px 12px;
+    text-align: left;
+    border-right: 1px solid #ddd; 
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+thead tr {
+    background-color: #7494ec;
+    color: #fff;
+    border-radius: 10px;
+}
+
+td {
+    font-size: 14px;
+}
+
+table button, .approved-status {
+    width: 100%;
+    padding: 8px;
+    background: rgb(230, 240, 91);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: rgb(155, 152, 5);
+    font-weight: 500;
+    /* margin-bottom: 20px; */
+    /* transition: 0.5s; */
+}
+
+.approved-status {
+    background: rgb(121, 218, 121);
+    color: green;
+    
+}
+
+button.delete {
+    background: rgb(255, 25, 25);
+    color: #fff;
+}
+
+#logout-btn {
+
+    width: 100%;
+    padding: 12px;
+    background: #7925d3;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: 0.5s;
+
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .table-container {
+    overflow-x: hidden;
+}
+
+}
