@@ -3,6 +3,7 @@
     // Wait for regUsers to be available (from script.js)
     document.addEventListener('DOMContentLoaded', function() {
         const username = localStorage.getItem('username');
+        
         // regUsers is defined in script.js
         if (!username || !window.regUsers || !regUsers.some(u => u.username === username)) {
             window.location.href = 'index.html'; // Redirect to login
@@ -389,7 +390,7 @@
     </div>
 
     
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
     <script>
         const name = localStorage.getItem('name');
         if (name) {

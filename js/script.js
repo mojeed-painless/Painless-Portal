@@ -25,6 +25,7 @@ const regUsers = [
 window.regUsers = regUsers;
 
 
+
 // let users = JSON.parse(localStorage.getItem('users') || '[]');
 //             if (!users.some(u => u.role === 'admin')) {
 //                 users.push({
@@ -306,11 +307,16 @@ function openWebsite() {
 
     let found = false;
     for (let i = 0; i < regUsers.length; i++) {
+
+        const name = regUsers[i].name.toLowerCase();
+
         if (
             userName === regUsers[i].username &&
             passwordValue === regUsers[i].password)
- {
+        {
             found = true;
+            // document.getElementById('welcome-user').textContent = name.charAt(0).toUpperCase() + name.slice(1);
+            localStorage.setItem('name', regUsers[i].name);
             if (regUsers[i].role === 'user') {
                 window.location.href = 'welcome.html';
                 
