@@ -296,18 +296,13 @@ function openWebsite() {
     const passwordValue = passwordInput.value.toLowerCase();
     const errorMsg = document.querySelector('.error-message');
 
-<<<<<<< HEAD
+
     let found = false;
     for (let i = 0; i < regUsers.length; i++) {
         if (
             userName === regUsers[i].username &&
-            passwordValue === regUsers[i].password
-=======
-    if (
-        userName === 'mjd' && passwordValue === '0000'
-|| userName === 'waleo' && passwordValue === '0000'
->>>>>>> 9531111a3ff6aa4d88a9936d586c28b058ac0601
-        ) {
+            passwordValue === regUsers[i].password)
+ {
             found = true;
             if (regUsers[i].role === 'user') {
                 window.location.href = 'welcome.html';
