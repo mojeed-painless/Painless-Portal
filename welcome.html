@@ -40,7 +40,7 @@
                 <a href="#"><img src="img/html_logo.png" alt="HTML logo"></a>
                 <a href="#"><img src="img/css_logo.png" alt="CSS logo"></a>
                 <a href="#"><img src="img/js_logo.png" alt="JS logo"></a>
-                <button class="logout" onclick="window.location.href='index.html'" 
+                <button class="logout" id="logout-btn" 
                 style="background: #7925d3; padding: 0.2rem 1rem; border-radius: 0.2rem; border: none; color: white; cursor: pointer;">
                     Logout
                 </button>
@@ -264,7 +264,7 @@
                                 </div>
                             </a>
 
-                            <a href="./pages/css_pages/formating.html">
+                            <a href="./pages/css_pages/formatting.html">
                                 <div>
                                     <i class="fa-solid fa-file"></i>
                                     <p>Text Formatting</p>
@@ -404,6 +404,11 @@
                 document.getElementById('welcome-user').textContent = 'Guest';
             }
         });
+
+        document.getElementById('logout-btn').onclick = function() {
+            localStorage.removeItem('username');
+            window.location.href = 'index.html';
+        };
 
 
 
