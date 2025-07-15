@@ -34,13 +34,104 @@
 
         <main>
 
+            <section id="selector">
+                <div id="cover">
+                    <div class="spacing selector">
+                        <p>
+                            CSS Selectors are used to “select” or target the HTML elements you want to style.
+                            Without selectors, the browser won’t know what parts of the webpage to apply styles to.
+                        </p>
+
+                        <h3>Types of CSS Selectors</h3>
+
+                        <h4>Element Selector</h4>
+                        <p>
+                            This targets HTML elements directly by their tag name.
+                            For example, to style all paragraph tags:
+                        </p>
+<pre>
+p {
+    color: green;
+}
+</pre>
+
+                        <h4>ID Selector</h4>
+                        <p>
+                            This targets a specific HTML element by its unique <code>id</code> attribute.
+                            Use a hash <code>#</code> followed by the ID name.
+                        </p>
+<pre>
+&lt;div id="left"&gt;&lt;/div&gt;
+
+#left {
+    background-color: lightblue;
+}
+</pre>
+                        <p style="color: yellowgreen;"><strong><em>Note: IDs must be unique on a page.</em></strong></p>
+
+                        <h4>Class Selector</h4>
+                        <p>
+                            This targets one or more elements with a shared <code>class</code> attribute.
+                            Use a dot <code>.</code> followed by the class name.
+                        </p>
+<pre>
+&lt;p class="right"&gt;Content&lt;/p&gt;
+
+.right {
+    text-align: right;
+}
+</pre>
+
+                        <h4>Universal Selector</h4>
+                        <p>
+                            The universal selector <code>*</code> selects <strong>all</strong> elements on the page.
+                            It's useful for resetting styles:
+                        </p>
+<pre>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+</pre>
+
+                        <h4>Group Selector</h4>
+                        <p>
+                            This allows you to group multiple selectors that share the same styles. Use a comma to separate them.
+                        </p>
+<pre>
+p, div, h1 {
+    font-family: Arial, sans-serif;
+}
+</pre>
+                        <h3>Conclusion</h3>
+                         <p>
+                            Understanding CSS selectors is the foundation of effective web styling. Selectors allow you to target and style specific elements on your web page with precision. Whether you're applying styles to a single unique ID, multiple elements sharing the same class, or the entire page using the universal selector, mastering these tools will make your designs cleaner, more scalable, and easier to maintain.
+                         </p>
+                         <p>
+                            As you progress, you'll find that combining selectors and using them creatively gives you greater control over your layout and design. 
+                         </p>
+                         <h3 class="bold">
+                            So take your time, experiment with different types, and get comfortable — selectors are your first real step into the power of CSS!
+                         </h3>
+
+                         <div class="watch">
+                            <p>🎥 Watch: Selectors</p>
+                            <video controls>
+                            <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
 
 
             <section id="navigator">
                 <div id="cover">
                     <div class="spacing navigator">
-                       <a href="./insert_css.html" target="_self">
+                       <a href="./css_syntax.html" target="_self">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>previous</span>
                        </a>

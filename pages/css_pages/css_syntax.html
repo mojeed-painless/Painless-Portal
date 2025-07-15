@@ -34,18 +34,97 @@
 
         <main>
 
+            <section id="syntax">
+                <div id="cover">
+                    <div class="spacing syntax">
+                        <p>
+                            Every CSS rule consists of two main parts: the <strong>selector</strong> and the <strong>declaration block</strong>.
+                        </p>
+
+                        <h3>Basic Syntax Structure</h3>
+
+<pre>
+selector {
+    property: value;
+}
+</pre>
+
+                        <p>
+                            The <code>selector</code> points to the HTML element you want to style. For example, <code>div</code>, <code>p</code>, or <code>h1</code>.
+                        </p>
+
+                        <p>
+                            The <code>property</code> is the style attribute you want to change, such as <code>color</code>, <code>font-size</code>, or <code>background</code>.
+                        </p>
+
+                        <p>
+                            The <code>value</code> is what you want to assign to that property, such as <code>red</code>, <code>16px</code>, or <code>#333</code>.
+                        </p>
+
+                        <p>
+                            A colon <code>:</code> is used to separate the property from its value. A semicolon <code>;</code> is used to separate multiple declarations inside the block.
+                        </p>
+
+                        <h4>Example</h4>
+
+<pre>
+div {
+    color: red;
+    font-size: 18px;
+    background-color: #f0f0f0;
+}
+</pre>
+
+                        <p>
+                            In the example above:
+                            <ul>
+                            <li><strong>div</strong> is the selector</li>
+                            <li><strong>color</strong>, <strong>font-size</strong>, and <strong>background-color</strong> are properties</li>
+                            <li><strong>red</strong>, <strong>18px</strong>, and <strong>#f0f0f0</strong> are the values</li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            The entire block of styles (inside the curly braces <code>{ }</code>) is known as the <strong>declaration block</strong>.
+                        </p>
+
+                        <h3>Styling Multiple Properties</h3>
+
+                        <p>
+                            You can add multiple style properties inside a single declaration block. Just make sure to end each line with a semicolon <code>;</code>:
+                        </p>
+
+<pre>
+p {
+    color: blue;
+    line-height: 1.5;
+    text-align: justify;
+}
+</pre>
+
+                        <div class="watch">
+                            <p>🎥 Watch: Syntax</p>
+                            <video controls>
+                            <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
 
 
 
             <section id="navigator">
                 <div id="cover">
                     <div class="spacing navigator">
-                       <a href="./css_intro.html" target="_self">
+                       <a href="./insert_css.html" target="_self">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>previous</span>
                        </a>
 
-                       <a href="./insert_css.html" target="_self">
+                       <a href="./selectors.html" target="_self">
                         <span>next</span>
                         <i class="fa-solid fa-arrow-right"></i>
                        </a>
