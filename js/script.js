@@ -36,7 +36,6 @@ const welcome = document.getElementById('welcome-user');
 
 
 
-
 // let users = JSON.parse(localStorage.getItem('users') || '[]');
 //             if (!users.some(u => u.role === 'admin')) {
 //                 users.push({
@@ -326,6 +325,7 @@ function openWebsite() {
             passwordValue === regUsers[i].password)
         {
             found = true;
+            localStorage.setItem('username', regUsers[i].username);
             const userNameParam = encodeURIComponent(regUsers[i].name);
             if (regUsers[i].role === 'user') {
                 window.location.href = `welcome.html?name=${userNameParam}`;
