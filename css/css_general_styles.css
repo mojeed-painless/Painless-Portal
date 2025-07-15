@@ -16,10 +16,19 @@ ul {
     margin-top: 1rem;
 }
 
-li {
+ul li {
     padding: 0.5rem 0;
     margin-left: 1rem;
     list-style-type: disc;
+}
+
+ol {
+    margin-top: 1rem;
+}
+
+ol li {
+    padding: 0.5rem 0;
+    margin-left: 1rem;
 }
 
 table {

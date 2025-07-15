@@ -97,8 +97,9 @@ h4 {
 
 code {
     background: var(--para_bg);
-    padding: 0.5rem;
+    padding: 0.2rem 0.5rem;
     margin: 1.5rem 0;
+    border-radius: 0.2rem;
     /* font-size: 0.9rem; */
 }
 
@@ -109,6 +110,10 @@ pre {
     margin-top: 0.5rem;
     overflow-x: auto;
     /* font-size: 0.9rem; */
+}
+
+.comments {
+    color: rgb(0, 112, 0);
 }
 
 
