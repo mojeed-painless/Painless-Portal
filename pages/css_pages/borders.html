@@ -34,7 +34,93 @@
 
         <main>
 
+            <section id="borders">
+                <div id="cover">
+                    <div class="spacing borders">
+                        <p>
+                            CSS borders allow you to control the appearance of element boundaries. You can define the style, width, color, radius (rounded corners), and more.
+                        </p>
 
+                        <h3>border-style</h3>
+                        <p>
+                            This property defines the type of line the border will be. You can use up to 4 values in clockwise order:
+                            <code>dotted</code>, <code>dashed</code>, <code>solid</code>, <code>double</code>, <code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>, <code>none</code>, <code>hidden</code>.
+                        </p>
+
+<pre>
+p {
+  border-style: dotted dashed solid double;
+}
+</pre>
+
+                        <p><strong> And these values are in the following sequences, top right bottom left</strong></p>
+
+  <h3>border-width</h3>
+  <p>
+    Defines the thickness of the border using units like <code>px</code>, <code>pt</code>, <code>cm</code>, <code>em</code>, or keywords like <code>thin</code>, <code>medium</code>, and <code>thick</code>.
+  </p>
+<pre>
+p {
+  border-width: 20px 5px 15px 10px;
+}
+</pre>
+
+  <h3>border-color</h3>
+  <p>
+    Sets the color of the border. You can use color names, HEX, RGB, or other supported color values. You can also assign different colors for each side.
+  </p>
+<pre>
+p {
+  border-color: red green blue yellow;
+}
+</pre>
+
+  <h3>Individual Sides</h3>
+  <p>You can specify border styles, colors, and widths individually:</p>
+  <ul>
+    <li><code>border-top-style</code></li>
+    <li><code>border-right-color</code></li>
+    <li><code>border-bottom-width</code></li>
+    <li><code>border-left</code>, etc.</li>
+  </ul>
+
+  <h3> border (shorthand)</h3>
+  <p>
+    Instead of writing multiple properties, you can use a shorthand to combine width, style, and color.
+  </p>
+<pre>
+p {
+  border: 5px solid red;
+}
+
+p {
+  border: width style color;
+}
+</pre>
+
+  <h3> border-radius</h3>
+  <p>
+    Adds rounded corners to elements. You can apply different radii to each corner in clockwise order.
+  </p>
+<pre>
+p {
+  border-radius: 5px 10px 15px 2px;
+}
+</pre>
+
+
+
+                        <div class="watch">
+                            <p>🎥 Watch: Borders</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </section>
 
 
             <section id="navigator">
