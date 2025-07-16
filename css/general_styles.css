@@ -8,8 +8,19 @@ h4 {
     text-decoration: underline;
 }
 
+h5 {
+    color: greenyellow;
+    margin-top: 0.5rem;
+}
+
 p {
     margin-top: 1rem;
+}
+
+img {
+    max-width: 100%;
+    /* height: auto; */
+    border-radius: 0.3rem;
 }
 
 ul {
@@ -18,8 +29,8 @@ ul {
 
 ul li {
     padding: 0.5rem 0;
-    margin-left: 1rem;
-    list-style-type: disc;
+    margin-left: 1.5rem;
+    list-style-type: circle;
 }
 
 ol {
@@ -28,7 +39,7 @@ ol {
 
 ol li {
     padding: 0.5rem 0;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 table {
@@ -46,6 +57,14 @@ th, td {
 
 th {
   background-color: var(--para_bg);
+}
+
+blockquote {
+    font-style: italic; 
+    border-left: 3px solid greenyellow; 
+    padding: 0.5rem; 
+    margin-left: 0;
+    background: var(--para_color);
 }
 
 

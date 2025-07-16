@@ -35,6 +35,10 @@ header p {
     line-height: 1.5rem;
 }
 
+#logos img {
+    width: 1.8rem;
+}
+
 .login-container {
     background: radial-gradient(#280a48, #20043d);;
     width: 100%;
@@ -188,6 +192,10 @@ header p {
     header p {
         text-align: left;
         width: 33rem;
+    }
+
+    #logos img {
+        width: 2rem;
     }
 
 
