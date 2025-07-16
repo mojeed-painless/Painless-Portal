@@ -33,7 +33,25 @@ window.regUsers = regUsers;
 
 const welcome = document.getElementById('welcome-user');
 
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    // If you want to force login if name is missing, uncomment below:
+    // if (!name) window.location.href = '../index.html';
 
+    if (name) {
+        document.querySelectorAll('a').forEach(link => {
+            const href = link.getAttribute('href');
+            // Only update internal links (not external or anchors)
+            if (href && !href.startsWith('http') && !href.startsWith('#')) {
+                let separator = href.includes('?') ? '&' : '?';
+                if (!href.includes('name=')) {
+                    link.setAttribute('href', `${href}${separator}name=${encodeURIComponent(name)}`);
+                }
+            }
+        });
+    }
+});
 
 
 // let users = JSON.parse(localStorage.getItem('users') || '[]');
