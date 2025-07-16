@@ -73,8 +73,59 @@ blockquote {
 
 
 
+/* Quiz styles */
+.actions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.action {
+    background: linear-gradient(to right, #BED1EF, #DAE7F9);
+    color: #000;
+    padding:  1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #BED1EF;
+}
+
+.previous {
+    background: linear-gradient(to right, #E2FAC0, #F1F8E5);
+    border: 1px solid #E2FAC0;
+}
+
+.leaders {
+    background: linear-gradient(to right, #E5CFFF, #F1E4FD);
+    border: 1px solid #E5CFFF;
+}
+
+.action .topic {
+    color: #7925d3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    
+}
+
+.action h3{
+    color: #000;
+}
+
+.action p{
+    margin-bottom: 0.5rem;
+}
+
+.action a{
+    color: blue;
+}
+
+
 @media screen and (min-width: 768px) {
     table {
       font-size: 1rem;
+}
+
+
+.actions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 }
