@@ -26,6 +26,13 @@ const regUsers = [
         username: 'michelle1',
         password: 'michelle1234$',
         role: 'user',
+    },
+    {
+        name: 'Awofeso',
+        email: 'damilare4jesus96@gmail.com',
+        username: 'rodin',
+        password: '692003',
+        role: 'user',
     }
 ]
 
