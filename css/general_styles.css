@@ -17,6 +17,10 @@ p {
     margin-top: 1rem;
 }
 
+.head_left p {
+    margin-top: 0rem;
+}
+
 img {
     max-width: 100%;
     /* height: auto; */

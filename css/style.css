@@ -328,31 +328,32 @@ header h1 {
     cursor: pointer;
 }
 
-#head_left {
+.head_left {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
 }
 
-#head_left i {
+.head_left i {
     font-weight: 600;
     font-size: 1.8rem;
     color: greenyellow;
 }
 
-#head_left p {
+.head_left p {
     white-space: nowrap;
-    overflow: hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     width: 14rem;
 }
 
-#head_left p span{
+.head_left p span{
     font-weight: 800;
 }
 
-#head_right i {
+.head_right i {
     color: var(--para_bg);
 }
 
@@ -360,6 +361,10 @@ header h1 {
     border-right: 1px solid var(--para_color2);
     border-left: 0.25rem solid greenyellow;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#quiz #content {
+    border-bottom: 1px solid var(--para_color2);
 }
 
 .hide {
@@ -462,11 +467,11 @@ footer p {
         padding: 0 1.5rem;
     }
     
-    #head_left {
+    .head_left {
         gap: 1rem;
     }
     
-    #head_left p {
+    .head_left p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
