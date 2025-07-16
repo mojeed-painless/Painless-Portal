@@ -406,3 +406,165 @@ function openWebsite() {
     // }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Quiz Scripts
+
+// 1. Your questions array (add as many as you want, in order)
+const dailyQuestions = [
+    {
+        question: "What is the capital of France?",
+        options: ["London", "Berlin", "Paris", "Madrid"],
+        answer: 2 // index of correct answer
+    },
+    {
+        question: "Which language runs in a web browser?",
+        options: ["Python", "Java", "C", "JavaScript"],
+        answer: 3
+    },
+    // ...add more questions
+];
+
+// 2. Utility functions
+function getTodayIndex() {
+    // Use days since a fixed date to rotate questions
+    const start = new Date(2025, 0, 1); // Jan 1, 2025
+    const now = new Date();
+    const diff = Math.floor((now - start) / (1000 * 60 * 60 * 24));
+    return diff % dailyQuestions.length;
+}
+
+function getNext5pm() {
+    const now = new Date();
+    const next = new Date(now);
+    next.setHours(17, 0, 0, 0); // 5pm today
+    if (now >= next) next.setDate(next.getDate() + 1);
+    return next;
+}
+
+function getNextMidnight() {
+    const now = new Date();
+    const next = new Date(now);
+    next.setHours(24, 0, 0, 0); // midnight
+    return next;
+}
+
+// 3. Main logic
+function setupDailyQuiz(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    function renderCountdown(target, label) {
+        function update() {
+            const now = new Date();
+            const diff = target - now;
+            if (diff <= 0) {
+                location.reload();
+                return;
+            }
+            const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+            const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+            const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+            container.innerHTML = `<div class="quiz-countdown">${label} <br><span>${h}:${m}:${s}</span></div>`;
+        }
+        update();
+        return setInterval(update, 1000);
+    }
+
+    function renderQuiz(q, idx) {
+        let selected = null;
+        let timer = 60;
+        const startTime = Date.now();
+        container.innerHTML = `
+            <div class="quiz-question">
+                <p>${q.question}</p>
+                <form id="quiz-form">
+                    ${q.options.map((opt, i) => `
+                        <label>
+                            <input type="radio" name="option" value="${i}"> ${opt}
+                        </label><br>
+                    `).join('')}
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="quiz-timer">Time left: <b>60</b>s</div>
+            </div>
+        `;
+        const timerDiv = document.getElementById('quiz-timer');
+        const interval = setInterval(() => {
+            timer--;
+            timerDiv.innerHTML = `Time left: <b>${timer}</b>s`;
+            if (timer <= 0) {
+                clearInterval(interval);
+                saveInput(null, idx, startTime);
+                showEnded();
+            }
+        }, 1000);
+
+        document.getElementById('quiz-form').onsubmit = function(e) {
+            e.preventDefault();
+            const val = this.option.value;
+            clearInterval(interval);
+            saveInput(val, idx, startTime);
+            showEnded();
+        };
+    }
+
+    function saveInput(selected, idx, startTime) {
+        const now = Date.now();
+        const entry = {
+            questionIndex: idx,
+            selected: selected,
+            time: now,
+            duration: Math.floor((now - startTime) / 1000)
+        };
+        // Save to localStorage (or send to server if needed)
+        let all = JSON.parse(localStorage.getItem('quizAnswers') || '[]');
+        // Only one entry per day/question
+        all = all.filter(e => e.questionIndex !== idx);
+        all.push(entry);
+        localStorage.setItem('quizAnswers', JSON.stringify(all));
+    }
+
+    function showEnded() {
+        container.innerHTML = `<div class="quiz-ended">Today's quiz has ended.</div>`;
+        renderCountdown(getNextMidnight(), "Next quiz in");
+    }
+
+    // --- Main display logic ---
+    const now = new Date();
+    const idx = getTodayIndex();
+    const fivePm = new Date(now);
+    fivePm.setHours(17, 0, 0, 0);
+
+    if (now < fivePm) {
+        // Before 5pm: show countdown to 5pm
+        renderCountdown(fivePm, "Next quiz in");
+    } else if (now >= fivePm && now < getNextMidnight()) {
+        // Between 5pm and midnight: show quiz if not answered or time not up
+        // Check if already answered
+        let all = JSON.parse(localStorage.getItem('quizAnswers') || '[]');
+        const answered = all.find(e => e.questionIndex === idx);
+        if (answered) {
+            showEnded();
+        } else {
+            renderQuiz(dailyQuestions[idx], idx);
+        }
+    } else {
+        // After midnight: show countdown to next 5pm
+        renderCountdown(getNext5pm(), "Next quiz in");
+    }
+}
+
+setupDailyQuiz('quiz-container');

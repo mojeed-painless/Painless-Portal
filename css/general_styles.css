@@ -81,7 +81,7 @@ blockquote {
 }
 
 .action {
-    background: linear-gradient(to right, #BED1EF, #DAE7F9);
+    background: linear-gradient(to right, #BED1EF, #DFEBFA);
     color: #000;
     padding:  1rem;
     border-radius: 0.5rem;
@@ -118,6 +118,87 @@ blockquote {
 }
 
 
+
+.quiz-countdown {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz-countdown span{
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+
+.quiz-question {
+    background: #140524;
+    padding: 1rem 2rem;
+}
+
+.quiz-question p {
+    margin: 0 0 1rem 0;
+    text-align: center;
+    background: white;
+    color: #140524;
+    padding: 0.5rem;
+    font-weight: 700;
+}
+
+.quiz-question button {
+    border: none;
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: #7925d3;
+    color: white;
+    cursor: pointer;
+}
+
+#quiz-form {
+    
+}
+
+/* .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#options label {
+    display: block
+} */
+
+#quiz-timer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#quiz-timer span {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    color: greenyellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 768px) {
     table {
       font-size: 1rem;
@@ -127,5 +208,9 @@ blockquote {
 .actions {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+}
+
+.quiz-countdown span{
+    font-size: 5rem;
 }
 }
