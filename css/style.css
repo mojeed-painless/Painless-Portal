@@ -163,6 +163,7 @@ section#navigator {
 h3.bold {
     text-align: center;
     color: greenyellow;
+    font-family: "Quicksand", sans-serif;
 }
 
 hr {
@@ -365,6 +366,7 @@ header h1 {
 
 #quiz #content {
     border-bottom: 1px solid var(--para_color2);
+    padding: 0 0.5rem;
 }
 
 .hide {
