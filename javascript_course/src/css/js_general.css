@@ -40,7 +40,7 @@
 html {
     font-family: "Quicksand", sans-serif;
     line-height: 1.5;
-    background: #b9a4cf;
+    background: #2f1d43;
     color: var(--text_color);
     scroll-behavior: smooth;
     height: 100vh;
@@ -123,10 +123,12 @@ h4 {
     color: white; 
     cursor: pointer;
     transition: all 400ms ease;
+    border: 1px solid transparent;
 }
 #nav__container button:hover {
     background: var(--color_active-light);
     color: var(--color_active);
+    border: 1px solid var(--border_color);
 }
 
 /* *************************** HEADER SECTION *************************** */
