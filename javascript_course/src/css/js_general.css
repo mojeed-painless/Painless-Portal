@@ -405,6 +405,10 @@ main {
 
 @media screen and (min-width: 768px) {
 
+    article {
+        width: 70%;
+    }
+
     #nav__container nav{
         padding: 0 9rem;
     }
@@ -427,6 +431,8 @@ main {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.8rem;
         align-items: center;
+        justify-content: center;
+        width: 90%;
     }
 
     .header__section img {
