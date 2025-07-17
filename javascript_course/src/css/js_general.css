@@ -190,7 +190,8 @@ main {
     color: var(--color_white);
     border: 1px solid var(--border_color);
     cursor: pointer;
-    
+    border-radius: 0.9rem;
+    transition: all 400ms ease;
 }
 
 .head p, #content p {
@@ -212,8 +213,14 @@ main {
 .head__left i {
     background: var(--color_success-light);
     color: var(--color_success);
+    width: 2rem;
+    height: 2rem;
     padding: 0.5rem;
     border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .head__left p {
@@ -231,11 +238,12 @@ main {
     color: var(--border_color);
 }
 
-/* .head.active {
-    background: var(--color_active-light);
+.head.active {
+    /* background: var(--color_active-light);
     color: var(--color_active);
-    transition: all 0.4s ease;
-} */
+    transition: all 0.4s ease; */
+    border-radius: 0.9rem 0.9rem 0 0;
+}
 
 #content {
     border-right: 1px solid var(--border_color);
@@ -266,7 +274,7 @@ main {
 
 .hide.active {
     max-height: 1000px;
-    transition: all 400ms ease;
+    /* transition: all 400ms ease; */
 }
 
 /* unique */
