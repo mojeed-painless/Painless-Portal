@@ -42,11 +42,11 @@ body {
 }
 
 #nav__container .dp {
-    background: yellowgreen;
+    background: var(--color_yellow);
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: 2.5px solid var(--color_white);
+    border: 2px solid var(--color_white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +74,12 @@ strong {
 h3 {
     color: var(--color_yellow);
     margin: 1rem 0;
+}
+
+h3.bold {
+    text-align: center;
+    color: var(--color_yellow);
+    font-family: "Quicksand", sans-serif;
 }
 
 h4 {
@@ -138,6 +144,34 @@ blockquote {
     padding: 0.5rem; 
     margin-left: 0;
     background: var(--para_color);
+}
+
+hr {
+    margin: 1.5rem 0;
+}
+
+.watch {
+    margin-top: 1rem;
+}
+
+video {
+    width: 100%;
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+}
+
+.visit_link {
+    color: var(--color_active);
+    font-style: italic;
+    font-size: 13px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.8rem;
+    transition: all 400ms ease;
+    
+}
+.visit_link:hover {
+    background: var(--color_active-dark);
+    color: var(--color_active);
 }
 
 .navigator__section {
