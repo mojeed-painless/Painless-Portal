@@ -155,15 +155,15 @@ main {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .header__section img {
     width: 18rem;
 }
 
-.header__section h2 {
-        margin-bottom: 1.5rem ;
+.header__section h3 {
+        margin-bottom: 1rem ;
         color: var(--color_yellow) ;
 }
 
@@ -177,6 +177,7 @@ main {
 .header__section p {
     margin-top: 1.5rem;
     line-height: 1.5rem;
+    text-align: justify;
 }
 
 /* *************************** INTRO SECTION *************************** */
