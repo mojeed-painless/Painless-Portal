@@ -39,7 +39,7 @@ head.forEach((item) => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const articles = document.querySelectorAll('.contents__section');
+    const articles = document.querySelectorAll('.appear');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
