@@ -35,8 +35,7 @@ head.forEach((item) => {
         }
     });
 });
-
-
+console.log("This message comes from an external JS file!");
 
 document.addEventListener('DOMContentLoaded', function() {
     const articles = document.querySelectorAll('.appear');

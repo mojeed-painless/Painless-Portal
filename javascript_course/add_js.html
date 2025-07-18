@@ -37,7 +37,74 @@
 
             <section class="contents__section">
                 <article>
-                    
+
+                    <p>To use JavaScript in your web pages, you need to insert it inside the HTML file 
+                        using the <code>&lt;script&gt;</code> tag.</p>
+
+                    <h3 class="bold">There are three main ways to add JavaScript to your HTML:</h3>
+                    <ol>
+                    <li><strong>Inline JavaScript</strong> – JavaScript code added directly to an HTML element’s attribute.</li>
+                    <li><strong>Internal JavaScript</strong> – Code written inside a <code>&lt;script&gt;</code> tag within the HTML file.</li>
+                    <li><strong>External JavaScript</strong> – Code placed in a separate file and linked to the HTML file.</li>
+                    </ol>
+
+                    <h3> Inline JavaScript</h3>
+                    <p>You can add JavaScript code directly to HTML elements using the 
+                        <code>onclick</code> or other event attributes:
+                    </p>
+<pre>
+<span class="t">&lt;button</span> <span class="p">onclick</span>=<span class="v">"alert('Hello!')"</span><span class="t">&gt;</span> Click me <span class="t">&lt;/button&gt;</span>
+</pre>
+
+                    <h3> Internal JavaScript</h3>
+                    <p>Write your JavaScript inside a <code>&lt;script&gt;</code> tag in the HTML file:</p>
+<pre>
+<span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html&gt;</span>
+<span class="t">&lt;head&gt;</span>
+    <span class="t">&lt;title&gt;</span>My Page<span class="t">&lt;/title&gt;</span>
+<span class="t">&lt;/head&gt;</span>
+<span class="t">&lt;body&gt;</span>
+
+    <span class="t">&lt;h1&gt;</span>Welcome<span class="t">&lt;/h1&gt;</span>
+
+    <span class="t">&lt;script&gt;</span>
+        <span class="f">alert</span><span class="b">(</span><span class="v">"Hello from JavaScript!"</span><span class="b">)</span>;
+    <span class="t">&lt;/script&gt;</span>
+
+<span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span>
+</pre>
+
+                    <h3>External JavaScript</h3>
+                    <p>You can also write JavaScript in a separate file (e.g., <code>script.js</code>) 
+                        and link it to your HTML:
+                    </p>
+<pre>
+<span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html&gt;</span>
+<span class="t">&lt;head&gt;</span>
+    <span class="t">&lt;title&gt;</span>External JS<span class="t">&lt;/title&gt;</span>
+    <span class="t">&lt;script</span> <span class="p">src</span>=<span class="v">"script.js"</span><span class="t">&gt;&lt;/script&gt;</span>
+<span class="t">&lt;/head&gt;</span>
+<span class="t">&lt;body&gt;</span>
+    <span class="t">&lt;h1&gt;</span>External JavaScript Example<span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span>
+</pre>
+
+                    <p>Then in <code>script.js</code>:</p>
+<pre>
+<span class="m">console</span>.<span class="f">log</span><span class="b">(</span><span class="v">"This message comes from an external JS file!"</span><span class="b">)</span>;
+</pre>
+
+
+                    <h3>Best Practice</h3>
+                    <ul>
+                    <li>Use <strong>external files</strong> for better code organization and reuse.</li>
+                    <li>Place <code>&lt;script&gt;</code> tags just <strong>before the closing <code>&lt;/body&gt;</code></strong> tag to make sure the page loads first.</li>
+                    </ul>
+
                 </article>
             </section>
 
@@ -62,3 +129,5 @@
     <script src="./src/js/js_script.js"></script>
 </body>
 </html>
+
+
