@@ -176,7 +176,11 @@ video {
 
 .navigator__section {
     border-top: 1px solid var(--border_color);
-    padding-top: 2rem;
+    padding: 1rem;
+    position: fixed;
+    bottom: -3rem;
+    left: 0;
+    background: var(--color_secondary)
 }
 
 .navigator__section article {
