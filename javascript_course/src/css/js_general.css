@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
 :root {
-      --color_primary: #1A1A1A;
+            --color_primary: #1A1A1A;
       --color_secondary: #242424;
       --color_success: #136683;
       --color_success-light: #8CF5DB;
@@ -11,7 +11,7 @@
       --color_danger-light: #F9B2A4;
 
       --color_active: #9389FF;
-      --color_active-light: #292531;
+      --color_active-dark: #292531;
 
       --color_hover: #2C2C2C;
       --color_black: #171719;
@@ -20,13 +20,13 @@
       --border_color: #3D3D3D;
 
       --color_yellow: #FFEE5B;
-      --color_yellow-light: #343325;
+      --color_yellow-dark: #343325;
       --color_purple: #6D48FA;
       --color_purple-light: #E5D9FE;
       --color_green: #6faf26;
       --color_green-light: #c8ecb1;
       --color_blue: #27B9BE;
-      --color_blue-light: #172A2F;
+      --color_blue-dark: #172A2F;
 }
 
 * {
