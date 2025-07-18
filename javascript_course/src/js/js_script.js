@@ -36,3 +36,18 @@ head.forEach((item) => {
     });
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const articles = document.querySelectorAll('.contents__section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    articles.forEach(article => observer.observe(article));
+});
+
