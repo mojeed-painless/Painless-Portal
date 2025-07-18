@@ -319,10 +319,10 @@ main {
     color: var(--color_green);
 }
 .interaction__section #content {
-    border-left: 0.2rem solid var(--color_green);
+    border-left: 0.2rem solid var(--color_green-light);
 }
 .interaction__section #content i {
-    color: var(--color_green);
+    color: var(--color_green-light);
 }
 /* unique */
 .operators__section .head__left i {
