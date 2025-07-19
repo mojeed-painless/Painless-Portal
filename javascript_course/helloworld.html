@@ -37,33 +37,40 @@
 
             <section class="contents__section">
                 <article>
-    
-                    <p>
-                        After successfully connecting your JavaScript file to your HTML document using 
-                        the <code>&lt;script src="yourfile.js"&gt;</code> method, the next question is:
-                        <strong>“How do I know if it actually works?”</strong>
-                    </p>
-                    <p>
-                        Great question! One simple and effective way to test your connection is to write 
-                        your very first JavaScript code using a built-in function called 
-                        <code>alert()</code>. Let's explore what it does.
-                    </p>
+                    
+                    <div class="appear">
+                        <p>
+                            After successfully connecting your JavaScript file to your HTML document using 
+                            the <code>&lt;script src="yourfile.js"&gt;</code> method, the next question is:
+                            <strong>“How do I know if it actually works?”</strong>
+                        </p>
+                        <p>
+                            Great question! One simple and effective way to test your connection is to write 
+                            your very first JavaScript code using a built-in function called 
+                            <code>alert()</code>. Let's explore what it does.
+                        </p>
+                    </div>
 
-                    <h3>Using the alert( ) Function</h3>
-                    <p>
-                        The <code>alert()</code> function is one of the most basic JavaScript tools 
-                        used to display a pop-up message box in your browser.
-                        It pauses the page and shows a message to the user in a dialog box. 
-                        It's often used for testing and quick notifications.
-                    </p>
+                    <div class="appear">
+                        <h3>Using the alert( ) Function</h3>
+                        <p>
+                            The <code>alert()</code> function is one of the most basic JavaScript tools 
+                            used to display a pop-up message box in your browser.
+                            It pauses the page and shows a message to the user in a dialog box. 
+                            It's often used for testing and quick notifications.
+                        </p>
+                    </div>
 
-                    <h4>Example:</h4>
+                    <div class="appear">
+                        <h4>Example:</h4>
 <pre>
 // add this in your script.js
 alert("Hello, World! This means your JavaScript is working.");
 </pre>
+                    </div>
 
-                    <p>Then in your HTML file:</p>
+                    <div class="appear">
+                        <p>Then in your HTML file:</p>
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -80,58 +87,69 @@ alert("Hello, World! This means your JavaScript is working.");
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+                    </div>
 
-                    <p>
-                        When you open this HTML file in your browser, you’ll immediately 
-                        see a pop-up message saying:
-                        <em><strong>“Hello, World! This means your JavaScript is working.”</strong></em>
-                        This confirms that your script is properly connected and executed.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            When you open this HTML file in your browser, you’ll immediately 
+                            see a pop-up message saying:
+                            <em><strong>“Hello, World! This means your JavaScript is working.”</strong></em>
+                            This confirms that your script is properly connected and executed.
+                        </p>
+                    </div>
 
-                    <h3 class="bold">
-                        <strong>Note:</strong> The alert box pauses your script and stops the user 
-                        from interacting with the page until it's dismissed.
-                    </h3>
-                    <p>That’s why it’s mostly used for testing and debugging during development, 
-                        not in production websites.
-                    </p>
+                    <div class="appear">
+                        <h3 class="bold">
+                            <strong>Note:</strong> The alert box pauses your script and stops the user 
+                            from interacting with the page until it's dismissed.
+                        </h3>
+                        <p>That’s why it’s mostly used for testing and debugging during development, 
+                            not in production websites.
+                        </p>
+                    </div>
 
                     <hr>
 
-                    <h3>Introducing the Developer Console</h3>
-                    <p>
-                        Once you're comfortable with <code>alert()</code>, the next step is using the 
-                        <strong>browser console</strong> — a powerful tool for developers to test 
-                        and debug JavaScript code without disturbing the page or user experience.
-                    </p>
-                    <p>
-                        You can write messages or output results using the <code>console.log()</code> 
-                        function. It doesn’t show anything on the webpage, but instead prints the result 
-                        to your browser’s developer tools console.
-                    </p>
+                    <div class="appear">
+                        <h3>Introducing the Developer Console</h3>
+                        <p>
+                            Once you're comfortable with <code>alert()</code>, the next step is using the 
+                            <strong>browser console</strong> — a powerful tool for developers to test 
+                            and debug JavaScript code without disturbing the page or user experience.
+                        </p>
+                        <p>
+                            You can write messages or output results using the <code>console.log()</code> 
+                            function. It doesn’t show anything on the webpage, but instead prints the result 
+                            to your browser’s developer tools console.
+                        </p>
+                    </div>
 
-                    <h4>Example:</h4>
+                    <div class="appear">
+                        <h4>Example:</h4>
 <pre>
 console.log("Hello from the console!");
 </pre>
 
-                    <p>
-                        To see this message, you need to open the Developer Console in your browser.
-                    </p>
+                        <p>
+                            To see this message, you need to open the Developer Console in your browser.
+                        </p>
+                    </div>
 
-                    <h3>How to Open the Console</h3>
-                    <ul>
-                        <li><strong>Windows/Linux:</strong> Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd></li>
-                        <li><strong>Mac:</strong> Press <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd></li>
-                        <li>Then, click the <strong>Console</strong> tab in the Developer Tools pane.</li>
-                    </ul>
+                    <div class="appear">
+                        <h3>How to Open the Console</h3>
+                        <ul>
+                            <li><strong>Windows/Linux:</strong> Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd></li>
+                            <li><strong>Mac:</strong> Press <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd></li>
+                            <li>Then, click the <strong>Console</strong> tab in the Developer Tools pane.</li>
+                        </ul>
 
-                    <p>You should see the message printed like this:</p>
+                        <p>You should see the message printed like this:</p>
 <pre>
 Hello from the console!
 </pre>
+                    </div>
 
-                    
+                    <div class="appear">
                         <h3>Why use the Console?</h3>
                         <p>Developers rely on the console to:</p>
                         <ul>
@@ -140,11 +158,13 @@ Hello from the console!
                             <li>Track errors and debug issues</li>
                             <li>View outputs without disrupting the web page</li>
                         </ul>
+                    </div>
 
-                    <h3>Practical Example</h3>
-                    <p>Here’s a simple interactive page that combines both <code>alert()</code> and 
-                        <code>console.log()</code>:
-                    </p>
+                    <div class="appear">
+                        <h3>Practical Example</h3>
+                        <p>Here’s a simple interactive page that combines both <code>alert()</code> and 
+                            <code>console.log()</code>:
+                        </p>
 
 <pre>
 &lt;!DOCTYPE html&gt;
@@ -163,31 +183,35 @@ Hello from the console!
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+                    </div>
 
-                    <p>And in <code>script.js</code> add:</p>
+                    <div class="appear">
+                        <p>And in <code>script.js</code> add:</p>
 <pre>
 function sayHello() {
     alert("Hello, World!");
     console.log("The button was clicked and alert was shown.");
 }
 </pre>
-                    <p>
-                        When you click the button, it will show an alert with "Hello, World!" 
-                        and log a message in the console.
-                    </p>
-                    <p>
-                        Don't worry about the <code>function sayHello()</code> part for now, you will learn 
-                        more about it later on.
-                    </p>
+                        <p>
+                            When you click the button, it will show an alert with "Hello, World!" 
+                            and log a message in the console.
+                        </p>
+                        <p>
+                            Don't worry about the <code>function sayHello()</code> part for now, you will learn 
+                            more about it later on.
+                        </p>
+                    </div>
 
-                    <h4>What You’ve Learned</h4>
-                    <ul>
-                        <li>How to test your JavaScript connection using <code>alert()</code></li>
-                        <li>What the browser console is and how to use <code>console.log()</code></li>
-                        <li>Keyboard shortcuts to access Developer Tools</li>
-                    </ul>
-                    <h3 class="bold">Now you’re ready to start writing and testing your JavaScript like a real developer!</h3>
-                    
+                    <div class="appear">
+                        <h4>What You’ve Learned</h4>
+                        <ul>
+                            <li>How to test your JavaScript connection using <code>alert()</code></li>
+                            <li>What the browser console is and how to use <code>console.log()</code></li>
+                            <li>Keyboard shortcuts to access Developer Tools</li>
+                        </ul>
+                        <h3 class="bold">Now you’re ready to start writing and testing your JavaScript like a real developer!</h3>
+                    </div>
 
                 </article>
             </section>
