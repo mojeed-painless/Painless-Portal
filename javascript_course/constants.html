@@ -38,6 +38,83 @@
             <section class="contents__section">
                 <article>
 
+                    <div class="appear">
+                        <h3>What is a Constant?</h3>
+                        <p>
+                            In JavaScript, a <strong>constant</strong> is a variable whose value is fixed ,
+                            and cannot be changed once assigned. Constants are declared using the 
+                            <code>const</code> keyword and must be initialized(assigned) at the time of declaration.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Declaring a Constant</h3>
+                        <p>To declare a constant, use the <code>const</code> keyword instead of 
+                            <code>let</code> or <code>var</code>:</p>
+
+<pre>
+<span class="t">const</span> <span class="p">myBirthday</span> <span class="r">=</span> <span class="g">'28.11.1990'</span>;
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <p>Attempting to change the value of a constant will throw an error:</p>
+
+<pre>
+<span class="t">const</span> <span class="p">myBirthday</span> <span class="r">=</span> <span class="g">'28.11.1990'</span>;
+
+<span class="p">myBirthday</span> <span class="r">=</span> <span class="g">'11.08.2000'</span>; <span class='c'>// Error: Assignment to constant variable!</span>
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Why Use Constants?</h3>
+                        <ul>
+                            <li>They prevent accidental value changes.</li>
+                            <li>They make your code more predictable and easier to debug.</li>
+                            <li>They help communicate that certain values should remain unchanged.</li>
+                        </ul>
+                        <p>When a programmer is confident that a value will never change, 
+                            it's best to declare it with <code>const</code> to enforce that 
+                            immutability and make the intention clear to anyone reading the code.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Uppercase Constants</h3>
+                        <p>When using constants to store values that are fixed and known before runtime 
+                            (like color codes, tax rates, or configuration values), it is common practice 
+                            to write them in uppercase with underscores:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="t">const</span> <span class="p">COLOR_RED</span> <span class="r">=</span> <span class="g">"#F00"</span>;
+<span class="t">const</span> <span class="p">COLOR_GREEN</span> <span class="r">=</span> <span class="g">"#0F0"</span>;
+<span class="t">const</span> <span class="p">COLOR_BLUE</span> <span class="r">=</span> <span class="g">"#00F"</span>;
+<span class="t">const</span> <span class="p">COLOR_ORANGE</span> <span class="r">=</span> <span class="g">"#FF7F00"</span>;
+
+<span class="t">let</span> <span class="p">color</span> <span class="r">=</span> <span class="p">COLOR_ORANGE</span>;
+<span class="f">alert</span>(<span class="p">color</span>); <span class='c'>// Outputs: #FF7F00</span>
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h3>When to Use Uppercase</h3>
+                        <p>Use uppercase naming only for values that:</p>
+                        <ul>
+                            <li>Are hard-coded and known before execution.</li>
+                            <li>Serve as meaningful aliases for raw values.</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <p>In summary, use <code>const</code> for any variable whose value should not change. 
+                            Use uppercase naming only when you're defining a fixed, hard-coded value.
+                        </p>
+                    </div>
+
 
                     <div class="appear">
                         <div class="watch">
@@ -58,7 +135,7 @@
                      <span>previous</span>
                     </a>
 
-                    <a href="#" target="_self">
+                    <a href="./datatypes1.html" target="_self">
                      <span>next</span>
                      <i class="fa-solid fa-arrow-right"></i>
                     </a>

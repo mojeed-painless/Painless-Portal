@@ -102,7 +102,7 @@ img {
 }
 
 ul {
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 ul li {
@@ -200,7 +200,7 @@ pre {
 }
 
 .c {
-    color: rgb(2, 156, 2);
+    color: #7a7a88;
 }
 
 hr {

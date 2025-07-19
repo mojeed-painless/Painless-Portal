@@ -37,6 +37,129 @@
 
             <section class="contents__section">
                 <article>
+                    
+                    <div class="appear">
+                        <p>There are two main rules for naming variables in JavaScript:</p>
+                        <ul>
+                            <li>The name must contain only letters, digits, or the symbols <code>$</code> and <code>_</code>.</li>
+                            <li>The first character must not be a digit.</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Examples of valid names:</h4>
+<pre>
+<span class="t">let</span> <span class="p">user</span>;
+<span class="t">let</span> <span class="p">product456</span>;
+</pre>
+                    </div>  
+                    
+                    <div class="appear">
+                        <p>When variable names contain multiple words, the <strong>camelCase</strong> 
+                            convention is often used. This means the first word starts lowercase, 
+                            and each subsequent word starts with a capital letter:
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">customerPhoneNumber</span>;
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <p>You can also use <code>$</code> and <code>_</code> as part of variable names. 
+                            They don’t have any special meaning:
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">$value</span> <span class="r">=</span> <span class="n">5</span>;
+<span class="t">let</span> <span class="p">_tempCount</span> <span class="r">=</span> <span class="n">10</span>;
+
+<span class="f">alert</span>(<span class="p">$value</span> <span class="r">+</span> <span class="p">_tempCount</span>); <span class='c'>// 15</span>
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Examples of Incorrect Variable Names</h4>
+<pre>
+<span class="t">let</span> <span class="p">7score</span>;   <span class='c'>// Cannot start with a digit</span>
+<span class="t">let</span> <span class="p">user-name</span>;  <span class='c'>// Hyphens aren't allowed</span>
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Case Sensitivity</h3>
+                        <p>JavaScript variable names are <strong>case-sensitive</strong>. That means:</p>
+<pre>
+<span class="t">let</span> <span class="p">dog</span> <span class="r">=</span> <span class="g">"woof"</span>;
+<span class="t">let</span> <span class="p">Dog</span> <span class="r">=</span> <span class="g">"bark"</span>;
+
+console.<span class="f">log</span>(<span class="p">dog</span>); <span class='c'>// "woof"</span>
+console.<span class="f">log</span>(<span class="p">Dog</span>); <span class='c'>// "bark"</span>
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Non-English Characters</h3>
+                        <p>JavaScript allows variable names in any language, including Cyrillic or Chinese. 
+                            For example:
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">имя</span> <span class="r">=</span> <span class="g">"Alex"</span>;
+<span class="t">let</span> <span class="p">我</span> <span class="r">=</span> <span class="g">"你好"</span>;
+</pre>
+                        <p>However, it's highly recommended to use English variable names for better 
+                            readability and collaboration.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Reserved Words</h3>
+                        <p>Some words are reserved by JavaScript and cannot be used as variable names, 
+                            such as <code>let</code>, <code>return</code>, <code>function</code>, 
+                            and <code>class</code>.
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">return</span> <span class="r">=</span> <span class="n">10</span>; <span class='c'>// Error: "return" is a reserved keyword</span>
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Naming Things the Right Way</h3>
+                        <p>Variable names should be clear and descriptive. This makes code easier to read, 
+                            understand, and maintain. For example:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class='c'>// Good</span>
+<span class="t">let</span> <span class="p">currentUser</span>;
+<span class="t">let</span> <span class="p">orderTotal</span>;
+
+<span class='c'>// Bad</span>
+<span class="t">let</span> <span class="p">a</span>;
+<span class="t">let</span> <span class="p">data</span>;
+<span class="t">let</span> <span class="p">val</span>;
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <p>Some good naming practices include:</p>
+                        <ul>
+                            <li>Use meaningful names like <code>cartItemCount</code> instead of <code>c</code>.</li>
+                            <li>Be consistent with naming conventions in your team or project.</li>
+                            <li>Avoid vague names like <code>thing</code>, <code>stuff</code>, or <code>value</code>.</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="appear">
+                        <h3>Conclusion</h3>
+                        <p>
+                            Naming variables properly is a key skill in 
+                            JavaScript. It helps your code stay clean, understandable, and bug-free. 
+                            Always use descriptive, readable, and consistent names.
+                        </p>
+                    </div>
+
 
 
                     <div class="appear">
