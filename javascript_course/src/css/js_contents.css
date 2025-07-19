@@ -169,13 +169,21 @@ pre {
 }
 
 /* t: tags; s: selectors; p: properties; v: values; 
-   g: strings; c: comments; f: function, b: bracket
-   l: variable */
-.t, .l {
+   g: strings; c: comments; f: function,
+   d: js pre-defined words r: operators n: num */
+.t, .d {
     color: rgb(66, 113, 243);
 }
 
-.s, .b {
+.n {
+    color: rgb(170, 50, 170);
+}
+
+.r {
+    color: rgb(243, 81, 162);
+}
+
+.s{
     color: rgb(184, 181, 12);
 }
 
@@ -184,11 +192,15 @@ pre {
 }
 
 .p {
-    color: rgb(105, 191, 248);
+    color: rgb(117, 197, 250);
 }
 
 .v, .g {
     color: rgb(226, 105, 75);
+}
+
+.c {
+    color: rgb(2, 156, 2);
 }
 
 hr {

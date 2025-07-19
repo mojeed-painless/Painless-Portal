@@ -51,7 +51,7 @@
                         
                         <h4>Example:</h4>
 <pre>
-alert('Hello, world!');
+<span class="f">alert</span>(<span class="g">'Hello, world!'</span>)
 </pre>
                     </div>
 
@@ -64,15 +64,15 @@ alert('Hello, world!');
                             <code>;</code>:
                         </p>
 <pre>
-alert('Hey'); alert('painless');
+<span class="f">alert</span>(<span class="g">'Hey'</span>); <span class="f">alert</span>(<span class="g">'painless'</span>)
 </pre>
                     </div>
 
                     <div class="appear">
                         <p>But for better readability, it's common to write each statement on a new line:</p>
 <pre>
-alert('Hey');
-alert('painless');
+<span class="f">alert</span>(<span class="g">'Hey'</span>);
+<span class="f">alert</span>(<span class="g">'painless'</span>);
 </pre>
                     </div>
 
@@ -86,8 +86,8 @@ alert('painless');
 
                     <p>This works fine:</p>
 <pre>
-alert('Hey')
-alert('painless')
+<span class="f">alert</span>(<span class="g">'Hey'</span>)
+<span class="f">alert</span>(<span class="g">'painless'</span>)
 </pre>
                     </div>
 
@@ -97,15 +97,15 @@ alert('painless')
                         But ASI isn't perfect. For example:</p>
 
 <pre>
-alert("Hello")
-["apple", "pawpaw"].forEach(alert);
+<span class="f">alert</span>(<span class="g">"Hello"</span>)
+[<span class="g">"apple"</span>, <span class="g">"pawpaw"</span>].<span class="f">forEach</span>(<span class="t">alert</span>);
 </pre>
                     </div>
 
                     <div class="appear">
                         <p>This will cause an error. Why? Because JavaScript reads it like this:</p>
 <pre>
-alert("Hello")["apple", "pawpaw"].forEach(alert);
+<span class="f">alert</span>(<span class="g">"Hello"</span>)[<span class="g">"apple"</span>, <span class="g">"pawpaw"</span>].<span class="f">forEach</span>(<span class="t">alert</span>);
 </pre>
                         <p class="bold">
                             Always add semicolons between statements especially as a beginner!. 
@@ -124,10 +124,10 @@ alert("Hello")["apple", "pawpaw"].forEach(alert);
                     <div class="appear">
                         <h4>Single-Line Comments</h4>
 <pre>
-// This comment takes the entire line
-alert('Hey');
+<span class='c'>// This comment takes the entire line</span>
+<span class="f">alert</span>(<span class="g">'Hey'</span>);
 
-alert('painless'); // This is a comment after a statement
+<span class="f">alert</span>(<span class="g">'painless'</span>); <span class='c'>// This is a comment after a statement</span>
 </pre>
                     </div>
 
@@ -135,19 +135,19 @@ alert('painless'); // This is a comment after a statement
                         <h4>Multi-Line Comments</h4>
                         <p>Used to describe sections or temporarily disable blocks of code:</p>
 <pre>
-/* This is a comment too,
+<span class='c'>/* This is a comment too,
 but a multiline comment 
-*/
-alert('Hey');
-alert('painless');
+*/</span>
+<span class="f">alert</span>(<span class="g">'Hey'</span>);
+<span class="f">alert</span>(<span class="g">'painless'</span>);
 </pre>
                     </div>
 
                     <div class="appear">
                         <h4>Disabling Code Temporarily</h4>
 <pre>
-/* alert('Hey'); */
-alert('painless');
+<span class='c'>/* alert('Hey'); */</span>
+<span class="f">alert</span>(<span class="g">'painless'</span>);
 </pre>
                     </div>
 
@@ -155,8 +155,8 @@ alert('painless');
                         <h4>Nested Comments Don’t Work!</h4>
                         <p>JavaScript does not support nested comments. The following will throw an error:</p>
 <pre>
-/*
-  /* Invalid nested comment */
+<span class='c'>/*
+  /* Invalid nested comment */</span>
 */
 </pre>
                     </div>

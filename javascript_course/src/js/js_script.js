@@ -48,5 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.2 });
 
     articles.forEach(article => observer.observe(article));
+
 });
 
