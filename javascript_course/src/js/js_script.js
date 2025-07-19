@@ -50,4 +50,3 @@ document.addEventListener('DOMContentLoaded', function() {
     articles.forEach(article => observer.observe(article));
 
 });
-

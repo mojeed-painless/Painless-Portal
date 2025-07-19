@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+
+    <link rel="stylesheet" href="./src/css/js_general.css">
+    <link rel="stylesheet" href="./src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="./js_home.html" target="_self"><img src="./src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Variables</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>In most JavaScript programs, we work with data — that is, information that our 
+                        application needs to function.
+                        </p>
+
+                        <p>For example:</p>
+                        <ul>
+                            <li>An online store uses data like products, prices, and items in a shopping cart.</li>
+                            <li>A chat app needs to keep track of users, messages, and active conversations.</li>
+                            
+                        </ul>
+                        <p>To manage and store this information, <strong>JavaScript uses variables.</strong></p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>What is a Variable?</h3>
+                        <p>A <strong>variable</strong> is a container used to store data. This data can be text, numbers, 
+                            or other types of information.
+                        </p>
+
+                        <p>In JavaScript, you create (or <strong>declare</strong>) a variable using the <code>let</code> keyword.</p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Variable Declaration</h3>
+                        <p><strong>Declaration</strong> means introducing a variable to the program 
+                            so JavaScript knows it exists and sets aside space in memory for it.
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">message</span>;
+</pre>
+                        <p>This tells the browser: <em>"Prepare a container called message — I’ll put 
+                            something inside it soon."</em>
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Variable Assignment</h3>
+                        <p><strong>Assignment</strong> Assignment means giving a value to a declared 
+                            variable using the equals sign <code>=</code>.
+                        </p>
+<pre>
+<span class="p">message</span> = <span class="g">'Hello'</span>;
+</pre>
+                        <p>This stores the string <strong>'Hello'</strong> inside the variable message.</p>
+
+                        <p>You can access it any time:</p>
+<pre>
+<span class="f">alert</span>(<span class="p">message</span>); <span class="c">// shows "Hello"</span>
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Declare and Assign in One Step</h3>
+                        <p>It’s common to create a variable and store a value in it at the same time:</p>
+                    
+<pre>
+<span class="t">let</span> <span class="p">message</span> = <span class="g">'Hello!'</span>;
+<span class="f">alert</span>(<span class="p">message</span>); <span class="c">// Hello!</span>
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Declaring Multiple Variables</h3>
+                        <p>You can also declare multiple variables in one go:</p>
+                    
+<pre>
+<span class="t">let</span> <span class="p">user</span> = <span class="g">'John'</span>, <span class="p">age</span> = <span class="n">25</span>, <span class="p">message</span> = <span class="g">'Hello'</span>;
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <p>But for better clarity, it’s usually better to put each one on its own line:</p>
+<pre>                   
+<span class="t">let</span> <span class="p">user</span> = <span class="g">'John'</span>;
+<span class="t">let</span> <span class="p">age</span> = <span class="n">25</span>;
+<span class="t">let</span> <span class="p">message</span> = <span class="g">'Hello'</span>;  
+</pre>                  
+                    </div>
+
+                    <div class="appear">
+                        <h3>Updating a Variable</h3>
+                        <p>You can change what's inside a variable at any time:</p>
+<pre>
+<span class="t">let</span> <span class="p">message</span> = <span class="g">'Hello'</span>; 
+<span class="p">message</span> = <span class="g">'Welcome'</span>;
+<span class="f">alert</span>(<span class="p">message</span>); <span class="c">// Welcome!</span>
+</pre>
+                        <p>The old value is replaced by the new one.</p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Copying a Variable</h3>
+                        <p>You can copy the content of one variable into another:</p>
+<pre>
+<span class="t">let</span> <span class="p">greeting</span> = <span class="g">'Good morning!'</span>; 
+<span class="t">let</span> <span class="p">message</span>;
+
+<span class="p">message</span> = <span class="p">greeting</span>;
+
+<span class="f">alert</span>(<span class="p">greeting</span>); <span class="c">// Good morning!</span>
+<span class="f">alert</span>(<span class="p">message</span>); <span class="c">// Good morning!</span>
+</pre>
+                        <p>Both variables now hold the same value, though they're still separate lockers.</p>                    
+                    </div>
+
+                    <div class="appear">
+                        <h3>Declaring the Same Variable Twice</h3>
+                        <p>
+                            Once you've declared a variable with let, you should not declare it again 
+                            in the same scope. Trying to do so will result in an error:
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">message</span> = <span class="g">"This"</span>;
+
+<span class="c">// This will throw an error</span>
+<span class="t">let</span> <span class="p">message</span> = <span class="g">"That"</span>; <span class="c">// SyntaxError: 'message' has already been declared</span>
+
+If you want to update the value, just reassign it:
+
+<span class="p">message</span> = <span class="g">"That"</span>;<span class="c">// Correct way</span> 
+</pre>                        
+                    </div>
+
+                    <div class="appear">
+                        <h3>A Note on <code>var</code> (The Old Way)</h3>
+                        <p>In older JavaScript code, you might see <code>var</code> instead of <code>let</code>:</p>
+<pre>
+<span class="t">var</span> <span class="p">message</span> = <span class="g">'Hello'</span>;
+</pre>
+                        <p>
+                            It works similarly to <code>let</code> but behaves differently in certain 
+                            technical ways. For now, just know that <code>let</code> is the modern and preferred way 
+                            to declare variables. We'll cover the differences later.
+                        </p>                    
+                    </div>
+
+
+
+
+
+
+                        
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: JavaScript Variables</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./js_structure.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./var_naming.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="./src/js/js_script.js"></script>
+</body>
+</html>
