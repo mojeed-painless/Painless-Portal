@@ -30,13 +30,171 @@
             <section class="topic__section">
                 <article>
                     <header>
-                        <h2>Code Structure</h2>
+                        <h2>Javascript Code Structure</h2>
                     </header>
                 </article>
             </section>
 
             <section class="contents__section">
                 <article>
+
+                    <div class="appear">
+                        <p>Every programming language has building blocks, and in JavaScript, it all starts 
+                            with <strong>statements</strong>, <strong>semicolons</strong>, and 
+                            <strong>comments</strong>. Mastering these early gives you a strong foundation.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>What Are Statements?</h3>
+                        <p>A <strong>statement</strong> is a command or instruction that the browser executes.</p>
+                        
+                        <h4>Example:</h4>
+<pre>
+alert('Hello, world!');
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <p>This is a statement that tells the browser to show a pop-up message. 
+                            JavaScript code is made up of many such statements.
+                        </p>
+
+                        <p>You can write multiple statements in one line using a semicolon 
+                            <code>;</code>:
+                        </p>
+<pre>
+alert('Hey'); alert('painless');
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <p>But for better readability, it's common to write each statement on a new line:</p>
+<pre>
+alert('Hey');
+alert('painless');
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h3> Semicolons</h3>
+                        <p>In JavaScript, semicolons are used to separate statements. While they can often be 
+                            omitted when using line breaks, it's considered <strong>best practice</strong> 
+                            to include them.
+                        </p>
+                    
+
+                    <p>This works fine:</p>
+<pre>
+alert('Hey')
+alert('painless')
+</pre>
+                    </div>
+
+                    <div class="appear">
+                      <p>JavaScript automatically inserts semicolons where it thinks they're needed — a 
+                        feature called <strong>Automatic Semicolon Insertion (ASI)</strong>. 
+                        But ASI isn't perfect. For example:</p>
+
+<pre>
+alert("Hello")
+["apple", "pawpaw"].forEach(alert);
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <p>This will cause an error. Why? Because JavaScript reads it like this:</p>
+<pre>
+alert("Hello")["apple", "pawpaw"].forEach(alert);
+</pre>
+                        <p class="bold">
+                            Always add semicolons between statements especially as a beginner!. 
+                            It's safer and more readable.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3> Comments in JavaScript</h3>
+                        <p>As your code grows, you’ll want to leave notes to yourself or other developers. 
+                            That’s what <strong>comments</strong> are for! JavaScript ignores them during 
+                            execution.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Single-Line Comments</h4>
+<pre>
+// This comment takes the entire line
+alert('Hey');
+
+alert('painless'); // This is a comment after a statement
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Multi-Line Comments</h4>
+                        <p>Used to describe sections or temporarily disable blocks of code:</p>
+<pre>
+/* This is a comment too,
+but a multiline comment 
+*/
+alert('Hey');
+alert('painless');
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Disabling Code Temporarily</h4>
+<pre>
+/* alert('Hey'); */
+alert('painless');
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Nested Comments Don’t Work!</h4>
+                        <p>JavaScript does not support nested comments. The following will throw an error:</p>
+<pre>
+/*
+  /* Invalid nested comment */
+*/
+</pre>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Keyboard Shortcuts</h4>
+                        <ul>
+                            <li><strong>Single-line comment:</strong> <kbd>Ctrl + /</kbd> (Windows/Linux), <kbd>Cmd + /</kbd> (Mac)</li>
+                            <li><strong>Multiline comment:</strong> <kbd>Ctrl + Shift + /</kbd> or <kbd>Cmd + Option + /</kbd></li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h3 class="bold">
+                            <strong>Best Practice:</strong> Comment your code often! Comments are removed 
+                            during minification when publishing to production, so they don’t slow down your 
+                            site or take up space.
+                        </h3>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Summary</h3>
+                        <ul>
+                            <li>Statements are commands that the browser runs.</li>
+                            <li>Semicolons help avoid ambiguity — always use them!</li>
+                            <li>Comments are essential for clarity and collaboration.</li>
+                            <li>Nested comments are not allowed — use hotkeys to toggle comments quickly.</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: JavaScript Code Structure</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
 
                 </article>
             </section>

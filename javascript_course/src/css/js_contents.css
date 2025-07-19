@@ -153,6 +153,13 @@ code {
     border-radius: 0.3rem;
 }
 
+kbd {
+    padding: 0.2rem 0.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0.3rem;
+    border: 1px solid var(--border_color);
+}
+
 pre {
     background: var(--color_secondary);
     padding: 1rem;
