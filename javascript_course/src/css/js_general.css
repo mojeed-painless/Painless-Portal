@@ -223,7 +223,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .head__left i {
@@ -409,7 +409,7 @@ main {
     }
     
     .head__left {
-        gap: 1rem;
+        
     }
     
     .head__left p {
