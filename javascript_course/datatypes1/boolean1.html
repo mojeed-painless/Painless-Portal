@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean 1</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Boolean</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <p>
+                        The <strong>Boolean</strong> type in JavaScript has only <strong>two 
+                            possible values</strong>: <code>true</code> and <code>false</code>.
+                    </p>
+                    <p>
+                        This type is typically used to represent a <strong>yes/no</strong> 
+                        condition:<br>
+                        <code>true</code> means “yes” or “correct”<br>
+                        <code>false</code> means “no” or “incorrect”
+                    </p>
+
+                    <h4>Example:</h4>
+<pre>
+let isSubscribed = true;    // yes, the user is subscribed
+let hasDiscount = false;    // no, the user does not have a discount
+</pre>
+
+                    <p>Boolean values are also often the <strong>result of comparisons</strong>:</p>
+<pre>
+let isOlder = 30 > 18;
+
+alert(isOlder); // true (because 30 is greater than 18)
+</pre>
+
+                    <p>
+                        In the example above, the comparison <code>30 > 18</code> evaluates 
+                        to <code>true</code>, 
+                        so the value of <code>isOlder</code> is <code>true</code>.
+                    </p>
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Boolean</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./strings1.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./null1.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Javascript</title>
 
-    <link rel="stylesheet" href="./src/css/js_general.css">
-    <link rel="stylesheet" href="./src/css/js_contents.css">
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -17,7 +17,7 @@
 
         <div id="nav__container">
             <nav>
-                <a href="./js_home.html" target="_self"><img src="./src/img/white_logo.png" alt="logo"></a>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
                 <div class="userInfo">
                     <div class="dp">O</div>
                     <p>Olawale</p>
@@ -30,7 +30,7 @@
             <section class="topic__section">
                 <article>
                     <header>
-                        <h2>Link JavaScript to HTML</h2>
+                        <h2>Link Javascript to HTML</h2>
                     </header>
                 </article>
             </section>
@@ -67,15 +67,17 @@
 <span class="t">&lt;!DOCTYPE html&gt;</span>
 <span class="t">&lt;html&gt;</span>
 <span class="t">&lt;head&gt;</span>
-    <span class="t">&lt;title&gt;</span>My Page<span class="t">&lt;/title&gt;</span>
+    <span class="t">&lt;title&gt;</span> My Page <span class="t">&lt;/title&gt;</span>
 <span class="t">&lt;/head&gt;</span>
 <span class="t">&lt;body&gt;</span>
 
-    <span class="t">&lt;h1&gt;</span>Welcome<span class="t">&lt;/h1&gt;</span>
+    <span class="t">&lt;h1&gt;</span> Welcome <span class="t">&lt;/h1&gt;</span>
 
     <span class="t">&lt;script&gt;</span>
         <span class="f">alert</span><span class="b">(</span><span class="v">"Hello from JavaScript!"</span><span class="b">)</span>;
     <span class="t">&lt;/script&gt;</span>
+
+    <span class="t">&lt;p&gt;</span> Thanks for visiting this page <span class="t">&lt;/p&gt;</span>
 
 <span class="t">&lt;/body&gt;</span>
 <span class="t">&lt;/html&gt;</span>
@@ -87,15 +89,34 @@
                         <p>You can also write JavaScript in a separate file (e.g., <code>script.js</code>) 
                             and link it to your HTML:
                         </p>
+                        <p>It can be placed in the <code>&lt;head&gt;</code> tag just like this:</p>
 <pre>
 <span class="t">&lt;!DOCTYPE html&gt;</span>
 <span class="t">&lt;html&gt;</span>
 <span class="t">&lt;head&gt;</span>
-    <span class="t">&lt;title&gt;</span>External JS<span class="t">&lt;/title&gt;</span>
+    <span class="t">&lt;title&gt;</span> External JS <span class="t">&lt;/title&gt;</span>
     <span class="t">&lt;script</span> <span class="p">src</span>=<span class="v">"script.js"</span><span class="t">&gt;&lt;/script&gt;</span>
 <span class="t">&lt;/head&gt;</span>
 <span class="t">&lt;body&gt;</span>
-    <span class="t">&lt;h1&gt;</span>External JavaScript Example<span class="t">&lt;/h1&gt;</span>
+    <span class="t">&lt;h1&gt;</span> External JavaScript Example <span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span>
+</pre>
+                        </div>
+
+                        <div class="appear">
+                            <p>Or before the closing <code>&lt;/body&gt;</code> tag </p>
+<pre>
+<span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html&gt;</span>
+<span class="t">&lt;head&gt;</span>
+    <span class="t">&lt;title&gt;</span> External JS <span class="t">&lt;/title&gt;</span>
+<span class="t">&lt;/head&gt;</span>
+<span class="t">&lt;body&gt;</span>
+    <span class="t">&lt;h1&gt;</span> External JavaScript Example <span class="t">&lt;/h1&gt;</span>
+
+
+    <span class="t">&lt;script</span> <span class="p">src</span>=<span class="v">"script.js"</span><span class="t">&gt;&lt;/script&gt;</span>
 <span class="t">&lt;/body&gt;</span>
 <span class="t">&lt;/html&gt;</span>
 </pre>
@@ -144,7 +165,7 @@
     </div>
 
     
-    <script src="./src/js/js_script.js"></script>
+    <script src="../src/js/js_script.js"></script>
 </body>
 </html>
 

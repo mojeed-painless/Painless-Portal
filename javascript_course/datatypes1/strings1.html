@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings 1</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Strings</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <p>In JavaScript, a string must be surrounded by quotes.</p>
+
+<pre>
+let city = "Lagos";
+let city2 = 'Abuja is great too';
+let message = `Welcome to ${city}`;
+</pre>
+
+                    <p>There are 3 types of quotes used for Javascript strings:</p>
+                    <ul>
+                        <li><strong>Double quotes:</strong> <code>"Hello"</code></li>
+                        <li><strong>Single quotes:</strong> <code>'Hello'</code></li>
+                        <li><strong>Backticks:</strong> <code>`Hello`</code></li>
+                    </ul>
+
+                    <p>Double and single quotes are considered “simple” quotes and behave the same 
+                        way in JavaScript.
+                    </p>
+
+                    <h3>Backticks</h3>
+                    <p>Backticks, however, have extended functionality. They allow us to embed 
+                        variables and expressions inside a string using <code>${…}</code>. 
+                        For example:
+                    </p>
+
+<pre>
+let user = "Tosin";
+
+// embed a variable
+alert(`Hi, ${user}!`); // Hi, Tosin!
+
+// embed an expression
+alert(`2 multiplied by 5 is ${2 * 5}`); // 2 multiplied by 5 is 10
+</pre>
+
+                    <p>The expression inside <code>${…}</code> is evaluated and the result is 
+                        inserted into the string. We can embed variables, arithmetic expressions, 
+                        or more complex logic inside it.
+                    </p>
+
+                    <p><strong>Important:</strong> Only backticks support this kind of embedding. 
+                        If we use other types of quotes, the expression will not be evaluated:
+                    </p>
+
+<pre>
+alert("2 multiplied by 5 is ${2 * 5}"); // 2 multiplied by 5 is ${2 * 5}
+</pre>
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Strings</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./bigInt1.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./boolean1.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

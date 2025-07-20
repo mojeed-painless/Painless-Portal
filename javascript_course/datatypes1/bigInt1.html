@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigInt 1</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>BigInt</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                     <p>
+                        In JavaScript, the <code>number</code> type cannot safely represent integer 
+                        values larger than <strong>2<sup>53</sup> - 1</strong> (which is 
+                        <code>9007199254740991</code>) or less than <code>-9007199254740991</code>. 
+                        These limits define the <strong>safe integer range</strong>.
+                    </p>
+
+                    <h3>Problem</h3>
+                    <p>
+                        Although JavaScript can technically store larger integers, doing so may 
+                        lead to <strong>precision errors</strong>. For example:
+                    </p>
+
+<pre>
+console.log(9007199254740991 + 1); // 9007199254740992
+console.log(9007199254740991 + 2); // 9007199254740992 (wrong!)
+</pre>
+
+                    <p>
+                        Both expressions return the same result, even though they should be 
+                        different. This happens because JavaScript cannot accurately distinguish 
+                        numbers outside the safe range.
+                    </p>
+
+                    <h3>Solution</h3>
+                    <p>
+                        To solve this, JavaScript introduced the <strong>BigInt</strong> type, 
+                        which allows you to work with <em>integers of arbitrary length</em>.
+                    </p>
+
+                    <p>
+                        A BigInt is created by adding an <code>n</code> at the end of an integer 
+                        literal:
+                    </p>
+
+<pre>
+// the "n" at the end means it's a BigInt
+const accountBalance = 987654321987654321987654321987654321n;
+</pre>
+
+                    <p>
+                        BigInts are rarely needed for everyday tasks, but they are very useful 
+                        in fields like cryptography or handling precise timestamps.
+                    </p>
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: BigInt</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./numbers1.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./strings1.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

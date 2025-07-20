@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typeof 1</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>The "typeof" operator</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                     <p>
+                        The <code>typeof</code> operator helps determine the data type of a given 
+                        value. It's particularly useful when working with values of various types 
+                        or when you just want to quickly check what kind of data you're dealing with.
+                    </p>
+                    <p>
+                        When you run <code>typeof someValue</code>, it returns a string indicating
+                        the value’s type:
+                    </p>
+<pre>
+typeof undefined       // "undefined"
+typeof 42              // "number"
+typeof 900719925n      // "bigint"
+typeof false           // "boolean"
+typeof "hello"         // "string"
+typeof Symbol("key")   // "symbol"
+typeof null            // "object"
+</pre>
+
+                    <h3>Note:</h3>
+                    <ul>
+                        <li>
+                            <strong>Why <code>typeof null</code> returns "<code>object</code>":</strong>
+                            This is a long-standing bug in JavaScript. Although <code>null</code> 
+                            is a special value with its own type, <code>typeof null</code> 
+                            mistakenly returns "<code>object</code>". It has been preserved for 
+                            backward compatibility.
+                        </li>
+                    </ul>
+
+                    <h3><code>typeof(value)</code> vs <code>typeof value</code></h3>
+                    <p>
+                        Both of the following are valid and behave the same:
+                    </p>
+<pre>
+typeof userName
+typeof(userName)
+</pre>
+                    <p>
+                        While the second version uses parentheses, they are purely for grouping, 
+                        just like in mathematical expressions. Some developers prefer this style, 
+                        but the version without parentheses is more commonly used.
+                    </p>
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: The "typeof" operator</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./objects1.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="#" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>
