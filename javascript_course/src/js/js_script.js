@@ -35,7 +35,7 @@ head.forEach((item) => {
         }
     });
 });
-console.log("This message comes from an external JS file!");
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const articles = document.querySelectorAll('.appear');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.4 });
 
     articles.forEach(article => observer.observe(article));
 
