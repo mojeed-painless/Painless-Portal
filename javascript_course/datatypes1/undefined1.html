@@ -37,48 +37,58 @@
 
             <section class="contents__section">
                 <article>
+                    <div class="appear">
+                        <p>
+                            The special value <code>undefined</code> also stands apart. 
+                            Like <code>null</code>, it forms a type of its own.
+                        </p>
+                        <p>
+                            The meaning of <code>undefined</code> is simply: “value is not assigned”.
+                        </p>
+                    </div>
 
-                     <p>
-                        The special value <code>undefined</code> also stands apart. 
-                        Like <code>null</code>, it forms a type of its own.
-                    </p>
-                    <p>
-                        The meaning of <code>undefined</code> is simply: “value is not assigned”.
-                    </p>
-
+                    <div class="appear">
                     <h4>Example: Declared but not assigned</h4>
 <pre>
-let userStatus;
+<span class="t">let</span> <span class="p">userStatus</span>;
 
-alert(userStatus); // shows "undefined"
+<span class="f">alert</span>(<span class="p">userStatus</span>); <span class='c'>// shows "undefined"</span>
 </pre>
+</div>
+                    <div class="appear">
+                        <p>
+                            In this case, the variable <code>userStatus</code> was declared but not 
+                            given any value, so JavaScript assigns it the value <code>undefined</code> 
+                            by default.
+                        </p>
+                    </div>
 
-                    <p>
-                        In this case, the variable <code>userStatus</code> was declared but not 
-                        given any value, so JavaScript assigns it the value <code>undefined</code> 
-                        by default.
-                    </p>
-
-                    <h4>Example: Manually assigning undefined</h4>
+                    <div class="appear">
+                        <h4>Example: Manually assigning undefined</h4>
 <pre>
-let userStatus = "active";
+<span class="t">let</span> <span class="p">userStatus</span> <span class="r">=</span> <span class="g">"active"</span>;
 
-// change the value to undefined
-userStatus = undefined;
+<span class='c'>// change the value to undefined</span>
+<span class="p">userStatus</span> <span class="r">=</span> <span class="t">undefined</span>;
 
-alert(userStatus); // "undefined"
+<span class="f">alert</span>(<span class="p">userStatus</span>); <span class='c'>// "undefined"</span>
 </pre>
+</div>
 
-                    <p>
-                        Although it’s technically possible to assign <code>undefined</code> 
-                        manually, it is generally discouraged.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            Although it’s technically possible to assign <code>undefined</code> 
+                            manually, it is generally discouraged.
+                        </p>
+                    </div>
 
-                    <p>
-                        Instead, use <code>null</code> when you intentionally want to indicate an 
-                        “empty” or “unknown” value. <code>undefined</code> is best left as the 
-                        system’s way of saying “not yet assigned”.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            Instead, use <code>null</code> when you intentionally want to indicate an 
+                            “empty” or “unknown” value. <code>undefined</code> is best left as the 
+                            system’s way of saying “not yet assigned”.
+                        </p>
+                    </div>
 
 
                     <div class="appear">

@@ -38,50 +38,63 @@
             <section class="contents__section">
                 <article>
 
-                     <p>
-                        In JavaScript, the <code>number</code> type cannot safely represent integer 
-                        values larger than <strong>2<sup>53</sup> - 1</strong> (which is 
-                        <code>9007199254740991</code>) or less than <code>-9007199254740991</code>. 
-                        These limits define the <strong>safe integer range</strong>.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            In JavaScript, the <code>number</code> type cannot safely represent integer 
+                            values larger than <strong>2<sup>53</sup> - 1</strong> (which is 
+                            <code>9007199254740991</code>) or less than <code>-9007199254740991</code>. 
+                            These limits define the <strong>safe integer range</strong>.
+                        </p>
+                    </div>
 
-                    <h3>Problem</h3>
-                    <p>
-                        Although JavaScript can technically store larger integers, doing so may 
-                        lead to <strong>precision errors</strong>. For example:
-                    </p>
+                    <div class="appear">
+                        <h3>Problem</h3>
+                        <p>
+                            Although JavaScript can technically store larger integers, doing so may 
+                            lead to <strong>precision errors</strong>. For example:
+                        </p>
+                    </div>
+<div class="appear">
+<pre>
+console.<span class="f">log</span>(<span class="n">9007199254740991</span> <span class="r">+</span> <span class="n">1</span>); <span class='c'>// 9007199254740992</span>
+console.<span class="f">log</span>(<span class="n">9007199254740991</span> <span class="r">+</span> <span class="n">2</span>); <span class='c'>// 9007199254740992 (wrong!)</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            Both expressions return the same result, even though they should be 
+                            different. This happens because JavaScript cannot accurately distinguish 
+                            numbers outside the safe range.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Solution</h3>
+                        <p>
+                            To solve this, JavaScript introduced the <strong>BigInt</strong> type, 
+                            which allows you to work with <em>integers of arbitrary length</em>.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <p>
+                            A BigInt is created by adding an <code>n</code> at the end of an integer 
+                            literal:
+                        </p>
 
 <pre>
-console.log(9007199254740991 + 1); // 9007199254740992
-console.log(9007199254740991 + 2); // 9007199254740992 (wrong!)
+<span class='c'>// the "n" at the end means it's a BigInt</span>
+<span class="t">const</span> <span class="p">accountBalance</span> <span class="r">=</span> <span class="n">987654321987654321987654321987654321n</span>;
 </pre>
+</div>
 
-                    <p>
-                        Both expressions return the same result, even though they should be 
-                        different. This happens because JavaScript cannot accurately distinguish 
-                        numbers outside the safe range.
-                    </p>
-
-                    <h3>Solution</h3>
-                    <p>
-                        To solve this, JavaScript introduced the <strong>BigInt</strong> type, 
-                        which allows you to work with <em>integers of arbitrary length</em>.
-                    </p>
-
-                    <p>
-                        A BigInt is created by adding an <code>n</code> at the end of an integer 
-                        literal:
-                    </p>
-
-<pre>
-// the "n" at the end means it's a BigInt
-const accountBalance = 987654321987654321987654321987654321n;
-</pre>
-
-                    <p>
-                        BigInts are rarely needed for everyday tasks, but they are very useful 
-                        in fields like cryptography or handling precise timestamps.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            BigInts are rarely needed for everyday tasks, but they are very useful 
+                            in fields like cryptography or handling precise timestamps.
+                        </p>
+                    </div>
 
                     <div class="appear">
                         <div class="watch">

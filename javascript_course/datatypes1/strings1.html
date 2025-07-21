@@ -38,54 +38,64 @@
             <section class="contents__section">
                 <article>
 
-                    <p>In JavaScript, a string must be surrounded by quotes.</p>
+                    <div class="appear">
+                        <p>In JavaScript, a string must be surrounded by quotes.</p>
 
 <pre>
-let city = "Lagos";
-let city2 = 'Abuja is great too';
-let message = `Welcome to ${city}`;
+<span class="t">let</span> <span class="p">city</span> <span class="r">=</span> <span class="g">"Lagos"</span>;
+<span class="t">let</span> <span class="p">city2</span> <span class="r">=</span> <span class="g">'Abuja is great too'</span>;
+<span class="t">let</span> <span class="p">message</span> <span class="r">=</span> <span class="g">`Welcome to <span class="p">${city}</span>`</span>;
 </pre>
+                    </div>
 
-                    <p>There are 3 types of quotes used for Javascript strings:</p>
-                    <ul>
-                        <li><strong>Double quotes:</strong> <code>"Hello"</code></li>
-                        <li><strong>Single quotes:</strong> <code>'Hello'</code></li>
-                        <li><strong>Backticks:</strong> <code>`Hello`</code></li>
-                    </ul>
+                    <div class="appear">
+                        <p>There are 3 types of quotes used for Javascript strings:</p>
+                        <ul>
+                            <li><strong>Double quotes:</strong> <code>"Hello"</code></li>
+                            <li><strong>Single quotes:</strong> <code>'Hello'</code></li>
+                            <li><strong>Backticks:</strong> <code>`Hello`</code></li>
+                        </ul>
+                    </div>
 
-                    <p>Double and single quotes are considered “simple” quotes and behave the same 
-                        way in JavaScript.
-                    </p>
+                    <div class="appear">
+                        <p>Double and single quotes are considered “simple” quotes and behave the same 
+                            way in JavaScript.
+                        </p>
 
-                    <h3>Backticks</h3>
-                    <p>Backticks, however, have extended functionality. They allow us to embed 
-                        variables and expressions inside a string using <code>${…}</code>. 
-                        For example:
-                    </p>
+                        <h3>Backticks</h3>
+                        <p>Backticks, however, have extended functionality. They allow us to embed 
+                            variables and expressions inside a string using <code>${…}</code>. 
+                            For example:
+                        </p>
+                    </div>
+<div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">user</span> <span class="r">=</span> <span class="g">"Tosin"</span>;
+
+<span class='c'>// embed a variable</span>
+<span class="f">alert</span>(<span class="g">`Hi, <span class="p">${user}</span>!`</span>); <span class='c'>// Hi, Tosin!</span>
+
+<span class='c'>// embed an expression</span>
+<span class="f">alert</span>(<span class="g">`2 multiplied by 5 is <span class="p">${2 * 5}`</span>); <span class='c'>// 2 multiplied by 5 is 10</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>The expression inside <code>${…}</code> is evaluated and the result is 
+                            inserted into the string. We can embed variables, arithmetic expressions, 
+                            or more complex logic inside it.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <p><strong>Important:</strong> Only backticks support this kind of embedding. 
+                            If we use other types of quotes, the expression will not be evaluated:
+                        </p>
 
 <pre>
-let user = "Tosin";
-
-// embed a variable
-alert(`Hi, ${user}!`); // Hi, Tosin!
-
-// embed an expression
-alert(`2 multiplied by 5 is ${2 * 5}`); // 2 multiplied by 5 is 10
+<span class="f">alert</span>(<span class="g">"2 multiplied by 5 is ${2 * 5}"</span>); <span class='c'>// 2 multiplied by 5 is ${2 * 5}</span>
 </pre>
-
-                    <p>The expression inside <code>${…}</code> is evaluated and the result is 
-                        inserted into the string. We can embed variables, arithmetic expressions, 
-                        or more complex logic inside it.
-                    </p>
-
-                    <p><strong>Important:</strong> Only backticks support this kind of embedding. 
-                        If we use other types of quotes, the expression will not be evaluated:
-                    </p>
-
-<pre>
-alert("2 multiplied by 5 is ${2 * 5}"); // 2 multiplied by 5 is ${2 * 5}
-</pre>
-
+</div>
 
 
                     <div class="appear">

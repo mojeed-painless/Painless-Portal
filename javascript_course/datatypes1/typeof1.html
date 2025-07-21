@@ -38,49 +38,59 @@
             <section class="contents__section">
                 <article>
 
-                     <p>
-                        The <code>typeof</code> operator helps determine the data type of a given 
-                        value. It's particularly useful when working with values of various types 
-                        or when you just want to quickly check what kind of data you're dealing with.
-                    </p>
-                    <p>
-                        When you run <code>typeof someValue</code>, it returns a string indicating
-                        the value’s type:
-                    </p>
+                    <div class="appear">
+                        <p>
+                            The <code>typeof</code> operator helps determine the data type of a given 
+                            value. It's particularly useful when working with values of various types 
+                            or when you just want to quickly check what kind of data you're dealing with.
+                        </p>
+                        <p>
+                            When you run <code>typeof someValue</code>, it returns a string indicating
+                            the value’s type:
+                        </p>
+                    </div>
+<div class="appear">
 <pre>
-typeof undefined       // "undefined"
-typeof 42              // "number"
-typeof 900719925n      // "bigint"
-typeof false           // "boolean"
-typeof "hello"         // "string"
-typeof Symbol("key")   // "symbol"
-typeof null            // "object"
+<span class="t">typeof</span> <span class="t">undefined</span>       <span class='c'>// "undefined"</span>
+<span class="t">typeof</span> <span class="n">42</span>              <span class='c'>// "number"</span>
+<span class="t">typeof</span> <span class="n">900719925n</span>      <span class='c'>// "bigint"</span>
+<span class="t">typeof</span> <span class="t">false</span>           <span class='c'>// "boolean"</span>
+<span class="t">typeof</span> <span class="g">"hello"</span>         <span class='c'>// "string"</span>
+<span class="t">typeof</span> <span class="f">Symbol</span>(<span class="g">"key"</span>)   <span class='c'>// "symbol"</span>
+<span class="t">typeof</span> <span class="t">null</span>            <span class='c'>// "object"</span>
 </pre>
+</div>
+                    <div class="appear">
+                        <h3>Note:</h3>
+                        <ul>
+                            <li>
+                                <strong>Why <code>typeof null</code> returns "<code>object</code>":</strong>
+                                This is a long-standing bug in JavaScript. Although <code>null</code> 
+                                is a special value with its own type, <code>typeof null</code> 
+                                mistakenly returns "<code>object</code>". It has been preserved for 
+                                backward compatibility.
+                            </li>
+                        </ul>
+                    </div>
 
-                    <h3>Note:</h3>
-                    <ul>
-                        <li>
-                            <strong>Why <code>typeof null</code> returns "<code>object</code>":</strong>
-                            This is a long-standing bug in JavaScript. Although <code>null</code> 
-                            is a special value with its own type, <code>typeof null</code> 
-                            mistakenly returns "<code>object</code>". It has been preserved for 
-                            backward compatibility.
-                        </li>
-                    </ul>
-
-                    <h3><code>typeof(value)</code> vs <code>typeof value</code></h3>
-                    <p>
-                        Both of the following are valid and behave the same:
-                    </p>
+                    <div class="appear">
+                        <h3><code>typeof(value)</code> vs <code>typeof value</code></h3>
+                        <p>
+                            Both of the following are valid and behave the same:
+                        </p>
 <pre>
-typeof userName
-typeof(userName)
+<span class="t">typeof</span> <span class="p">userName</span>
+<span class="t">typeof</span>(<span class="p">userName</span>)
 </pre>
-                    <p>
-                        While the second version uses parentheses, they are purely for grouping, 
-                        just like in mathematical expressions. Some developers prefer this style, 
-                        but the version without parentheses is more commonly used.
-                    </p>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            While the second version uses parentheses, they are purely for grouping, 
+                            just like in mathematical expressions. Some developers prefer this style, 
+                            but the version without parentheses is more commonly used.
+                        </p>
+                    </div>
 
                     <div class="appear">
                         <div class="watch">
@@ -101,7 +111,7 @@ typeof(userName)
                      <span>previous</span>
                     </a>
 
-                    <a href="#" target="_self">
+                    <a href="../interactions/interactions.html" target="_self">
                      <span>next</span>
                      <i class="fa-solid fa-arrow-right"></i>
                     </a>

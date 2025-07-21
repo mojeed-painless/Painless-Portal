@@ -38,74 +38,88 @@
             <section class="contents__section">
                 <article>
 
-                    <p>
-                        The <strong>number</strong> type in JavaScript represents both integers 
-                        and floating-point (decimal) numbers.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            The <strong>number</strong> type in JavaScript represents both integers 
+                            and floating-point (decimal) numbers.
+                        </p>
 
 <pre>
-let price = 250; // integer
-price = 89.75; // floating-point
+<span class="t">let</span> <span class="p">price</span> <span class="r">=</span> <span class="n">250</span>; <span class='c'>// integer</span>
+<span class="p">price</span> <span class="r">=</span> <span class="n">89.75</span>; <span class='c'>// floating-point</span>
 </pre>
 
-                    <p>
-                        JavaScript supports several arithmetic operations such as:
-                        multiplication (<code>*</code>), division (<code>/</code>), 
-                        addition (<code>+</code>), subtraction (<code>-</code>), and more.
-                    </p>
+                        <p>
+                            JavaScript supports several arithmetic operations such as:
+                            multiplication (<code>*</code>), division (<code>/</code>), 
+                            addition (<code>+</code>), subtraction (<code>-</code>), and more.
+                        </p>
+                    </div>
 
-                    <p>
-                        In addition to regular numbers, JavaScript has some special numeric values 
-                        that also belong to the number type: 
-                        <code>Infinity</code>, <code>-Infinity</code>, and <code>NaN</code>.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            In addition to regular numbers, JavaScript has some special numeric values 
+                            that also belong to the number type: 
+                            <code>Infinity</code>, <code>-Infinity</code>, and <code>NaN</code>.
+                        </p>
+                    </div>
 
-                    <h3>Infinity</h3>
-                    <p>
-                        <code>Infinity</code> represents a mathematical infinity <code>∞</code>. 
-                        It’s a special value that’s greater than any number. 
-                        It usually appears as a result of dividing a number by zero.
-                    </p>
+                    <div class="appear">
+                        <h3>Infinity</h3>
+                        <p>
+                            <code>Infinity</code> represents a mathematical infinity <code>∞</code>. 
+                            It’s a special value that’s greater than any number. 
+                            It usually appears as a result of dividing a number by zero.
+                        </p>
+                    </div>
+<div class="appear">
+<pre>
+<span class="f">alert</span>( <span class="n">5</span> <span class="r">/</span> <span class="n">0</span> ); <span class='c'>// Infinity</span>
+<span class="f">alert</span>( <span class="p">Infinity</span> ); <span class='c'>// Infinity</span>
+</pre>
+</div>
+                    <div class="appear">
+                        <h3>NaN</h3>
+                        <p>
+                            <code>NaN</code> stands for “Not a Number” and represents a computational 
+                            error. It appears when a mathematical operation fails or doesn’t make sense.
+                        </p>
 
 <pre>
-alert( 5 / 0 ); // Infinity
-alert( Infinity ); // Infinity
+<span class="f">alert</span>( <span class="g">"hello"</span> <span class="r">/</span> <span class="n">3</span> ); <span class='c'>// NaN</span>
 </pre>
+                    </div>
 
-                    <h3>NaN</h3>
-                    <p>
-                        <code>NaN</code> stands for “Not a Number” and represents a computational 
-                        error. It appears when a mathematical operation fails or doesn’t make sense.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            Once <code>NaN</code> is produced, it spreads through any further 
+                            mathematical operations:
+                        </p>
 
 <pre>
-alert( "hello" / 3 ); // NaN
+<span class="f">alert</span>( <span class="p">NaN</span> <span class="r">+</span> <span class="n">2</span> );      <span class='c'>// NaN</span>
+<span class="f">alert</span>( <span class="n">7</span> <span class="r">*</span> <span class="p">NaN</span> );      <span class='c'>// NaN</span>
+<span class="f">alert</span>( <span class="g">"abc"</span> <span class="r">/</span> <span class="n">2</span> <span class="r">-</span> <span class="n">1</span> ); <span class='c'>// NaN</span>
 </pre>
+</div>
 
-                    <p>
-                        Once <code>NaN</code> is produced, it spreads through any further 
-                        mathematical operations:
-                    </p>
+                    <div class="appear">
+                        <h3>Mathematics is Safe in JavaScript</h3>
+                        <p>
+                            JavaScript allows you to perform all kinds of mathematical operations—even 
+                            ones that would crash other languages, like dividing by zero or multiplying 
+                            a string. The script won't throw a fatal error. At worst, you'll get 
+                            <code>NaN</code>.
+                        </p>
+                    </div>
 
-<pre>
-alert( NaN + 2 );      // NaN
-alert( 7 * NaN );      // NaN
-alert( "abc" / 2 - 1 ); // NaN
-</pre>
-
-                    <h3>Mathematics is Safe in JavaScript</h3>
-                    <p>
-                        JavaScript allows you to perform all kinds of mathematical operations—even 
-                        ones that would crash other languages, like dividing by zero or multiplying 
-                        a string. The script won't throw a fatal error. At worst, you'll get 
-                        <code>NaN</code>.
-                    </p>
-
-                    <p>
-                        These special values like <code>Infinity</code> and <code>NaN</code> 
-                        formally belong to the <strong>number</strong> type, 
-                        even though they don't behave like typical numbers.
-                    </p>
+                    <div class="appear">
+                        <p>
+                            These special values like <code>Infinity</code> and <code>NaN</code> 
+                            formally belong to the <strong>number</strong> type, 
+                            even though they don't behave like typical numbers.
+                        </p>
+                    </div>
 
                     <div class="appear">
                         <div class="watch">
