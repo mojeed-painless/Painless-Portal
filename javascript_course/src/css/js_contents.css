@@ -82,8 +82,9 @@ h3.bold {
 }
 
 h4 {
-    margin-top: 1rem;
+    margin: 1rem 0;
     text-decoration: underline;
+    color: var(--color_purple-light)
 }
 
 h5 {

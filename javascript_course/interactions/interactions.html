@@ -71,21 +71,45 @@
                     </div>
 
                     <div class="appear">
-                        <p>Syntax:</p>
+                        <h4>Syntax:</h4>
+<pre>
+<span class="f">prompt</span>(message, [<span class="t">defaultInput</span>]);
+</pre>
+<ul>
+    <li><code>message</code>: What will be displayed to the user. Usually a message requesting for user's input</li>
+    <li><code>defaultInput</code>: This is the default value that will appear in the input field,
+        then the users can cancel it and put their desired value.</li>
+</ul>
+
+                        <h4>Example</h4>
 <pre>
 <span class="f">prompt</span>(<span class="g">"What's your name?"</span>, <span class="g">"Guest"</span>);
 </pre>
                         <p>If the user clicks OK, the typed value is returned. If Cancel is clicked or 
                             ESC is pressed, <code>null</code> is returned.
                         </p>
+
+                        <p>The <code>defaultInput</code> can be left blank using an empty string</p>
+                        <h4>Example</h4>
+<pre>
+<span class="f">prompt</span>(<span class="g">"What's your name?"</span>, <span class="g">""</span>);
+</pre>
+
+                        <p>Now users would not see any default value in the input field, but can still input
+                            their desired value
+                        </p>
                     </div>
 
                     <div class="appear">
+                        <h4>Storing User Input</h4>
+                        <p>It should be noted that we can also store the user input in a variable and use 
+                            them when ever we need to</p>
+
                         <h4>Example:</h4>
 <pre>
 <span class="t">let</span> <span class="p">userName</span> <span class="r">=</span> <span class="f">prompt</span>(<span class="g">"Enter your username:"</span>, <span class="g">"user123"</span>);
 
-<span class="f">alert</span>(<span class="g">"Hello, "</span> <span class="r">+</span> <span class="p">userName</span> <span class="r">+</span> <span class="g">"!"</span>);
+<span class="f">alert</span>(<span class="g">`Hello, <span class="p">${userName}</span> <span class="g">!`</span>);
 </pre>
 </div>
 
@@ -94,7 +118,7 @@
                         <p>This function presents a message with OK and Cancel buttons, usually to confirm 
                             an action.
                         </p>
-                        <p>Syntax:</p>
+                        <p>Example:</p>
 <pre>
 <span class="f">confirm</span>(<span class="g">"Do you want to continue?"</span>);
 </pre>
@@ -109,13 +133,8 @@
                     <div class="appear">
                         <h4>Example:</h4>
 <pre>
-<span class="t">let</span> <span class="p">wantsToDownload</span> <span class="r">=</span> <span class="f">confirm</span>(<span class="g">"Would you like to download the file?"</span>);
-
-<span class="t">if</span> (<span class="p">wantsToDownload</span> <span class="r">==</span> <span class="t">true</span>) {
-    <span class="f">alert</span>(<span class="g">"Starting download..."</span>);
-} <span class="t">else</span> {
-    <span class="f">alert</span>(<span class="g">"Download canceled."</span>);
-}
+<span class="t">let</span> <span class="p">registeredUser</span> <span class="r">=</span> <span class="f">confirm</span>(<span class="g">"Are you a registered user?"</span>);
+<span class="f">alert</span>(<span class="p">registeredUser</span>) <span class="c">// true if OK is clicked</span>
 </pre>
 </div>
                     <div class="appear">
