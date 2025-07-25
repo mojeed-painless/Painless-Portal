@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Conversion</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>String Conversion</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+                    <div class="appear">
+                        <p>String conversion occurs when a value needs to be represented as text. 
+                            This happens automatically in certain situations as previously discussed.
+                        </p>
+    
+                        <p>We can also manually convert any value into a string using the 
+                            <code>String()</code> function.
+                        </p>
+                    </div>
+                
+<div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">existingUser</span> <span class="r">=</span> <span class="t">false</span>;
+<span class="f">alert</span>(<span class="f">typeof</span> <span class="p">existingUser</span>); <span class='c'>// boolean</span>
+
+<span class="p">existingUser</span> <span class="r">=</span> <span class="f">String</span>(<span class="p">existingUser</span>); <span class='c'>// now it's a string</span>
+<span class="f">alert</span>(<span class="f">typeof</span> <span class="p">existingUser</span>); <span class='c'>// string</span>
+</pre>
+
+                        <p>As shown above, <code>String()</code> changes the data type of 
+                            <code>false</code> to the string <code>"false"</code>.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Other Examples</h4>
+<pre>
+<span class='c'>// Number to string</span>
+<span class="t">let</span> <span class="p">score</span> <span class="r">=</span> <span class="n">100</span>;
+<span class="t">let</span> <span class="p">scoreText</span> <span class="r">=</span> <span class="f">String</span>(<span class="p">score</span>); 
+<span class="f">alert</span>(<span class="p">scoreText</span>);   <span class='c'>// "100"</span>
+
+<span class='c'>// null to string</span>
+<span class="t">let</span> <span class="p">response</span> <span class="r">=</span> <span class="t">null</span>;
+<span class="t">let</span> <span class="p">responseText</span> <span class="r">=</span> <span class="f">String</span>(<span class="p">response</span>); 
+<span class="f">alert</span>(<span class="p">responseText</span>)     <span class='c'>// "null"</span>
+
+<span class='c'>// undefined to string</span>
+<span class="t">let</span> <span class="p">value</span>;
+<span class="t">let</span> <span class="p">valueText</span> <span class="r">=</span> <span class="f">String</span>(<span class="p">value</span>); 
+<span class="f">alert</span>(<span class="p">valueText</span>)    <span class='c'>// "undefined"</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Why Use String Conversion?</h3>
+                        <ul>
+                            <li>To display values on the screen using <code>alert()</code>, <code>document.write()</code>, or <code>console.log()</code></li>
+                            <li>To store data in text format (e.g. sending data over a network)</li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: String Conversion</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./type_conversions.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./number_conv.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

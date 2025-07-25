@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Conversion</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+        table pre {
+            background: transparent;
+            padding: 0;
+            border-left: 0px solid var(--color_active);
+            margin: 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Number Conversion</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>Numeric conversion occurs automatically when mathematical operations are applied 
+                            to non-numeric values. This means that JavaScript tries to convert the values 
+                            into numbers where necessary.
+                        </p>
+
+                    <h4>Example</h4>
+<pre>
+<span class="f">alert</span>(<span class="g">"10"</span> <span class="r">/</span> <span class="g">"2"</span>); <span class='c'>// <span class="n">5</span>, strings are converted to numbers</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>You can also explicitly convert a value into a number using the 
+                            <code>Number()</code> function:
+                        </p>
+
+                    <h4>Example</h4>
+<pre>
+<span class="t">let</span> <span class="p">userInput</span> <span class="r">=</span> <span class="g">"456"</span>;
+<span class="f">alert</span>(<span class="f">typeof</span> <span class="p">userInput</span>); <span class='c'>// string</span>
+
+<span class="t">let</span> <span class="p">numericInput</span> <span class="r">=</span> <span class="f">Number</span>(<span class="p">userInput</span>);
+<span class="f">alert</span>(<span class="p">numericInput</span>); <span class='c'>// <span class="n">456</span></span>
+<span class="f">alert</span>(<span class="f">typeof</span> <span class="p">numericInput</span>); <span class='c'>// number</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>This is especially useful when values come from user input forms or 
+                            text sources. For example, form fields return string values even if the user 
+                            enters numbers.
+                        </p>
+                    </div>
+                    
+                    <div class="appear">
+                        <h3>Invalid Conversions</h3>
+                        <p>If a string doesn't represent a valid number, the conversion result will be 
+                            <code>NaN</code> (Not a Number):
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">ageInput</span> <span class="r">=</span> <span class="f">Number</span>(<span class="g">"some random text"</span>);
+
+<span class="f">alert</span>(<span class="p">ageInput</span>); <span class='c'>// NaN</span>
+<span class="f">alert</span>(<span class="f">typeof</span> <span class="p">ageInput</span>); <span class='c'>// number</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Numeric Conversion Rules</h3>
+                        <table border="1">
+                            <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Converts to</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>undefined</td>
+                                <td>NaN</td>
+                            </tr>
+                            <tr>
+                                <td>null</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>true</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>false</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><pre>"  789  "</pre></t>
+                                <td>789</td>
+                            </tr>
+                            <tr>
+                                <td>"99xyz"</td>
+                                <td>NaN</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="appear">
+                        <h4>More Examples</h4>
+<pre>
+<span class="f">alert</span>(<span class="f">Number</span>(<span class="g">"   789   "</span>));     <span class='c'>// <span class="n">789</span></span>
+<span class="f">alert</span>(<span class="f">Number</span>(<span class="g">"abc123"</span>));        <span class='c'>// NaN</span>
+<span class="f">alert</span>(<span class="f">Number</span>(<span class="t">true</span>));            <span class='c'>// <span class="n">1</span></span>
+<span class="f">alert</span>(<span class="f">Number</span>(<span class="t">false</span>));           <span class='c'>// <span class="n">0</span></span>
+<span class="f">alert</span>(<span class="f">Number</span>(<span class="t">undefined</span>));       <span class='c'>// NaN</span>
+<span class="f">alert</span>(<span class="f">Number</span>(<span class="t">null</span>));            <span class='c'>// <span class="n">0</span></span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>It’s important to understand these behaviors when dealing with data conversions 
+                            in JavaScript, especially when performing calculations based on user input 
+                            or external data sources.
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Number Conversion</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./string_conv.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./boolean_conv.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

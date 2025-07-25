@@ -112,6 +112,10 @@ ul li {
     list-style-type: circle;
 }
 
+ul ul li {
+    list-style-type: square;
+}
+
 ol {
     margin-top: 1rem;
 }
@@ -135,7 +139,7 @@ th, td {
 }
 
 th {
-  background-color: var(--para_bg);
+  background-color: var(--color_blue-dark);
 }
 
 blockquote {

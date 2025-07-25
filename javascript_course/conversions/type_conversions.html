@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversions</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Type Conversions</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+                    <div class="appear">
+                        <p>In JavaScript, values are often automatically converted from one type to another 
+                            when used with different operators or functions. This behavior is known as 
+                            <strong>type coercion</strong>.
+                        </p>
+                    
+
+                        <h4>Example:</h4>
+                        <p>Some functions like <code>alert()</code> convert any value into a string before 
+                            displaying it:
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">temperature</span> <span class="r">=</span> <span class="n">28</span>;
+<span class="f">alert</span>(<span class="g">`Today's temperature is <span class="p">${temperature}</span>`</span>); <span class='c'>// "28" is converted to a string</span>
+</pre>
+</div>
+                    <div class="appear">
+                        <p>Mathematical operations automatically convert values to numbers:</p>
+<pre>
+<span class="t">let</span> <span class="p">width</span> <span class="r">=</span> <span class="g">"40"</span>;
+<span class="t">let</span> <span class="p">height</span> <span class="r">=</span> <span class="g">"5"</span>;
+<span class="t">let</span> <span class="p">area</span> <span class="r">=</span> <span class="p">width</span> <span class="r">*</span> <span class="p">height</span>; <span class='c'>// "40" and "5" are converted to numbers</span>
+<span class="f">alert</span>(<span class="p">area</span>); <span class='c'>// Outputs: 200</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Explicit Type Conversion</h3>
+                        <p>Sometimes, you need to manually convert a value to a specific type. 
+                            JavaScript provides functions for this:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <ul>
+                            <li><code>String(value)</code> – converts a value to a string</li>
+                            <li><code>Number(value)</code> – converts a value to a number</li>
+                            <li><code>Boolean(value)</code> – converts a value to <code>true</code> or <code>false</code></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Type Conversions</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="../interactions/interactions.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./string_conv.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

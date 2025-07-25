@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Conversion</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+        ul pre {
+            background: transparent;
+            padding: 0;
+            border-left: 0px solid var(--color_active);
+            margin: 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Boolean Conversion</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>Boolean conversion is one of the simplest types of data conversions in JavaScript.</p>
+
+                        <p>You can convert any value to a boolean using the <code>Boolean(value)</code> 
+                            function. Let's look at some examples:
+                        </p>
+                    </div>
+<div class="appear">
+<pre>
+<span class="f">alert</span>( <span class="f">Boolean</span>(<span class="n">10</span>) );          <span class='c'>// true</span>
+<span class="f">alert</span>( <span class="f">Boolean</span>(<span class="n">0</span>) );           <span class='c'>// false</span>
+
+<span class="f">alert</span>( <span class="f">Boolean</span>(<span class="g">"text"</span>) );      <span class='c'>// true</span>
+<span class="f">alert</span>( <span class="f">Boolean</span>(<span class="g">""</span>) );          <span class='c'>// false</span>
+
+<span class="f">alert</span>( <span class="f">Boolean</span>(<span class="t">null</span>) );        <span class='c'>// false</span>
+<span class="f">alert</span>( <span class="f">Boolean</span>(<span class="t">undefined</span>) );   <span class='c'>// false</span>
+
+<span class="f">alert</span>( <span class="f">Boolean</span>(<span class="p">NaN</span>) );         <span class='c'>// false</span>
+<span class="f">alert</span>( <span class="f">Boolean</span>(<span class="g">"false"</span>) );     <span class='c'>// true - it's a non-empty string</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Important Notes</h3>
+                        <ul>
+                            <li>All non-zero numbers (positive or negative) are considered <code>true</code>.</li>
+                            <li>All non-empty strings are also considered <code>true</code>, including strings like <code>"0"</code> and <code>" "</code> (a space).</li>
+                            <li>The following values are the only ones considered <code>false</code> in JavaScript:
+                            <ul>
+                                
+                                    <li><pre>0</pre></li>
+                                    <li><pre>"" (empty string)</pre></li>
+                                    <li><pre>null</pre></li>
+                                    <li><pre>undefined</pre></li>
+                                    <li><pre>NaN</pre></li>
+                                
+                            </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Examples</h4>
+<pre>
+<span class="t">let</span> <span class="p">result</span> <span class="r">=</span> <span class="f">Boolean</span>(<span class="g">"JavaScript"</span>);
+<span class="f">alert</span>(<span class="p">result</span>); <span class='c'>// true</span>
+
+<span class="t">let</span> <span class="p">emptyValue</span> <span class="r">=</span> <span class="g">""</span>;
+<span class="f">alert</span>(<span class="f">Boolean</span>(<span class="p">emptyValue</span>)); <span class='c'>// false</span>
+
+<span class="t">let</span> <span class="p">valueWithSpace</span> <span class="r">=</span> <span class="g">" "</span>;
+<span class="f">alert</span>(<span class="f">Boolean</span>(<span class="p">valueWithSpace</span>)); <span class='c'>// true</span>
+
+<span class="t">let</span> <span class="p">isZero</span> <span class="r">=</span> <span class="f">Boolean</span>(<span class="n">0</span>);
+<span class="f">alert</span>(<span class="p">isZero</span>); <span class='c'>// false</span>
+
+<span class="t">let</span> <span class="p">isNumber</span> <span class="r">=</span> <span class="f">Boolean</span>(<span class="n">-25</span>);
+<span class="f">alert</span>(<span class="p">isNumber</span>); <span class='c'>// true</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>Boolean conversion is especially useful when validating input, toggling flags, 
+                            or checking conditions based on user data.
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Boolean Conversion</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./number_conv.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="#" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>
