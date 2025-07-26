@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment & decrement</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Increment & decrement</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>In JavaScript, one of the most common operations is increasing or decreasing a 
+                            number by 1. JavaScript provides special shorthand operators for this:
+                        </p>
+
+                        <ul>
+                            <li><strong>Increment (<code>++</code>)</strong> increases a variable's value by 1.</li>
+                            <li><strong>Decrement (<code>--</code>)</strong> decreases a variable's value by 1.</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Basic Usage</h3>
+<pre>
+<span class="t">let</span> <span class="p">score</span> <span class="r">=</span> <span class="n">10</span>;
+<span class="p">score</span><span class="r">++</span>;  <span class='c'>// same as score = score + 1</span>
+<span class="f">alert</span>(<span class="p">score</span>); <span class='c'>// 11</span>
+
+<span class="t">let</span> <span class="p">lives</span> <span class="r">=</span> <span class="n">5</span>;
+<span class="p">lives</span><span class="r">--</span>;  <span class='c'>// same as lives = lives - 1</span>
+<span class="f">alert</span>(<span class="p">lives</span>); <span class='c'>// 4</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>These operators only work on variables — you can't do <code>7++</code> or 
+                            <code>--3</code>.
+                        </p>
+
+                        <h3>Prefix vs Postfix</h3>
+                        <p>The <code>++</code> or <code>--</code> can appear before or after a variable:</p>
+
+                        <ul>
+                            <li><strong>Prefix:</strong> <code>++value</code> or <code>--value</code></li>
+                            <li><strong>Postfix:</strong> <code>value++</code> or <code>value--</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <p>Both increment or decrement the value, but they behave differently when used in 
+                            expressions.
+                        </p>
+
+                        <p>The difference is visible when the result of the operation is used immediately.</p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Prefix Example</h4>
+<pre>
+<span class="t">let</span> <span class="p">points</span> <span class="r">=</span> <span class="n">3</span>;
+<span class="t">let</span> <span class="p">result</span> <span class="r">=</span> <span class="r">++</span><span class="p">points</span>;  <span class='c'>// Increments first, then returns the new value</span>
+
+<span class="f">alert</span>(<span class="p">result</span>); <span class='c'>// 4</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h4>Postfix Example</h4>
+<pre>
+<span class="t">let</span> <span class="p">energy</span> <span class="r">=</span> <span class="n">3</span>;
+<span class="t">let</span> <span class="p">result</span> <span class="r">=</span> <span class="p">energy</span><span class="r">++</span>;  <span class='c'>// Returns the current value, before it tries to increment</span>
+
+<span class="f">alert</span>(<span class="p">result</span>); <span class='c'>// 3</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Summary</h3>
+                        <p>If you only need to update the value, either form works:</p>
+
+<pre>
+<span class="t">let</span> <span class="p">level</span> <span class="r">=</span> <span class="n">0</span>;
+
+<span class="p">level</span><span class="r">++</span>;
+<span class="r">++</span><span class="p">level</span>;
+
+<span class="f">alert</span>(<span class="p">level</span>); <span class='c'>// 2</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>But if you want to use the result of the operation immediately, choose wisely:</p>
+                        <ul>
+                            <li><code>++var</code>: returns new value</li>
+                            <li><code>var++</code>: returns old value</li>
+                        </ul>
+
+                        <h3>Increment/Decrement in Expressions</h3>
+
+                        <p>These operators can also be used inside mathematical expressions.</p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">multiplier</span> <span class="r">=</span> <span class="n">2</span>;
+<span class="t">let</span> <span class="p">value</span> <span class="r">=</span> <span class="n">1</span>;
+
+<span class="f">alert</span>(<span class="n">5</span> <span class="r">*</span> <span class="r">++</span><span class="p">value</span>); <span class='c'>// 10 (value becomes 2 before the multiplication)</span>
+</pre>
+
+<pre>
+<span class="t">let</span> <span class="p">step</span> <span class="r">=</span> <span class="n">1</span>;
+
+<span class="f">alert</span>(<span class="n">5</span> <span class="r">*</span> <span class="p">step</span><span class="r">++</span>); <span class='c'>// 5 (uses 1 first, then step becomes 2)</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>However, this can reduce code readability. A cleaner style is to keep 
+                            expressions simple:
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">multiplier</span> <span class="r">=</span> <span class="n">2</span>;
+<span class="t">let</span> <span class="p">value</span> <span class="r">=</span> <span class="n">1</span>;
+
+<span class="r">++</span><span class="p">value</span>
+
+<span class="f">alert</span>(<span class="n">5</span> <span class="r">*</span> <span class="p">value</span>); <span class='c'>// 10</span>
+</pre>
+</div>
+
+<div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">steps</span> <span class="r">=</span> <span class="n">1</span>;
+
+<span class="f">alert</span>(<span class="n">5</span> <span class="r">*</span> <span class="p">steps</span>);  <span class='c'>// 5</span>
+<span class="p">steps</span><span class="r">++</span>;
+</pre>
+</div>
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Increment & decrement</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./modify.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./bitwise.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

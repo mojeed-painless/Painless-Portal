@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operator</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Assignment Operator</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>In JavaScript, the assignment operator (<code>=</code>) is not just a way to 
+                            store values in variables — it is actually an operator with its own precedence 
+                            level. It has a very low precedence of <strong>2</strong>, meaning other 
+                            operations are usually performed before it in an expression.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <p>For example, consider the following expression:</p>
+
+<pre>
+<span class="t">let</span> <span class="p">x</span> <span class="r">=</span> <span class="n">3</span> <span class="r">*</span> <span class="n">3</span> <span class="r">+</span> <span class="n">2</span>;
+
+<span class="f">alert</span>(<span class="p">x</span>); <span class='c'>// 11</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>The multiplication and addition are executed first due to their higher precedence, 
+                            then the result is assigned to <code>x</code>.</p>
+
+                        <h3>Assignment Returns a Value</h3>
+                        <p>Unlike what we might assume, <code>=</code> is not a "special rule" in the 
+                            language — it’s just another operator. Like other operators, it <strong>returns 
+                            a value</strong>.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <p>This means the result of an assignment can be used directly in another expression. 
+                            Let’s see an example:
+                        </p>
+
+<pre>
+<span class="t">let</span> <span class="p">alpha</span> <span class="r">=</span> <span class="n">5</span>;
+<span class="t">let</span> <span class="p">beta</span> <span class="r">=</span> <span class="n">7</span>;
+
+<span class="t">let</span> <span class="p">result</span> <span class="r">=</span> <span class="n">20</span> <span class="r">-</span> (<span class="p">alpha</span> <span class="r">=</span> <span class="p">beta</span> <span class="r">+</span> <span class="n">4</span>);
+
+<span class="f">alert</span>(<span class="p">alpha</span>); <span class='c'>// 11</span>
+<span class="f">alert</span>(<span class="p">result</span>); <span class='c'>// 9</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>Here, <code>(alpha = beta + 4)</code> returns <code>11</code>, which is then 
+                            used in the subtraction. So, <code>20 - 11</code> gives <code>9</code>.
+                        </p>
+
+                        <p>This behavior is sometimes used in library code, although it may reduce clarity. 
+                            So, while it's important to understand, try to avoid using it in this way for 
+                            regular programming unless necessary.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Chaining Assignments</h3>
+
+                        <p>Assignment operations can also be <strong>chained</strong> from right to left. 
+                            This is useful when you want to assign the same value to multiple variables at 
+                            once.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">one</span>, <span class="p">two</span>, <span class="p">three</span>;
+
+<span class="p">one</span> <span class="r">=</span> <span class="p">two</span> <span class="r">=</span> <span class="p">three</span> <span class="r">=</span> <span class="n">8</span> <span class="r">+</span> <span class="n">2</span>;
+
+<span class="f">alert</span>(<span class="p">one</span>);   <span class='c'>// 10</span>
+<span class="f">alert</span>(<span class="p">two</span>);   <span class='c'>// 10</span>
+<span class="f">alert</span>(<span class="p">three</span>); <span class='c'>// 10</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>In this example, <code>8 + 2</code> is evaluated first. The result 
+                            <code>10</code> is assigned to <code>three</code>, then to <code>two</code>, 
+                            and finally to <code>one</code>.
+                        </p>
+
+                        <p>Even though this chaining works, for better readability, it's often preferred to 
+                            write assignments like this:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">one</span>, <span class="p">two</span>, <span class="p">three</span>;
+
+<span class="p">three</span> <span class="r">=</span> <span class="n">8</span> <span class="r">+</span> <span class="n">2</span>;
+<span class="p">two</span> <span class="r">=</span> <span class="p">three</span>;
+<span class="p">one</span> <span class="r">=</span> <span class="p">three</span>;
+</pre>
+
+                        <p>This makes the code easier to understand and debug.</p>
+                    </div>
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Assignment Operator</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./precedence.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./modify.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

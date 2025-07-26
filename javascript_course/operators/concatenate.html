@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Concatenation</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>String Concatenation</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>In JavaScript, the binary plus operator (<code>+</code>) typically adds numbers. 
+                            However, when it's used with strings, it performs concatenation — that is, 
+                            it joins the strings together into one.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Example:</h4>
+<pre>
+<span class="t">let</span> <span class="p">greeting</span> <span class="r">=</span> <span class="g">"hello"</span> <span class="r">+</span> <span class="g">"world"</span>;
+<span class="f">alert</span>(<span class="p">greeting</span>); <span class='c'>// helloworld</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>When using <code>+</code>, if at least one operand is a string, JavaScript 
+                            converts the other operand to a string and then concatenates.
+                        </p>
+
+                        <h4>Example: Mixing strings and numbers</h4>
+<pre>
+<span class="f">alert</span>(<span class="g">'5'</span> <span class="r">+</span> <span class="n">3</span>); <span class='c'>// "53"</span>
+<span class="f">alert</span>(<span class="n">7</span> <span class="r">+</span> <span class="g">'2'</span>); <span class='c'>// "72"</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>In both cases above, the number is converted into a string and then joined.</p>
+
+                        <h3>Operator Order Matters</h3>
+                        <p>Operators in JavaScript are evaluated from left to right. This affects the 
+                            final result when combining strings and numbers.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Example: First numbers, then string</h4>
+<pre>
+<span class="f">alert</span>(<span class="n">10</span> <span class="r">+</span> <span class="n">10</span> <span class="r">+</span> <span class="g">'5'</span>); <span class='c'>// "205"</span>
+</pre>
+
+                        <ul>
+                            <li><pre>10 + 10 is calculated first → 20</pre></li>
+                            <li><pre>'5' is a string → 20 + '5' becomes "205"</pre></li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Example: Starting with a string</h4>
+<pre>
+<span class="f">alert</span>(<span class="g">'5'</span> <span class="r">+</span> <span class="n">10</span> <span class="r">+</span> <span class="n">10</span>); <span class='c'>// "51010"</span>
+</pre>
+
+                        <ul>
+                            <li><pre>'5' + 10 becomes "510"</pre></li>
+                            <li><pre>"510" + 10 becomes "51010"</pre></li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <p>Once a string is introduced, all subsequent additions are treated as string 
+                            concatenations.
+                        </p>
+
+                        <h3>Other Operators Don’t Concatenate Strings</h3>
+                        <p>The <code>+</code> operator is the only arithmetic operator that behaves this 
+                            way with strings. All other arithmetic operators convert their operands to 
+                            numbers and then perform calculations.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Example:</h4>
+<pre>
+<span class="f">alert</span>(<span class="n">20</span> <span class="r">-</span> <span class="g">'4'</span>); <span class='c'>// <span class="n">16</span> → string '4' is converted to number</span>
+<span class="f">alert</span>(<span class="g">'9'</span> <span class="r">/</span> <span class="g">'3'</span>); <span class='c'>// <span class="n">3</span> → both strings are converted to numbers</span>
+</pre>
+</div>
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: String Concatenation</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./maths.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./numeric_conv.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

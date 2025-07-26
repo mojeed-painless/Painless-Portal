@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Operators</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Maths Operators</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>JavaScript supports several basic mathematical operations, including:</p>
+                        <ul>
+                            <li>Addition <code>+</code></li>
+                            <li>Subtraction <code>-</code></li>
+                            <li>Multiplication <code>*</code></li>
+                            <li>Division <code>/</code></li>
+                            <li>Remainder <code>%</code></li>
+                            <li>Exponentiation <code>**</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <p>These operators can be used with numbers to perform calculations. We have no issue
+                            with the first four operators as they are straightforward.
+                            However, the last two operators, <code>%</code> and <code>**</code>, may require 
+                            some explanation. Let's explore each of them in detail:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Remainder</h3>
+                        <p>The remainder operator <code>%</code> returns the remainder left over when one 
+                            number is divided by another. It uses the percentages sign but it is in no way 
+                            related to percentages.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Examples:</h4>
+<pre>
+<span class="t">let</span> <span class="p">x</span> <span class="r">=</span> <span class="n">11</span>;
+<span class="t">let</span> <span class="p">y</span> <span class="r">=</span> <span class="n">4</span>;
+<span class="f">alert</span>( <span class="p">x</span> <span class="r">%</span> <span class="p">y</span> ); <span class='c'>// 3, because 11 divided by 4 leaves a remainder of 3</span>
+
+<span class="t">let</span> <span class="p">a</span> <span class="r">=</span> <span class="n">15</span>;
+<span class="t">let</span> <span class="p">b</span> <span class="r">=</span> <span class="n">6</span>;
+<span class="f">alert</span>( <span class="p">a</span> <span class="r">%</span> <span class="p">b</span> ); <span class='c'>// 3, remainder of 15 divided by 6</span>
+
+<span class="t">let</span> <span class="p">p</span> <span class="r">=</span> <span class="n">20</span>;
+<span class="t">let</span> <span class="p">q</span> <span class="r">=</span> <span class="n">5</span>;
+<span class="f">alert</span>( <span class="p">p</span> <span class="r">%</span> <span class="p">q</span> ); <span class='c'>// 0, because 20 is evenly divisible by 5</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Exponentiation</h3>
+                        <p>The exponentiation operator <code>**</code> raises the first operand to the 
+                            power of the second operand.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Examples:</h4>
+<pre>
+<span class="t">let</span> <span class="p">base</span> <span class="r">=</span> <span class="n">3</span>;
+<span class="t">let</span> <span class="p">power</span> <span class="r">=</span> <span class="n">2</span>;
+<span class="f">alert</span>( <span class="p">base</span> <span class="r">**</span> <span class="p">power</span> ); <span class='c'>// 3² = 9</span>
+
+<span class="t">let</span> <span class="p">m</span> <span class="r">=</span> <span class="n">5</span>;
+<span class="t">let</span> <span class="p">n</span> <span class="r">=</span> <span class="n">3</span>;
+<span class="f">alert</span>( <span class="p">m</span> <span class="r">**</span> <span class="p">n</span> ); <span class='c'>// 5³ = 125</span>
+
+<span class="t">let</span> <span class="p">c</span> <span class="r">=</span> <span class="n">9</span>;
+<span class="f">alert</span>( <span class="p">c</span> <span class="r">**</span> (<span class="n">1</span><span class="r">/</span><span class="n">2</span>) ); <span class='c'>// 3, square root of 9</span>
+
+<span class="t">let</span> <span class="p">d</span> <span class="r">=</span> <span class="n">27</span>;
+<span class="f">alert</span>( <span class="p">d</span> <span class="r">**</span> (<span class="n">1</span><span class="r">/</span><span class="n">3</span>) ); <span class='c'>// 3, cube root of 27</span>
+</pre>
+</div>
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Maths Operators</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./basic_operators.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./concatenate.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

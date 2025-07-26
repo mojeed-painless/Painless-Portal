@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Comma Operator</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>The Comma Operator</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>
+                            The <strong>comma operator (<code>,</code>)</strong> is an uncommon but interesting operator 
+                            in JavaScript. It allows multiple expressions to be evaluated in sequence, 
+                            but only the result of the <em>last</em> expression is returned.
+                        </p>
+
+                        <p>
+                            This operator can sometimes help write more compact code, although it can 
+                            reduce clarity if overused. It's mainly seen in more advanced coding patterns 
+                            or within frameworks.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Basic Example</h4>
+<pre>
+<span class="t">let</span> <span class="p">result</span> <span class="r">=</span> (<span class="n">10</span> <span class="r">-</span> <span class="n">3</span>, <span class="n">4</span> <span class="r">*</span> <span class="n">2</span>);
+
+<span class="f">alert</span>(<span class="p">result</span>); <span class='c'>// 8 (only the result of 4 * 2 is returned)</span>
+</pre>
+
+                        <p>
+                            In this case, <code>10 - 3</code> is evaluated first but discarded. Then 
+                            <code>4 * 2</code> is computed and returned as the final value assigned to 
+                            <code>result</code>.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Operator Precedence</h3>
+                        <p>
+                            The comma operator has extremely low precedence—lower than the assignment 
+                            operator. This means that when using it in assignment statements, parentheses 
+                            are necessary to ensure correct evaluation order.
+                        </p>
+<pre>
+<span class="t">let</span> <span class="p">data</span> <span class="r">=</span> (<span class="n">5</span> <span class="r">+</span> <span class="n">2</span>, <span class="n">9</span> <span class="r">+</span> <span class="n">1</span>);
+
+<span class="f">alert</span>(<span class="p">data</span>); <span class='c'>// 10</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            Without the parentheses, <code>let data = 5 + 2, 9 + 1</code> would first 
+                            assign <code>7</code> to <code>data</code> and ignore the second part, due to 
+                            how JavaScript parses the code.
+                        </p>
+
+                        <p><strong>Note:</strong> Although the comma operator can make your code concise, 
+                            it’s best to use it with caution. Code readability is often more important than 
+                            saving a few characters.
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: The Comma Operator</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./bitwise.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="#" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

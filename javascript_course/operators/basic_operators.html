@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Operators</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Basic Operators</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>In JavaScript, we use various operators to perform operations on values 
+                            (also known as operands). Some operators you're already familiar with from 
+                            basic math, such as:
+                        </p>
+    
+                        <ul>
+                            <li>+ (addition),</li>
+                            <li>- (subtraction),</li>
+                            <li>* (multiplication),</li>
+                            <li>/ (division), and so on.</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <p>However, in programming, we often need to understand how many operands an 
+                            operator works with. This gives us two types of operators:
+                        </p>
+
+                        <h3>Terms: Unary, Binary, and Operand</h3>
+
+                        <p>You need to understand these three basic terminologies to give you edge in 
+                            understanding how operators actually work 
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Operand</h3>
+                        <p><strong>An operand</strong> is the value the operator works on.</p>
+                        <p>For example, in the expression <code>8 * 4</code>, the operands (also called 
+                        <strong>arguments</strong>) are 8 and 4.</p>
+                        <p>The operator <code>*</code> performs multiplication on those two operands.</p>
+                    </div>
+                    
+                    <div class="appear">
+                        <h3>Unary Operators</h3>
+                        <p>A unary operator works with only one operand.</p>
+
+                        <p><strong>Example: the negation operator (<code>-</code>):</strong></p>
+<pre>
+<span class="t">let</span> <span class="p">a</span> <span class="r">=</span> <span class="n">7</span>;
+<span class="p">a</span> <span class="r">=</span> <span class="r">-</span><span class="p">a</span>;
+<span class="f">alert</span>(<span class="p">a</span>); <span class='c'>// <span class="r">-</span><span class="n">7</span></span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>In the code above:</p>
+                        <ul>
+                            <li>We had a value 7 assigned to <code>a</code>.</li>
+                            <li>Then, <code>a = -a;</code> applied unary negation, reversing the sign.</li>
+                            <li>As a result, <code>a</code> became -7.</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Binary Operators</h3>
+                        <p>A binary operator works with two operands.</p>
+
+                        <p><strong>Example: subtraction (<code>-</code>):</strong></p>
+<pre>
+<span class="t">let</span> <span class="p">m</span> <span class="r">=</span> <span class="n">10</span>, <span class="p">n</span> <span class="r">=</span> <span class="n">4</span>;
+<span class="f">alert</span>(<span class="p">m</span> <span class="r">-</span> <span class="p">n</span>); <span class='c'>// <span class="n">6</span></span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>Here:</p>
+                        <ul>
+                            <li>The binary operator <code>-</code> subtracts the right operand 
+                                <code>n</code> (which is 4) from the left operand <code>m</code> 
+                                (which is 10), resulting in 6.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <p>Even though the same symbol <code>-</code> is used in both cases above 
+                            (unary and binary), they are considered two different operators:
+                        </p>
+                        <ul>
+                            <li>The unary <code>-</code> reverses the sign.</li>
+                            <li>The binary <code>-</code> subtracts one value from another.</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Basic Operators</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="../conversions/boolean_conv.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./maths.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

@@ -173,6 +173,14 @@ pre {
     overflow-x: auto;
 }
 
+ul pre, table pre {
+            background: transparent;
+            padding: 0;
+            border-left: 0px solid var(--color_active);
+            margin: 0;
+            overflow-x: auto;
+        }
+
 /* t: tags; s: selectors; p: properties; v: values; 
    g: strings; c: comments; f: function,
    d: js pre-defined words r: operators n: num */

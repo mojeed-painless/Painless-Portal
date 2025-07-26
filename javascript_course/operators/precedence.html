@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators Precedence</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Operators Precedence</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>
+                            When an expression contains multiple operators, operator precedence determines 
+                            which operation is performed first. In simpler terms, each operator has a 
+                            specific priority level, and operations with higher precedence are evaluated 
+                            before those with lower ones.
+                        </p>
+
+                        <p>
+                            We already know this from basic math, the <strong>BODMAS</strong> rule. For example:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">result</span> <span class="r">=</span> <span class="n">4</span> <span class="r">+</span> <span class="n">5</span> <span class="r">*</span> <span class="n">2</span>;
+<span class="f">alert</span>(<span class="p">result</span>); <span class='c'>// 14, because multiplication (*) has higher precedence than addition (+)</span>
+</pre>
+
+                        <p>
+                            The multiplication <code>5 * 2</code> is performed first, resulting in 
+                            <code>10</code>, and then <code>4 + 10</code> gives <code>14</code>.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <p>
+                            But if you want addition to happen first, you can use parentheses to override 
+                            the default order:
+                        </p>
+
+<pre>
+<span class="t">let</span> <span class="p">result</span> <span class="r">=</span> (<span class="n">4</span> <span class="r">+</span> <span class="n">5</span>) <span class="r">*</span> <span class="n">2</span>;
+<span class="f">alert</span>(<span class="p">result</span>); <span class='c'>// 18, because parentheses change the natural precedence</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            So, parentheses always take the highest priority in operator execution.
+                        </p>
+
+                        <h3>JavaScript Operator Precedence Table (Extract)</h3>
+
+                        <p>
+                            You don’t need to memorize the full table, but here’s a simplified version of 
+                            the most common operators:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <table border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Precedence</th>
+                                <th>Description</th>
+                                <th>Symbol</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>14</td>
+                                <td>Unary plus</td>
+                                <td><pre>+x</pre></td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Unary negation</td>
+                                <td><pre>-x</pre></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Exponentiation</td>
+                                <td><pre>**</pre></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Multiplication</td>
+                                <td><pre>*</pre></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Division</td>
+                                <td><pre>/</pre></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Addition</td>
+                                <td><pre>+</pre></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Subtraction</td>
+                                <td><pre>-</pre></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Assignment</td>
+                                <td><pre>=</pre></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="appear">
+                        <p>
+                            The unary plus (<code>+x</code>) has higher precedence than the binary plus 
+                            (<code>x + y</code>). That’s why this expression works as expected:
+                        </p>
+
+<pre>
+<span class="t">let</span> <span class="p">num1</span> <span class="r">=</span> <span class="g">"6"</span>;
+<span class="t">let</span> <span class="p">num2</span> <span class="r">=</span> <span class="g">"4"</span>;
+
+<span class="f">alert</span>(<span class="r">+</span><span class="p">num1</span> <span class="r">+</span> <span class="r">+</span><span class="p">num2</span>); <span class='c'>// 10, because +num1 and +num2 are converted to numbers first</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            Even though there are multiple <code>+</code> operators in the expression,
+                            the unary versions run before the binary addition, because of their higher precedence.
+                        </p>
+                    </div>
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Operators Precedence</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./numeric_conv.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./assignment.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify-in-place</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Modify-in-place</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>In programming, it’s common to update the value of a variable by applying an 
+                            operation and saving the result back to that same variable. This pattern is 
+                            called <strong>"modify-in-place."</strong> 
+                        </p>
+
+                        <p>Take the following example:</p>
+
+<pre>
+<span class="t">let</span> <span class="p">total</span> <span class="r">=</span> <span class="n">4</span>;
+<span class="p">total</span> <span class="r">=</span> <span class="p">total</span> <span class="r">+</span> <span class="n">6</span>;
+<span class="p">total</span> <span class="r">=</span> <span class="p">total</span> <span class="r">*</span> <span class="n">2</span>;
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>Here, we first add 6 to total, then multiply the result by 2. This works fine, 
+                            but JavaScript provides a shorthand syntax to make such operations cleaner and 
+                            more concise.
+                        </p>
+
+                        <p>Instead of writing the full expression again, we can use compound assignment 
+                            operators:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">total</span> <span class="r">=</span> <span class="n">4</span>;
+<span class="p">total</span> <span class="r">+=</span> <span class="n">6</span>; <span class='c'>// total becomes 10 (same as total = total + 6)</span>
+<span class="p">total</span> <span class="r">*=</span> <span class="n">2</span>; <span class='c'>// total becomes 20 (same as total = total * 2)</span>
+
+<span class="f">alert</span>(<span class="p">total</span>); <span class='c'>// 20</span>
+</pre>
+
+                        <p>These modify-and-assign operators are available for many arithmetic and bitwise 
+                            operations, including:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <ul>
+                            <li>+= for addition</li>
+                            <li>-= for subtraction</li>
+                            <li>*= for multiplication</li>
+                            <li>/= for division</li>
+                            <li>%= for remainder</li>
+                            <li>And others...</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Operator Precedence Reminder</h3>
+
+                        <p>Just like the regular assignment =, these compound operators have low precedence. 
+                            This means the right-hand side expression is fully evaluated first before 
+                            applying the operation.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Example:</h4>
+
+<pre>
+<span class="t">let</span> <span class="p">value</span> <span class="r">=</span> <span class="n">3</span>;
+
+<span class="p">value</span> <span class="r">+=</span> <span class="n">2</span> <span class="r">*</span> <span class="n">4</span>; <span class='c'>// right-hand side (2 * 4) is evaluated first → value += 8</span>
+
+<span class="f">alert</span>(<span class="p">value</span>); <span class='c'>// 11</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>This is the same as:</p>
+
+<pre>
+<span class="p">value</span> <span class="r">=</span> <span class="p">value</span> <span class="r">+</span> (<span class="n">2</span> <span class="r">*</span> <span class="n">4</span>);
+</pre>
+
+                        <p>Using these shortcuts makes code cleaner and often easier to read — especially 
+                            when updating values frequently in loops or calculations.
+                        </p>
+                    </div>
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Modify-in-place</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./assignment.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./increment.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

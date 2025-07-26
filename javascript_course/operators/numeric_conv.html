@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeric conversion</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Numeric conversion using unary +</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>
+                            In JavaScript, the <code>+</code> operator comes in two forms: 
+                            <strong>binary</strong> and <strong>unary</strong>.
+                        </p>
+
+                        <p>
+                            The <strong>binary plus</strong> is used to add two values together. 
+                            The <strong>unary plus</strong> (a single <code>+</code> before a value) 
+                            attempts to convert that value into a number.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                    <h4>Example: Unary Plus on Numbers</h4>
+<pre>
+<span class="t">let</span> <span class="p">m</span> <span class="r">=</span> <span class="n">5</span>;
+<span class="f">alert</span>(<span class="r">+</span><span class="p">m</span>); <span class='c'>// 5</span>
+
+<span class="t">let</span> <span class="p">n</span> <span class="r">=</span> <span class="r">-</span><span class="n">8</span>;
+<span class="f">alert</span>(<span class="r">+</span><span class="p">n</span>); <span class='c'>// -8</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            Applying unary <code>+</code> to actual numbers does not change them.
+                        </p>
+
+                        <h4>Example: Unary Plus on Non-Number Values</h4>
+<pre>
+<span class="f">alert</span>(<span class="r">+</span><span class="t">false</span>); <span class='c'>// 0</span>
+<span class="f">alert</span>(<span class="r">+</span><span class="g">"7"</span>);   <span class='c'>// 7</span>
+<span class="f">alert</span>(<span class="r">+</span><span class="g">""</span>);    <span class='c'>// 0</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            As shown, values like booleans and strings are converted into numbers.
+                        </p>
+
+                        <p>
+                            The unary <code>+</code> behaves exactly like <code>Number(...)</code> but is 
+                            shorter and often preferred for concise code.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Real-World Scenario: Getting Numeric Input from Forms</h3>
+                        <p>
+                            When data is collected from HTML form fields, the values are usually of type 
+                            <code>string</code>, even if the user entered a number. Using binary 
+                            <code>+</code> with strings results in string concatenation.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">qty1</span> <span class="r">=</span> <span class="g">"6"</span>;
+<span class="t">let</span> <span class="p">qty2</span> <span class="r">=</span> <span class="g">"4"</span>;
+
+<span class="f">alert</span>(<span class="p">qty1</span> <span class="r">+</span> <span class="p">qty2</span>); <span class='c'>// "64"</span>
+</pre>
+
+                        <p>
+                            The result is a string combination, not a numerical sum.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Fixing the Problem Using Unary Plus</h3>
+
+<pre>
+<span class="t">let</span> <span class="p">qty1</span> <span class="r">=</span> <span class="g">"6"</span>;
+<span class="t">let</span> <span class="p">qty2</span> <span class="r">=</span> <span class="g">"4"</span>;
+
+<span class="f">alert</span>(<span class="r">+</span><span class="p">qty1</span> <span class="r">+</span> <span class="r">+</span><span class="p">qty2</span>); <span class='c'>// 10</span>
+</pre>
+</div>
+                    <div class="appear">
+                        <p>
+                            Here, both values are converted to numbers using unary <code>+</code> 
+                            before being added.
+                        </p>
+
+                        <p>
+                            Alternatively, you could use the longer version:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="f">alert</span>(<span class="f">Number</span>(<span class="p">qty1</span>) <span class="r">+</span> <span class="f">Number</span>(<span class="p">qty2</span>)); <span class='c'>// 10</span>
+</pre>
+
+                        <h3>Why Does This Work?</h3>
+                        <p>
+                            In JavaScript, <strong>unary operators have higher precedence</strong> than 
+                            binary ones. This means they’re evaluated first.
+                        </p>
+                        <p>
+                            So, <code>+qty1</code> and <code>+qty2</code> are each executed before the 
+                            binary <code>+</code> performs the final addition.
+                        </p>
+                    </div>
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Numeric conversion with unary +</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./concatenate.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./precedence.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>
