@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict equality</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Strict equality</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>
+                            In JavaScript, the loose equality operator <code>==</code> performs type 
+                            coercion when comparing values of different types. This means it tries to 
+                            convert the operands to a common type before comparing them, which can lead to 
+                            unexpected results.
+                        </p>
+
+                        <p>For instance:</p>
+<pre>
+<span class="f">alert</span>(<span class="n">0</span> <span class="r">==</span> <span class="t">false</span>);    <span class='c'>// true - 0 is converted to false</span>
+<span class="f">alert</span>(<span class="g">""</span> <span class="r">==</span> <span class="t">false</span>);   <span class='c'>// true - an empty string is also converted to false</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            The reason behind these results is that <code>==</code> coerces both operands 
+                            into numbers. In these cases, <code>false</code> and <code>""</code> 
+                            (empty string) both become <code>0</code> during the comparison.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>How to Avoid Type Coercion Issues?</h3>
+                        <p>
+                            To ensure that two values are not only equal in value but also of the same type, 
+                            JavaScript provides the strict equality operator <code>===</code>.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <p>
+                            Unlike <code>==</code>, the <code>===</code> operator does not perform type 
+                            conversion. If the operands are of different types, it immediately returns 
+                            <code>false</code>.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <p>For example:</p>
+<pre>
+<span class="f">alert</span>(<span class="n">0</span> <span class="r">===</span> <span class="t">false</span>);     <span class='c'>// false - number and boolean types are different</span>
+<span class="f">alert</span>(<span class="g">"1"</span> <span class="r">===</span> <span class="n">1</span>);       <span class='c'>// false - string vs number</span>
+<span class="f">alert</span>(<span class="t">true</span> <span class="r">===</span> <span class="n">1</span>);      <span class='c'>// false - boolean vs number</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            This helps avoid confusion and makes your code more predictable and less prone 
+                            to bugs caused by automatic type conversions.
+                        </p>
+
+                        <h3>Strict Inequality Operator</h3>
+                        <p>
+                            JavaScript also offers a strict inequality operator <code>!==</code>, which 
+                            works just like <code>===</code> but checks for inequality instead.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="f">alert</span>(<span class="n">5</span> <span class="r">!==</span> <span class="g">"5"</span>);       <span class='c'>// true - different types</span>
+<span class="f">alert</span>(<span class="t">false</span> <span class="r">!==</span> <span class="n">0</span>);     <span class='c'>// true - boolean vs number</span>
+</pre>
+
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li><code>==</code> performs type coercion and may produce unexpected results.</li>
+                            <li><code>===</code> compares both value and type, offering more precise comparison.</li>
+                            <li>Prefer using <code>===</code> and <code>!==</code> for clarity and type safety.</li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Strict equality</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./different_types.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./null_comparison.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

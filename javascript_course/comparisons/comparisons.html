@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparisons</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Comparisons</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>In mathematics, comparison operators are used to evaluate the relationship 
+                            between two values. JavaScript uses similar comparison logic but with specific 
+                            syntax.
+                        </p>
+
+                        <h3>Available Comparison Operators</h3>
+                        <ul>
+                            <li><strong>Greater than:</strong> <code>x > y</code></li>
+                            <li><strong>Less than:</strong> <code>x < y</code></li>
+                            <li><strong>Greater than or equal to:</strong> <code>x >= y</code></li>
+                            <li><strong>Less than or equal to:</strong> <code>x <= y</code></li>
+                            <li><strong>Equality check:</strong> <code>x == y</code> (double equals checks value equality)</li>
+                            <li><strong>Inequality check:</strong> <code>x != y</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Results of Comparison</h3>
+                        <p>Every comparison operation returns a boolean value:</p>
+                        <ul>
+                            <li><code>true</code> – if the comparison is correct</li>
+                            <li><code>false</code> – if the comparison is incorrect</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Examples:</h4>
+<pre>
+<span class="f">alert</span>(<span class="n">7</span> <span class="r">&lt;</span> <span class="n">10</span>);   <span class='c'>// true</span>
+<span class="f">alert</span>(<span class="n">4</span> <span class="r">==</span> <span class="n">5</span>);   <span class='c'>// false</span>
+<span class="f">alert</span>(<span class="n">12</span> <span class="r">!=</span> <span class="n">6</span>);  <span class='c'>// true</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Using Comparison in Assignments</h3>
+                        <p>You can assign the result of a comparison to a variable. This allows you to 
+                            reuse the boolean result in logic or conditions.
+                        </p>
+
+<pre>
+<span class="t">let</span> <span class="p">isOlder</span> <span class="r">=</span> <span class="n">21</span> <span class="r">&gt;</span> <span class="n">18</span>;
+
+<span class="f">alert</span>(<span class="p">isOlder</span>); <span class='c'>// true</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Important Note</h3>
+                        <p>
+                            Always remember: <code>=</code> is for assignment, while <code>==</code> is for 
+                            comparison. Using them interchangeably can lead to bugs.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Final Thoughts</h3>
+                        <p>
+                            Comparing values is fundamental in programming. To avoid unexpected behavior 
+                            (especially in more complex comparisons involving types), it’s good practice to 
+                            understand how JavaScript evaluates values. 
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Comparisons</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="../operators/comma.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./string_comparison.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

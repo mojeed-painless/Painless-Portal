@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String comparison</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>String comparison</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>
+                            In JavaScript, comparing strings follows the lexicographical (dictionary-like) 
+                            order, meaning each character is compared one by one based on their Unicode 
+                            values.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Rules:</h3>
+                        <p>
+                            This method checks the characters from left to right:
+                        </p>
+                        <ul>
+                            <li>It starts by comparing the first characters of each string.</li>
+                            <li>If the first characters differ, the result is decided based on their Unicode values.</li>
+                            <li>If they are the same, it continues to the next pair of characters.</li>
+                            <li>This continues until a difference is found or until one string ends.</li>
+                            <li>If one string ends and all characters matched, the longer string is considered greater.</li>
+                        </ul>
+                    </div>
+
+                    <div class="appear">
+                      <h4>Examples:</h4>
+<pre>
+<span class="f">alert</span>(<span class="g">'Apple'</span> <span class="r">&gt;</span> <span class="g">'Ape'</span>);     <span class='c'>// true: 'p' &gt; 'e'</span>
+<span class="f">alert</span>(<span class="g">'Drip'</span> <span class="r">&gt;</span> <span class="g">'Drop'</span>);     <span class='c'>// true: 'i' &gt; 'o'</span>
+<span class="f">alert</span>(<span class="g">'Ant'</span> <span class="r">&gt;</span> <span class="g">'Antelope'</span>);  <span class='c'>// false: shorter string is smaller</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>Note:</h3>
+                        <p>
+                            This comparison is based on Unicode values, not a real dictionary. That means 
+                            case sensitivity is important. Uppercase letters come before lowercase letters 
+                            in Unicode.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h4>Example with Case Sensitivity:</h4>
+<pre>
+<span class="f">alert</span>(<span class="g">'bat'</span> <span class="r">&gt;</span> <span class="g">'Ball'</span>);   <span class='c'>// true: lowercase 'b' has higher Unicode value than uppercase 'B'</span>
+<span class="f">alert</span>(<span class="g">'Zoo'</span> <span class="r">&gt;</span> <span class="g">'zoo'</span>);    <span class='c'>// false: 'Z' is less than 'z'</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            JavaScript uses Unicode encoding, so each character has a numeric position. 
+                            The higher the position, the greater it is when compared.
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: String comparison</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./comparisons.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./different_types.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

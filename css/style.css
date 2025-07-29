@@ -95,7 +95,7 @@ h4 {
 .definition {
     background: var(--para_color);
     padding: 0.5rem;
-    border-left: 3px solid greenyellow;
+    border-left: 3px solid #adff2f;
 }
 
 code {

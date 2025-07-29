@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare null and undefined</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Comparison with null and undefined</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>When working with <code>null</code> and <code>undefined</code>, JavaScript 
+                            comparisons can behave unexpectedly. Let's explore how these values behave in 
+                            both strict and loose comparisons, and also how they interact with mathematical 
+                            operators.
+                        </p>
+
+                        <h3>Strict Equality (<code>===</code>)</h3>
+                        <p>In strict comparisons, <code>null</code> and <code>undefined</code> are treated 
+                            as completely different types. This means:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="f">alert</span>(<span class="t">null</span> <span class="r">===</span> <span class="t">undefined</span>); <span class='c'>// false</span>
+</pre>
+
+                        <p>Even though both signify "no value" in some sense, <code>null</code> is an 
+                            object and <code>undefined</code> is its own type, so strict equality evaluates 
+                            to false.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                    <h3>Loose Equality (<code>==</code>)</h3>
+                    <p>With the loose equality operator, there’s a unique exception: <code>null</code> 
+                        and <code>undefined</code> are considered equal to each other only.
+                    </p>
+
+<pre>
+<span class="f">alert</span>(<span class="t">null</span> <span class="r">==</span> <span class="t">undefined</span>); <span class='c'>// true</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>But keep in mind: they don’t equal any other value. For instance:</p>
+
+<pre>
+<span class="f">alert</span>(<span class="t">null</span> <span class="r">==</span> <span class="n">0</span>);        <span class='c'>// false</span>
+<span class="f">alert</span>(<span class="t">undefined</span> <span class="r">==</span> <span class="n">0</span>);   <span class='c'>// false</span>
+</pre>
+
+                        <h3>Mathematical Comparisons with <code><</code>, <code>></code>, <code><=</code>, <code>>=</code></h3>
+                        <p>This is where it gets tricky. When you compare <code>null</code> or 
+                            <code>undefined</code> using mathematical operators, type coercion happens 
+                            behind the scenes:
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <ul>
+                            <li><code>null</code> becomes <code>0</code></li>
+                            <li><code>undefined</code> becomes <code>NaN</code></li>
+                        </ul>
+
+                        <h6>Let’s analyze this with a few examples:</h6>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="f">alert</span>(<span class="t">null</span> <span class="r">&gt;</span> <span class="n">5</span>);   <span class='c'>// false, because 0 &gt; 5 is false</span>
+<span class="f">alert</span>(<span class="t">null</span> <span class="r">==</span> <span class="n">0</span>);  <span class='c'>// false, loose equality has special rules</span>
+<span class="f">alert</span>(<span class="t">null</span> <span class="r">&gt;=</span> <span class="n">0</span>);  <span class='c'>// true, because 0 &gt;= 0 is true</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>The third result seems confusing: if <code>null >= 0</code> is true, shouldn't 
+                            <code>null > 0</code> also be true? But remember, JavaScript treats equality 
+                            (<code>==</code>) and comparisons (<code>></code>, <code>>=</code>) 
+                            differently.</p>
+
+                        <p>Now, let’s see how <code>undefined</code> behaves in mathematical expressions:</p>
+                    </div>
+
+                    <div class="appear">
+<pre>
+<span class="f">alert</span>(<span class="t">undefined</span> <span class="r">&gt;</span> <span class="n">3</span>);  <span class='c'>// false</span>
+<span class="f">alert</span>(<span class="t">undefined</span> <span class="r">&lt;</span> <span class="n">3</span>);  <span class='c'>// false</span>
+<span class="f">alert</span>(<span class="t">undefined</span> <span class="r">==</span> <span class="n">3</span>); <span class='c'>// false</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p><strong>Why is everything false here?</strong></p>
+                        <p>Because <code>undefined</code> becomes <code>NaN</code>, and any comparison with 
+                            <code>NaN</code> results in <code>false</code>.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Best Practices to Avoid Tricky Bugs</h3>
+                        <p>You don’t need to memorize every odd behavior. The safest approach is:</p>
+
+                        <ul>
+                            <li>Only use <strong>strict equality (<code>===</code>)</strong> when comparing 
+                                <code>null</code> or <code>undefined</code>.</li>
+                            <li>Avoid using comparison operators (<code>></code>, <code><</code>, <code>>=</code>, <code><;=</code>) on variables that could be <code>null</code> or <code>undefined</code>.</li>
+                        </ul>
+
+                        <p>By following these practices, you can avoid unexpected behavior and make your 
+                            code more predictable.
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Comparison with null and undefined</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./strict_equality.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="#" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>

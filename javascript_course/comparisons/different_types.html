@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare of different types</title>
+
+    <link rel="stylesheet" href="../src/css/js_general.css">
+    <link rel="stylesheet" href="../src/css/js_contents.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="nav__container">
+            <nav>
+                <a href="../js_home.html" target="_self"><img src="../src/img/white_logo.png" alt="logo"></a>
+                <div class="userInfo">
+                    <div class="dp">O</div>
+                    <p>Olawale</p>
+                </div>
+                <!-- <button type="button">Logout</button> -->
+            </nav>
+        </div>
+
+        <main>
+            <section class="topic__section">
+                <article>
+                    <header>
+                        <h2>Comparison of different types</h2>
+                    </header>
+                </article>
+            </section>
+
+            <section class="contents__section">
+                <article>
+
+                    <div class="appear">
+                        <p>
+                            In JavaScript, when values of different types are compared using comparison 
+                            operators (<code>></code>, <code><</code>, <code>==</code>, etc.), the language
+                            automatically converts them into a common type, typically a number, before 
+                            performing the comparison.
+                        </p>
+
+                        <h4>Examples:</h4>
+<pre>
+<span class="f">alert</span>(<span class="g">'5'</span> <span class="r">&gt;</span> <span class="n">3</span>);   <span class='c'>// true – the string '5' is converted to number 5</span>
+<span class="f">alert</span>(<span class="g">'001'</span> <span class="r">==</span> <span class="n">1</span>); <span class='c'>// true – the string '001' is converted to number 1</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <p>
+                            This process is known as <strong>type coercion</strong>, and it allows flexible 
+                            comparisons, although it can sometimes produce confusing results.
+                        </p>
+
+                        <h3>Boolean Type Conversion in Comparisons</h3>
+                        <p>
+                            JavaScript also converts Boolean values (<code>true</code> and 
+                            <code>false</code>) into numbers when necessary:
+                        </p>
+                    </div>
+                    <div class="appear">
+                        <ul>
+                            <li><code>true</code> becomes <code>1</code></li>
+                            <li><code>false</code> becomes <code>0</code></li>
+                        </ul>
+
+<pre>
+<span class="f">alert</span>(<span class="t">true</span> <span class="r">==</span> <span class="n">1</span>);   <span class='c'>// true – true becomes 1</span>
+<span class="f">alert</span>(<span class="t">false</span> <span class="r">==</span> <span class="n">0</span>);  <span class='c'>// true – false becomes 0</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h3>An Interesting Case of Comparison</h3>
+                        <p>
+                            Sometimes, JavaScript will treat two values as equal, even if they behave 
+                            differently in Boolean logic.
+                        </p>
+                    </div>
+
+<div class="appear">
+<pre>
+<span class="t">let</span> <span class="p">num</span> <span class="r">=</span> <span class="n">0</span>;
+<span class="f">alert</span>(<span class="f">Boolean</span>(<span class="p">num</span>)); <span class='c'>// false</span>
+
+<span class="t">let</span> <span class="p">text</span> <span class="r">=</span> <span class="g">"0"</span>;
+<span class="f">alert</span>(<span class="f">Boolean</span>(<span class="p">text</span>)); <span class='c'>// true</span>
+
+<span class="f">alert</span>(<span class="p">num</span> <span class="r">==</span> <span class="p">text</span>); <span class='c'>// true!</span>
+</pre>
+</div>
+
+                    <div class="appear">
+                        <h4>Why This Happens:</h4>
+                        <p>
+                            When using <code>==</code>, JavaScript converts both values to numbers: 
+                            <code>0 == "0"</code> becomes <code>0 == 0</code>, which is <code>true</code>.
+                        </p>
+
+                        <p>But when explicitly converting to Boolean:</p>
+                        <ul>
+                            <li><code>0</code> is falsy</li>
+                            <li><code>"0"</code> (a non-empty string) is truthy</li>
+                        </ul>
+                        <p>
+                            This can lead to unexpected behavior if you're not aware of the type coercion 
+                            rules.
+                        </p>
+                    </div>
+
+                    <div class="appear">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>JavaScript uses numeric conversion when comparing different types.</li>
+                            <li>Boolean values become numbers (<code>true → 1</code>, <code>false → 0</code>) during comparison.</li>
+                            <li>A value can be <code>==</code> to another but behave differently in Boolean logic.</li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <div class="appear">
+                        <div class="watch">
+                            <p>🎥 Watch: Comparison of different types</p>
+                            <video controls>
+                                <source src="#" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="navigator__section">
+                <article>
+                    <a href="./string_comparison.html" target="_self">
+                     <i class="fa-solid fa-arrow-left"></i>
+                     <span>previous</span>
+                    </a>
+
+                    <a href="./strict_equality.html" target="_self">
+                     <span>next</span>
+                     <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    
+    <script src="../src/js/js_script.js"></script>
+</body>
+</html>
