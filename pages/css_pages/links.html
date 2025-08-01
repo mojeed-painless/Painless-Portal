@@ -1,0 +1,144 @@
+<script src="../../js/auth_html.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/general_styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <a href="../../welcome.html" target="_self"><img src="../../img/logo.png" alt="Painless Portal Logo"></a>
+            </div>
+
+            <div id="logos">
+                <a href="#"><img src="../../img/html_logo.png" alt="HTML logo"></a>
+                <a href="#"><img src="../../img/css_logo.png" alt="CSS logo"></a>
+                <a href="#"><img src="../../img/js_logo.png" alt="JS logo"></a>
+            </div>
+        </div>
+
+        <header>
+            <h1>Links</h1>
+        </header>
+
+        <main>
+
+            <section id="icon">
+                <div id="cover">
+                    <div class="spacing icon">
+                        <p>In HTML, links are created using the <code>&lt;a&gt;</code> tag. CSS gives 
+                            you the ability to style these links to improve appearance and user 
+                            interaction. You can change the color, add background, modify fonts, 
+                            and more.
+                        </p>
+
+<pre>
+<span class="t">&lt;a</span> <span class="p">href</span>=<span class="v">"https://www.example.com"</span><span class="t">&gt;</span>Visit Example<span class="t">&lt;/a&gt;</span>
+</pre>
+
+                        <p>By default, browsers style links with an underline and a color (usually blue 
+                            for unvisited and purple for visited). But with CSS, you can completely 
+                            customize this behavior.
+                        </p>
+
+                        <h3>Link States in CSS</h3>
+
+                        <p>There are 4 key states of a link that you can target in CSS:</p>
+
+                        <ul>
+                            <li><code>:link</code> – Targets links that have not been visited.</li>
+                            <li><code>:visited</code> – Targets links the user has previously clicked.</li>
+                            <li><code>:hover</code> – Targets links when the mouse is placed over them.</li>
+                            <li><code>:active</code> – Targets the link while it is being clicked.</li>
+                        </ul>
+
+                        <p>The order in which you define these states matters. The correct order is:<br>
+                        <code>a:link → a:visited → a:hover → a:active</code>
+                        </p>
+
+                        <h3>Examples</h3>
+
+                        <p>Here’s how you might define styles for the different link states:</p>
+
+<pre>
+<span class="s">a:link</span> {
+  <span class="p">color</span>: <span class="v">blue</span>;
+  <span class="p">text-decoration</span>: <span class="v">none</span>;
+}
+
+<span class="s">a:visited</span> {
+  <span class="p">color</span>: <span class="v">purple</span>;
+}
+
+<span class="s">a:hover</span> {
+  <span class="p">color</span>: <span class="v">green</span>;
+  <span class="p">text-decoration</span>: <span class="v">underline</span>;
+}
+
+<span class="s">a:active</span> {
+  <span class="p">color</span>: <span class="v">red</span>;
+}
+</pre>
+
+                        <p>This means:</p>
+                        <ul>
+                            <li>Before clicking, the link is blue.</li>
+                            <li>After visiting, it turns purple.</li>
+                            <li>On hover, it turns green and gets underlined.</li>
+                            <li>While clicking, it flashes red.</li>
+                        </ul>
+
+                        <div class="watch">
+                            <p>🎥 Watch: Links</p>
+                            <video controls>
+                                <source src="../../videos/box_model.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="navigator">
+                <div id="cover">
+                    <div class="spacing navigator">
+                       <a href="./formatting.html" target="_self">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>previous</span>
+                       </a>
+
+                       <a href="./lists.html" target="_self">
+                        <span>next</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <p>&copy; 2025 Painless Portal. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

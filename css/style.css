@@ -329,6 +329,14 @@ header h1 {
     cursor: pointer;
 }
 
+.head p, #content p {
+    transition: all 400ms ease;
+}
+
+.head:hover p, #content div:hover p{
+    transform: translateX(0.6rem);
+}
+
 .head_left {
     display: flex;
     flex-direction: row;
