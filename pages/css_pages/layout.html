@@ -34,7 +34,165 @@
 
         <main>
 
+            <section id="layout">
+                <div id="cover">
+                    <div class="spacing layout">
 
+                        <h3>Display Property</h3>
+                        <p><strong>Block-level elements</strong>: Start on a new line and take full width. Examples include <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;section&gt;</code></p>
+                        <p><strong>Inline elements</strong>: Appear on the same line and take only the required width. Examples include <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;strong&gt;</code></p>
+                        <p>You can override these using the <code>display</code> property.</p>
+                        <p><code>display: block;</code> / <code>display: inline;</code></p>
+
+<pre>
+&lt;span class="block-example"&gt;span as block&lt;/span&gt;
+&lt;div class="inline-example"&gt;div as inline&lt;/div&gt;
+
+.block-example {
+  display: block;
+  background-color: lightblue;
+}
+
+.inline-example {
+  display: inline;
+  background-color: lightcoral;
+}
+</pre>
+
+                        <h3>display: none; vs visibility: hidden;</h3>
+                        <p><strong>display: none</strong>: Hides the element and removes it from the flow.</p>
+                        <p><strong>visibility: hidden</strong>: Hides the element, but it still takes up space.</p>
+
+<pre>
+&lt;p class="none-example"&gt;This won't be visible at all.&lt;/p&gt;
+&lt;p class="hidden-example"&gt;This is hidden but still takes space.&lt;/p&gt;
+
+.none-example {
+  display: none;
+}
+
+.hidden-example {
+  visibility: hidden;
+}
+</pre>
+
+
+                        <h3>width and margin: auto;</h3>
+                        <p><code>width</code> restricts the full width of a block element.</p>
+                        <p><code>margin: auto</code> centers the element horizontally.</p>
+
+<pre>
+&lt;div class="center-box"&gt;Centered Box&lt;/div&gt;
+
+.center-box {
+  width: 300px;
+  margin: auto;
+  background-color: lightgreen;
+}
+</pre>
+
+                        <h3>overflow Property</h3>
+                        <p>Controls how content is handled when it overflows its container.</p>
+                        <ul>
+                            <li><code>visible</code> – default, overflow is shown.</li>
+                            <li><code>hidden</code> – overflow is clipped.</li>
+                            <li><code>scroll</code> – always adds scrollbars.</li>
+                            <li><code>auto</code> – adds scrollbars when necessary.</li>
+                        </ul>
+
+<pre>
+&lt;div class="scroll-box"&gt;
+  This is a long content that overflows: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo voluptatem, necessitatibus sapiente eligendi sint quaerat nisi neque ipsa quos. Quaerat porro sapiente dolor corrupti cupiditate exercitationem voluptatibus soluta excepturi sint!
+&lt;/div&gt;
+
+.scroll-box {
+  width: 200px;
+  height: 60px;
+  overflow: auto;
+  background-color: #eee;
+}
+</pre>
+
+  
+                        <h3>Position Property</h3>
+                        <ul>
+                            <li><code>static</code>: Default.</li>
+                            <li><code>relative</code>: Positioned relative to its normal spot.</li>
+                            <li><code>absolute</code>: Positioned relative to the nearest positioned ancestor.</li>
+                            <li><code>fixed</code>: Fixed to the screen.</li>
+                            <li><code>sticky</code>: Scrolls with the page and then "sticks".</li>
+                        </ul>
+
+<pre>
+&lt;div class="relative-box"&gt;Relative Box&lt;/div&gt;
+&lt;div class="absolute-box"&gt;Absolute Box&lt;/div&gt;
+
+.relative-box {
+  position: relative;
+  top: 20px;
+  left: 40px;
+  background-color: orange;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  background-color: teal;
+}
+</pre>
+
+
+                            <h3>z-index Property</h3>
+                            <p>Defines the stack order of elements (higher z-index = on top).</p>
+
+<pre>
+&lt;div class="z-box z1"&gt;Box 1&lt;/div&gt;
+&lt;div class="z-box z2"&gt;Box 2 (on top)&lt;/div&gt;
+
+.z1 {
+  background-color: red;
+  z-index: 1;
+}
+
+.z2 {
+  background-color: blue;
+  z-index: 2;
+}
+</pre>
+
+                        <h3>Float and Clear Property</h3>
+                        <p><code>float</code>: Makes elements float beside each other.</p>
+                        <p><code>clear</code>: Stops the float behavior.</p>
+
+<pre>
+&lt;div class="float-left"&gt;Left Float&lt;/div&gt;
+&lt;div class="float-right"&gt;Right Float&lt;/div&gt;
+&lt;div class="clear-fix"&gt;This clears the floats above.&lt;/div&gt;
+
+.float-left {
+  float: left;
+  width: 150px;
+  height: 100px;
+  background-color: pink;
+}
+
+.float-right {
+  float: right;
+  width: 150px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.clear-fix {
+  clear: both;
+  background-color: gray;
+  padding: 10px;
+}
+</pre>
+                    </div>
+                </div>
+            </section>
 
 
             <section id="navigator">
@@ -45,7 +203,7 @@
                         <span>previous</span>
                        </a>
 
-                       <a href="./combinators.html" target="_self">
+                       <a href="./flex.html" target="_self">
                         <span>next</span>
                         <i class="fa-solid fa-arrow-right"></i>
                        </a>

@@ -1,0 +1,167 @@
+<script src="../../js/auth_html.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/general_styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <a href="../../welcome.html" target="_self"><img src="../../img/logo.png" alt="Painless Portal Logo"></a>
+            </div>
+
+            <div id="logos">
+                <a href="#"><img src="../../img/html_logo.png" alt="HTML logo"></a>
+                <a href="#"><img src="../../img/css_logo.png" alt="CSS logo"></a>
+                <a href="#"><img src="../../img/js_logo.png" alt="JS logo"></a>
+            </div>
+        </div>
+
+        <header>
+            <h1>Tables</h1>
+        </header>
+
+        <main>
+
+            <section id="tables">
+                <div id="cover">
+                    <div class="spacing tables">
+                        
+                        <p>In HTML, tables are used to display tabular data. However, default HTML 
+                            tables can look plain. CSS allows you to style them for better aesthetics 
+                            and readability.
+                        </p>
+
+                        <h3>Border Property</h3>
+                        <p>The <code>border</code> property is used to add borders around the table, 
+                            table rows <code>&lt;tr&gt;</code>, table headers <code>&lt;th&gt;</code>, and table data cells 
+                            <code>&lt;td&gt;</code>.
+                        </p>
+
+<pre>
+<span class="s">table</span>, <span class="s">th</span>, <span class="s">td</span> {
+  <span class="p">border</span>: <span class="v">1px solid black</span>;
+}
+</pre>
+
+                        <p>This adds a 1-pixel solid black border to the table and all its cells.</p>
+
+                        <h3>Table Width</h3>
+                        <p>You can control how wide your table is using the <code>width</code> property.</p>
+
+                        <h4>Full width table:</h4>
+<pre>
+<span class="s">table</span> {
+  <span class="p">width</span>: <span class="v">100%</span>;
+}
+</pre>
+
+                        <p>This will stretch the table across the entire width of its container.</p>
+
+                        <h4>Fixed width table:</h4>
+<pre>
+<span class="s">table</span> {
+  <span class="p">width</span>: <span class="v">500px</span>;
+}
+</pre>
+
+                        <p>This sets the table width to 500 pixels.</p>
+
+                        <h3>Border Collapse</h3>
+                        <p>By default, table cells have separate borders. You can use the 
+                            <code>border-collapse</code> property to collapse them into a single border.
+                        </p>
+
+<pre>
+<span class="s">table</span> {
+  <span class="p">border-collapse</span>: <span class="v">collapse</span>;
+}
+</pre>
+
+                        <h3>Table Height</h3>
+                        <p>You can use the <code>height</code> property to set the height of the table 
+                            or individual cells.
+                        </p>
+
+<pre>
+<span class="s">td</span> {
+  <span class="p">height</span>: <span class="v">50px</span>;
+}
+</pre>
+
+                        <h3>Text Alignment</h3>
+                        <p>You can align text inside table cells using <code>text-align</code>.</p>
+
+<pre>
+<span class="s">th</span>, <span class="s">td</span> {
+  <span class="p">text-align</span>: <span class="v">center</span>;
+}
+</pre>
+
+                        <p>Other values include <code>left</code> and <code>right</code>.</p>
+
+                        <h3>Hoverable Table Rows</h3>
+                        <p>You can highlight rows when a user hovers over them:</p>
+
+<pre>
+<span class="s">tr:hover</span> {
+  <span class="p">background-color</span>: <span class="v">#f2f2f2</span>;
+}
+</pre>
+
+
+                        <div class="watch">
+                            <p>🎥 Watch: Tables</p>
+                            <video controls>
+                                <source src="../../videos/box_model.mp4" type="video/mp4">
+                            </video>
+                        </div>
+            
+                        </div>
+                    </div>
+            </section>
+
+
+            <section id="navigator">
+                <div id="cover">
+                    <div class="spacing navigator">
+                       <a href="./lists.html" target="_self">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>previous</span>
+                       </a>
+
+                       <a href="./icons.html" target="_self">
+                        <span>next</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <p>&copy; 2025 Painless Portal. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
