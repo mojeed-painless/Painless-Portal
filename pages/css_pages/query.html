@@ -1,0 +1,188 @@
+<script src="../../js/auth_html.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/general_styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <a href="../../welcome.html" target="_self"><img src="../../img/logo.png" alt="Painless Portal Logo"></a>
+            </div>
+
+            <div id="logos">
+                <a href="#"><img src="../../img/html_logo.png" alt="HTML logo"></a>
+                <a href="#"><img src="../../img/css_logo.png" alt="CSS logo"></a>
+                <a href="#"><img src="../../img/js_logo.png" alt="JS logo"></a>
+            </div>
+        </div>
+
+        <header>
+            <h1>Media Query</h1>
+        </header>
+
+        <main>
+
+            <section id="query">
+                <div id="cover">
+                    <div class="spacing query">
+           
+            <p>Media queries allow you to apply CSS rules based on device characteristics 
+                such as screen size, orientation, and resolution. This makes your website 
+                responsive and adaptable to various devices.
+            </p>
+
+            <h4>Syntax:</h4>
+<pre>
+<span class="k">@media</span> <span class="v">media-type</span> <span class="k">and</span> (<span class="p">condition</span>) {
+    <span class="c">/* CSS rules */</span>
+}
+</pre>
+
+            <h3>Common Media Features:</h3>
+            <ul>
+                <li><strong>max-width</strong>: Maximum viewport width</li>
+                <li><strong>min-width</strong>: Minimum viewport width</li>
+                <li><strong>orientation</strong>: Device orientation (portrait or landscape)</li>
+                <li><strong>resolution</strong>: Screen resolution (DPI)</li>
+                <li><strong>aspect-ratio</strong>: Width-to-height ratio</li>
+            </ul>
+
+            <h4>Examples:</h4>
+
+            <h3>Change Background Color When Screen Width is ≤ 600px</h3>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"color-change"</span><span class="t">&gt;</span>Change is detected when you resize your browser below 600px<span class="t">&lt;/div&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+    <span class="s">.color-change</span> {
+        <span class="p">width</span>: <span class="v">100%</span>;
+        <span class="p">padding</span>: <span class="v">20px</span>;
+        <span class="p">background-color</span>: <span class="v">lightgray</span>;
+        <span class="p">margin-bottom</span>: <span class="v">20px</span>;
+        <span class="p">text-align</span>: <span class="v">center</span>;
+    }
+    
+    <span class="k">@media</span> (<span class="p">max-width</span>: <span class="v">600px</span>) {
+        <span class="s">.color-change</span> {
+          <span class="p">background-color</span>: <span class="v">lightblue</span>;
+        }
+    }
+
+<span class="t">&lt;/style&gt;</span>
+</pre>
+
+            <h3>Hide Element on Screens Smaller Than 500px</h3>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"hide-on-small"</span><span class="t">&gt;</span>I will disappear on small screens<span class="t">&lt;/div&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+    <span class="s">.hide-on-small</span> {
+        <span class="p">width</span>: <span class="v">100%</span>;
+        <span class="p">padding</span>: <span class="v">20px</span>;
+        <span class="p">background-color</span>: <span class="v">lightgray</span>;
+        <span class="p">margin-bottom</span>: <span class="v">20px</span>;
+        <span class="p">text-align</span>: <span class="v">center</span>;
+    }
+    
+    <span class="k">@media</span> (<span class="p">max-width</span>: <span class="v">500px</span>) {
+        <span class="s">.hide-on-small</span> {
+            <span class="p">display</span>: <span class="v">none</span>;
+        }
+    }
+
+<span class="t">&lt;/style&gt;</span>
+</pre>
+
+            <h3>Column Layout on Larger Screens</h3>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"column-layout"</span><span class="t">&gt;</span>
+    <span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"box"</span><span class="t">&gt;</span>Column 1<span class="t">&lt;/div&gt;</span>
+    <span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"box"</span><span class="t">&gt;</span>Column 2<span class="t">&lt;/div&gt;</span>
+    <span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"box"</span><span class="t">&gt;</span>Column 2<span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;/div&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+    <span class="s">.box</span> {
+        <span class="p">width</span>: <span class="v">100%</span>;
+        <span class="p">padding</span>: <span class="v">20px</span>;
+        <span class="p">background-color</span>: <span class="v">lightgray</span>;
+        <span class="p">margin-bottom</span>: <span class="v">20px</span>;
+        <span class="p">text-align</span>: <span class="v">center</span>;
+    }
+    
+    <span class="s">.column-layout</span> {
+        <span class="p">display</span>: <span class="v">flex</span>;
+        <span class="p">flex-direction</span>: <span class="v">column</span>;
+    }
+
+    <span class="k">@media</span> (<span class="p">min-width</span>: <span class="v">768px</span>) {
+        <span class="s">.column-layout</span> {
+            <span class="p">flex-direction</span>: <span class="v">row</span>;
+            <span class="p">gap</span>: <span class="v">10px</span>;
+        }
+        <span class="s">.column-layout &gt; div</span> {
+            <span class="p">flex</span>: <span class="v">1</span>;
+        }
+    }
+
+<span class="t">&lt;/style&gt;</span>
+</pre>
+
+            <h3>Conclusion:</h3>
+            <p>Media queries are a core feature of responsive web design. They allow different styles based on screen sizes and other properties, ensuring your website looks great on all devices.</p>
+
+            <div class="watch">
+                <p>🎥 Watch: Media Query</p>
+                <video controls>
+                    <source src="../../videos/box_model.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <section id="navigator">
+                <div id="cover">
+                    <div class="spacing navigator">
+                       <a href="./navbar.html" target="_self">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>previous</span>
+                       </a>
+
+                       <a href="#" target="_self">
+                        <span>next</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <p>&copy; 2025 Painless Portal. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

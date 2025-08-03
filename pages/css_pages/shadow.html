@@ -34,7 +34,80 @@
 
         <main>
 
+            <section id="shadow">
+                <div id="cover">
+                    <div class="spacing shadow">
+          
+            <p>The <code>box-shadow</code> property in CSS adds shadow effects around an element’s frame. You can create one or more shadows using this property. It can be used to create depth, highlight elements, or create stylish UI effects.</p>
 
+            <h4>Syntax:</h4>
+<pre>
+<span class="s">selector</span> {
+    <span class="p">box-shadow</span>: <span class="v">h-offset</span> <span class="v">v-offset</span> <span class="v">blur</span> <span class="v">spread</span> <span class="v">color</span> <span class="v">inset</span>;
+}
+</pre>
+
+            <ul>
+                <li><strong>h-offset</strong> (required): Horizontal shadow. Positive = right, Negative = left.</li>
+                <li><strong>v-offset</strong> (required): Vertical shadow. Positive = down, Negative = up.</li>
+                <li><strong>blur</strong> (optional): Blurring distance of the shadow. The higher the number, the more blurred.</li>
+                <li><strong>spread</strong> (optional): Size of the shadow. Positive = expand, Negative = shrink.</li>
+                <li><strong>color</strong> (optional): Shadow color. Can use any CSS color.</li>
+                <li><strong>inset</strong> (optional): Changes the shadow from outer to inner shadow.</li>
+            </ul>
+
+            <h4>Examples:</h4>
+
+            <h3>Basic Shadow</h3>
+<pre>
+<span class="p">box-shadow</span>: <span class="v">5px</span> <span class="v">5px</span> <span class="v">10px</span> <span class="v">gray</span>;
+</pre>
+
+            <p>Adds a shadow 5px right and 5px down, blurred 10px, gray in color.</p>
+
+            <h3>Shadow With Spread</h3>
+<pre>
+<span class="p">box-shadow</span>: <span class="v">5px</span> <span class="v">5px</span> <span class="v">10px</span> <span class="v">5px</span> <span class="v">blue</span>;
+</pre>
+
+            <p>Shadow spreads 5px beyond the blurred area.</p>
+
+            <h3>Inset Shadow</h3>
+<pre>
+<span class="p">box-shadow</span>: <span class="v">inset</span> <span class="v">4px</span> <span class="v">4px</span> <span class="v">6px</span> <span class="v">rgba(0, 0, 0, 0.5)</span>;
+</pre>
+  
+            <p>Creates an inner shadow inside the element.</p>
+
+            <h3>Multiple Shadows</h3>
+<pre>
+<span class="p">box-shadow</span>: <span class="v">2px</span> <span class="v">2px</span> <span class="v">5px</span> <span class="v">red</span>, <span class="v">-2px</span> <span class="v">-2px</span> <span class="v">5px</span> <span class="v">green</span>;
+</pre>
+            <p>Adds multiple shadows in different directions and colors.</p>
+
+            <h3>No Blur and Spread</h3>
+<pre>
+<span class="p">box-shadow</span>: <span class="v">10px</span> <span class="v">10px</span> <span class="v">black</span>;
+</pre>
+            <p>Sharp edge shadow without blur or spread.</p>
+
+            <h3>Use Cases:</h3>
+            <ul>
+                <li>Simulate depth (like cards or modals)</li>
+                <li>Add hover effects</li>
+                <li>Highlight important content</li>
+                <li>Create glassmorphism or neumorphism designs</li>
+            </ul>
+
+            <div class="watch">
+                <p>🎥 Watch: Box Shadow</p>
+                <video controls>
+                    <source src="../../videos/box_model.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
 
 
             <section id="navigator">
@@ -45,7 +118,7 @@
                         <span>previous</span>
                        </a>
 
-                       <a href="./transition.html" target="_self">
+                       <a href="./opacity.html" target="_self">
                         <span>next</span>
                         <i class="fa-solid fa-arrow-right"></i>
                        </a>

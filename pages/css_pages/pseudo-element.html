@@ -1,0 +1,154 @@
+<script src="../../js/auth_html.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/general_styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <a href="../../welcome.html" target="_self"><img src="../../img/logo.png" alt="Painless Portal Logo"></a>
+            </div>
+
+            <div id="logos">
+                <a href="#"><img src="../../img/html_logo.png" alt="HTML logo"></a>
+                <a href="#"><img src="../../img/css_logo.png" alt="CSS logo"></a>
+                <a href="#"><img src="../../img/js_logo.png" alt="JS logo"></a>
+            </div>
+        </div>
+
+        <header>
+            <h1>Pseudo Elements</h1>
+        </header>
+
+        <main>
+
+            <section id="elements">
+                <div id="cover">
+                    <div class="spacing elements">
+          
+            <h3>What is a Pseudo-element?</h3>
+            <p>
+                A pseudo-element in CSS is used to style specific parts of an element. For example, you can 
+                style only the first letter, first line, or add content before or after an element using 
+                pseudo-elements.
+            </p>
+
+            <h4>Syntax:</h4>
+<pre>
+<span class="s">selector::pseudo-element</span> {
+    <span class="p">property</span>: <span class="v">value</span>;
+}
+</pre>
+
+            <h3>Common Pseudo-elements and Examples</h3>
+
+            <h3>::first-line</h3>
+            <p>Used to apply styles to only the first line of text within an element.</p>
+<pre>
+<span class="s">p::first-line</span> {
+  <span class="p">font-weight</span>: <span class="v">bold</span>;
+  <span class="p">text-transform</span>: <span class="v">uppercase</span>;
+}
+</pre>
+            <p><strong>Use Case:</strong> Highlighting the beginning of a paragraph.</p>
+
+            <h3>::first-letter</h3>
+            <p>Targets the first letter of an element’s text. Often used for decorative drop caps in articles.</p>
+<pre>
+<span class="s">p::first-letter</span> {
+  <span class="p">font-size</span>: <span class="v">2em</span>;
+  <span class="p">color</span>: <span class="v">red</span>;
+}
+</pre>
+
+            <h3>::before</h3>
+            <p>Inserts content before the element’s content. You must use the <code>content</code> property.</p>
+<pre>
+<span class="s">h1::before</span> {
+  <span class="p">content</span>: <span class="v">" "</span>;
+}
+</pre>
+
+            <p><strong>Use Case:</strong> Adding icons, labels, or quotes before headings or sections.</p>
+
+            <h3>::after</h3>
+            <p>Inserts content after the element’s content. Also requires the <code>content</code> property.</p>
+<pre>
+<span class="s">h1::after</span> {
+  <span class="p">content</span>: <span class="v">" "</span>;
+}
+</pre>
+
+            <h3>::marker</h3>
+            <p>Targets the bullet or number of a list item. Works on elements with <code>display: list-item</code>.</p>
+<pre>
+<span class="s">li::marker</span> {
+  <span class="p">color</span>: <span class="v">green</span>;
+  <span class="p">font-size</span>: <span class="v">1.5em</span>;
+}
+</pre>
+
+            <h3>::selection</h3>
+            <p>Applies styles to the part of the document that the user has selected (highlighted).</p>
+<pre>
+<span class="s">p::selection</span> {
+  <span class="p">background-color</span>: <span class="v">yellow</span>;
+  <span class="p">color</span>: <span class="v">black</span>;
+}
+</pre>
+
+            <div class="watch">
+                <p>🎥 Watch: Pseudo Elements</p>
+                <video controls>
+                    <source src="../../videos/box_model.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <section id="navigator">
+                <div id="cover">
+                    <div class="spacing navigator">
+                       <a href="./pseudo-class.html" target="_self">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>previous</span>
+                       </a>
+
+                       <a href="./attributes.html" target="_self">
+                        <span>next</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <p>&copy; 2025 Painless Portal. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

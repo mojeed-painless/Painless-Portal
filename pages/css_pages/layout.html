@@ -29,7 +29,7 @@
         </div>
 
         <header>
-            <h1>Layout</h1>
+            <h1>Layout: Display</h1>
         </header>
 
         <main>
@@ -91,76 +91,6 @@
 }
 </pre>
 
-                        <h3>overflow Property</h3>
-                        <p>Controls how content is handled when it overflows its container.</p>
-                        <ul>
-                            <li><code>visible</code> – default, overflow is shown.</li>
-                            <li><code>hidden</code> – overflow is clipped.</li>
-                            <li><code>scroll</code> – always adds scrollbars.</li>
-                            <li><code>auto</code> – adds scrollbars when necessary.</li>
-                        </ul>
-
-<pre>
-&lt;div class="scroll-box"&gt;
-  This is a long content that overflows: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo voluptatem, necessitatibus sapiente eligendi sint quaerat nisi neque ipsa quos. Quaerat porro sapiente dolor corrupti cupiditate exercitationem voluptatibus soluta excepturi sint!
-&lt;/div&gt;
-
-.scroll-box {
-  width: 200px;
-  height: 60px;
-  overflow: auto;
-  background-color: #eee;
-}
-</pre>
-
-  
-                        <h3>Position Property</h3>
-                        <ul>
-                            <li><code>static</code>: Default.</li>
-                            <li><code>relative</code>: Positioned relative to its normal spot.</li>
-                            <li><code>absolute</code>: Positioned relative to the nearest positioned ancestor.</li>
-                            <li><code>fixed</code>: Fixed to the screen.</li>
-                            <li><code>sticky</code>: Scrolls with the page and then "sticks".</li>
-                        </ul>
-
-<pre>
-&lt;div class="relative-box"&gt;Relative Box&lt;/div&gt;
-&lt;div class="absolute-box"&gt;Absolute Box&lt;/div&gt;
-
-.relative-box {
-  position: relative;
-  top: 20px;
-  left: 40px;
-  background-color: orange;
-}
-
-.absolute-box {
-  position: absolute;
-  top: 10px;
-  left: 100px;
-  background-color: teal;
-}
-</pre>
-
-
-                            <h3>z-index Property</h3>
-                            <p>Defines the stack order of elements (higher z-index = on top).</p>
-
-<pre>
-&lt;div class="z-box z1"&gt;Box 1&lt;/div&gt;
-&lt;div class="z-box z2"&gt;Box 2 (on top)&lt;/div&gt;
-
-.z1 {
-  background-color: red;
-  z-index: 1;
-}
-
-.z2 {
-  background-color: blue;
-  z-index: 2;
-}
-</pre>
-
                         <h3>Float and Clear Property</h3>
                         <p><code>float</code>: Makes elements float beside each other.</p>
                         <p><code>clear</code>: Stops the float behavior.</p>
@@ -203,7 +133,7 @@
                         <span>previous</span>
                        </a>
 
-                       <a href="./flex.html" target="_self">
+                       <a href="./overflow.html" target="_self">
                         <span>next</span>
                         <i class="fa-solid fa-arrow-right"></i>
                        </a>

@@ -1,0 +1,173 @@
+<script src="../../js/auth_html.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/general_styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <a href="../../welcome.html" target="_self"><img src="../../img/logo.png" alt="Painless Portal Logo"></a>
+            </div>
+
+            <div id="logos">
+                <a href="#"><img src="../../img/html_logo.png" alt="HTML logo"></a>
+                <a href="#"><img src="../../img/css_logo.png" alt="CSS logo"></a>
+                <a href="#"><img src="../../img/js_logo.png" alt="JS logo"></a>
+            </div>
+        </div>
+
+        <header>
+            <h1>Layout: Overflow</h1>
+        </header>
+
+        <main>
+
+            <section id="overflow">
+                <div id="cover">
+                    <div class="spacing overflow">
+
+            <p>
+                The <code>overflow</code> property in CSS controls what happens when content is too large to fit 
+                in an element’s box.
+                It's useful for handling long text, images, or dynamic content that exceeds its container.
+            </p>
+
+            <h4>Syntax:</h4>
+<pre>
+<span class="p">overflow</span>: <span class="v">visible</span>;
+<span class="p">overflow</span>: <span class="v">hidden</span>;
+<span class="p">overflow</span>: <span class="v">scroll</span>;
+<span class="p">overflow</span>: <span class="v">auto</span>;
+</pre>
+
+            <h4>Values</h4>
+            <ul>
+                <li><strong>visible</strong> (default): Content spills outside the box — no clipping or scrolling.</li>
+                <li><strong>hidden</strong>: Extra content is clipped and not visible — no scrollbars.</li>
+                <li><strong>scroll</strong>: Scrollbars are always shown even if content fits — enables scrollability.</li>
+                <li><strong>auto</strong>: Adds scrollbars only when content overflows.</li>
+            </ul>
+
+            <h4>Overflow Example: <code>auto</code></h4>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"scroll-box"</span><span class="t">&gt;</span>
+This is a long content that overflows: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo voluptatem, necessitatibus sapiente eligendi sint quaerat nisi neque ipsa quos. Quaerat porro sapiente dolor corrupti cupiditate exercitationem voluptatibus soluta excepturi sint!<span class="t">&lt;br&gt;</span>
+<span class="t">&lt;/div&gt;</span>
+
+<span class="s">.scroll-box</span> {
+    <span class="p">width</span>: <span class="v">300px</span>;
+    <span class="p">height</span>: <span class="v">100px</span>;
+    <span class="p">overflow</span>: <span class="v">auto</span>;
+    <span class="p">background-color</span>: <span class="v">lightyellow</span>;
+    <span class="p">padding</span>: <span class="v">10px</span>;
+}
+</pre>
+
+            <h4>Overflow Example: <code>hidden</code></h4>
+<pre>
+<span class="s">.scroll-box</span> {
+    <span class="p">width</span>: <span class="v">200px</span>;
+    <span class="p">height</span>: <span class="v">60px</span>;
+    <span class="p">overflow</span>: <span class="v">hidden</span>;
+    <span class="p">background-color</span>: <span class="v">#e6e6fa</span>;
+    <span class="p">padding</span>: <span class="v">10px</span>;
+}
+</pre>
+
+            <h4>Overflow Example: <code>scroll</code></h4>
+<pre>
+<span class="s">.scroll-box</span> {
+    <span class="p">width</span>: <span class="v">200px</span>;
+    <span class="p">height</span>: <span class="v">60px</span>;
+    <span class="p">overflow</span>: <span class="v">scroll</span>;
+    <span class="p">background-color</span>: <span class="v">#ffe4e1</span>;
+    <span class="p">padding</span>: <span class="v">10px</span>;
+}
+</pre>
+
+            <h3>Related Properties</h3>
+
+            <h4>overflow-x and overflow-y</h4>
+            <p>These control the horizontal and vertical overflow separately.</p>
+
+<pre>
+<span class="p">overflow-x</span>: <span class="v">auto</span>;
+<span class="p">overflow-y</span>: <span class="v">hidden</span>;
+</pre>
+
+            <h4>Shorthand Use:</h4>
+            <p>
+                You can combine both in one line like:
+            </p>
+<pre>
+<span class="p">overflow</span>: <span class="v">auto</span> <span class="v">hidden</span>;  <span class="comments">/* x is auto, y is hidden */</span>
+</pre>
+
+            <h3>Use Cases</h3>
+            <ul>
+                <li>Scroll boxes for long comments, code blocks, or chat apps</li>
+                <li>Cut off content cleanly using <code>overflow: hidden</code></li>
+                <li>Image galleries or sliders</li>
+                <li>Prevent layout breaking by limiting overflow</li>
+            </ul>
+    
+            <div class="watch">
+                <p>🎥 Watch: Overflow</p>
+                <video controls>
+                    <source src="../../videos/box_model.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <section id="navigator">
+                <div id="cover">
+                    <div class="spacing navigator">
+                       <a href="./layout.html" target="_self">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>previous</span>
+                       </a>
+
+                       <a href="./position.html" target="_self">
+                        <span>next</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <p>&copy; 2025 Painless Portal. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

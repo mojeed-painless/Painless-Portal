@@ -1,0 +1,221 @@
+<script src="../../js/auth_html.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/general_styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <a href="../../welcome.html" target="_self"><img src="../../img/logo.png" alt="Painless Portal Logo"></a>
+            </div>
+
+            <div id="logos">
+                <a href="#"><img src="../../img/html_logo.png" alt="HTML logo"></a>
+                <a href="#"><img src="../../img/css_logo.png" alt="CSS logo"></a>
+                <a href="#"><img src="../../img/js_logo.png" alt="JS logo"></a>
+            </div>
+        </div>
+
+        <header>
+            <h1>Animations</h1>
+        </header>
+
+        <main>
+
+            <section id="animations">
+                <div id="cover">
+                    <div class="spacing animations">
+           
+            <p>CSS animations make it possible to animate transitions from one CSS style configuration to another.</p>
+
+            <h4>Syntax:</h4>
+<pre>
+<span class="s">selector</span> {
+  <span class="p">animation-name</span>: <span class="v">name</span>;
+  <span class="p">animation-duration</span>: <span class="v">time</span>;
+  <span class="p">animation-timing-function</span>: <span class="v">ease</span> | <span class="v">linear</span> | <span class="v">ease-in</span> | <span class="v">ease-out</span> | <span class="v">ease-in-out</span>;
+  <span class="p">animation-delay</span>: <span class="v">time</span>;
+  <span class="p">animation-iteration-count</span>: <span class="v">number</span> | <span class="v">infinite</span>;
+  <span class="p">animation-direction</span>: <span class="v">normal</span> | <span class="v">reverse</span> | <span class="v">alternate</span> | <span class="v">alternate-reverse</span>;
+  <span class="p">animation-fill-mode</span>: <span class="v">none</span> | <span class="v">forwards</span> | <span class="v">backwards</span> | <span class="v">both</span>;
+  <span class="p">animation-play-state</span>: <span class="v">running</span> | <span class="v">paused</span>;
+}
+</pre>
+
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>@keyframes</strong>: Define what the animation looks like at each stage.</li>
+                <li><strong>animation-name</strong>: Name of the @keyframes rule to bind to the element.</li>
+                <li><strong>animation-duration</strong>: How long the animation takes to complete one cycle.</li>
+                <li><strong>animation-delay</strong>: Wait time before the animation starts.</li>
+                <li><strong>animation-iteration-count</strong>: Number of times the animation should play.</li>
+                <li><strong>animation-direction</strong>: Whether animation should play in reverse on alternate cycles.</li>
+                <li><strong>animation-fill-mode</strong>: Defines how styles are applied before and after animation executes.</li>
+                <li><strong>animation-timing-function</strong>: Defines the speed curve.</li>
+            </ul>
+
+            <h4>Examples:</h4>
+
+            <h3>Slide In</h3>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"slide"</span><span class="t">&gt;</span>Sliding Box<span class="t">&lt;/div&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+
+    <span class="k">@keyframes</span> <span class="v">slideIn</span> {
+      <span class="v">from</span> {
+        <span class="p">transform</span>: <span class="v">translateX(-100%)</span>;
+      }
+      <span class="v">to</span> {
+        <span class="p">transform</span>: <span class="v">translateX(0)</span>;
+      }
+    }
+
+    <span class="s">.slide</span> {
+        <span class="p">width</span>: <span class="v">200px</span>;
+        <span class="p">height</span>: <span class="v">50px</span>;
+        <span class="p">background</span>: <span class="v">#ccc</span>;
+        <span class="p">margin-bottom</span>: <span class="v">20px</span>;
+        <span class="p">animation</span>: <span class="v">slideIn 2s ease-in-out forwards</span>;
+    }
+
+<span class="t">&lt;/style&gt;</span>
+</pre>
+
+            <h3>Color Change</h3>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"color"</span><span class="t">&gt;</span>Color Cycle<span class="t">&lt;/div&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+
+    <span class="k">@keyframes</span> <span class="v">colorChange</span> {
+        <span class="v">0%</span> { <span class="p">background-color</span>: <span class="v">red</span>; }
+        <span class="v">50%</span> { <span class="p">background-color</span>: <span class="v">yellow</span>; }
+        <span class="v">100%</span> { <span class="p">background-color</span>: <span class="v">green</span>; }
+    }
+
+    <span class="s">.color</span> {
+        <span class="p">width</span>: <span class="v">200px</span>;
+        <span class="p">height</span>: <span class="v">50px</span>;
+        <span class="p">margin-bottom</span>: <span class="v">20px</span>;
+        <span class="p">animation</span>: <span class="v">colorChange 3s infinite alternate</span>;
+    }
+
+<span class="t">&lt;/style&gt;</span>
+</pre>
+
+            <h3>Bounce</h3>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"bounce"</span><span class="t">&gt;</span>Bouncing<span class="t">&lt;/div&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+
+    <span class="k">@keyframes</span> <span class="v">bounce</span> {
+        <span class="v">0%</span>, <span class="v">100%</span> { <span class="p">transform</span>: <span class="v">translateY(0)</span>; }
+        <span class="v">50%</span> { <span class="p">transform</span>: <span class="v">translateY(-50px)</span>; }
+    }
+
+    <span class="s">.bounce</span> {
+        <span class="p">width</span>: <span class="v">200px</span>;
+        <span class="p">height</span>: <span class="v">50px</span>;
+        <span class="p">background</span>: <span class="v">orange</span>;
+        <span class="p">margin-bottom</span>: <span class="v">20px</span>;
+        <span class="p">animation</span>: <span class="v">bounce 1s ease infinite</span>;
+    }
+
+<span class="t">&lt;/style&gt;</span>
+</pre>
+
+            <h3>Delay and Forward</h3>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"delay"</span><span class="t">&gt;</span>Delayed Slide<span class="t">&lt;/div&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+
+    <span class="comments">/* uses the slideIn @keyframes already created */</span>
+
+    <span class="s">.delay</span> {
+        <span class="p">width</span>: <span class="v">200px</span>;
+        <span class="p">height</span>: <span class="v">50px</span>;
+        <span class="p">background</span>: <span class="v">teal</span>;
+        <span class="p">margin-bottom</span>: <span class="v">20px</span>;
+        <span class="p">animation</span>: <span class="v">slideIn 2s ease-in 1s forwards</span>;
+    }
+
+<span class="t">&lt;/style&gt;</span>
+</pre>
+
+            <h3>Multiple Animations</h3>
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"multiple"</span><span class="t">&gt;</span>Bounce + Color<span class="t">&lt;/div&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+
+    <span class="comments">/* bounce & colorChange @keyframes already exist */</span>
+
+    <span class="s">.multiple</span> {
+        <span class="p">width</span>: <span class="v">200px</span>;
+        <span class="p">height</span>: <span class="v">50px</span>;
+        <span class="p">background</span>: <span class="v">orange</span>;
+        <span class="p">margin-bottom</span>: <span class="v">20px</span>;
+        <span class="p">animation</span>: <span class="v">bounce 1s ease infinite, colorChange 3s infinite alternate</span>;
+    }
+
+<span class="t">&lt;/style&gt;</span>
+</pre>
+          
+            <div class="watch">
+                <p>🎥 Watch: Animations</p>
+                <video controls>
+                    <source src="../../videos/box_model.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <section id="navigator">
+                <div id="cover">
+                    <div class="spacing navigator">
+                       <a href="./transition.html" target="_self">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>previous</span>
+                       </a>
+
+                       <a href="./forms.html" target="_self">
+                        <span>next</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <p>&copy; 2025 Painless Portal. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

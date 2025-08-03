@@ -1,0 +1,161 @@
+<script src="../../js/auth_html.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/general_styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <a href="../../welcome.html" target="_self"><img src="../../img/logo.png" alt="Painless Portal Logo"></a>
+            </div>
+
+            <div id="logos">
+                <a href="#"><img src="../../img/html_logo.png" alt="HTML logo"></a>
+                <a href="#"><img src="../../img/css_logo.png" alt="CSS logo"></a>
+                <a href="#"><img src="../../img/js_logo.png" alt="JS logo"></a>
+            </div>
+        </div>
+
+        <header>
+            <h1>Opacity</h1>
+        </header>
+
+        <main>
+
+            <section id="opacity">
+                <div id="cover">
+                    <div class="spacing opacity">
+                     
+            <p>The <strong>opacity</strong> property in CSS is used to set the transparency level of an element.</p>
+            <p>It takes a value from <code>0</code> (completely transparent) to <code>1</code> (fully opaque).</p>
+
+            <h4>Syntax:</h4>
+<pre>
+<span class="s">selector</span> {
+    <span class="p">opacity</span>: <span class="v">value</span>;
+}
+</pre>
+
+            <ul>
+                <li><strong>value</strong>: A number between <code>0</code> and <code>1</code></li>
+                <li><code>1</code> means fully visible (default)</li>
+                <li><code>0</code> means fully invisible</li>
+                <li><code>0.5</code> means 50% transparency</li>
+            </ul>
+
+            <h4>Examples:</h4>
+
+            <h3>Fully Opaque Element</h3>
+<pre>
+<span class="s">div</span> {
+    <span class="p">opacity</span>: <span class="v">1</span>;
+}
+</pre>
+
+            <p>This element is completely visible.</p>
+
+            <h3>Semi-Transparent Element</h3>
+<pre>
+<span class="s">div</span> {
+    <span class="p">opacity</span>: <span class="v">0.5</span>;
+}
+</pre>
+
+            <p>This makes the element 50% transparent.</p>
+
+            <h3>Fully Transparent Element</h3>
+<pre>
+<span class="s">div</span> {
+    <span class="p">opacity</span>: <span class="v">0</span>;
+}
+</pre>
+
+            <p>The element becomes invisible but still takes up space.</p>
+
+            <h3>Image Transparency</h3>
+<pre>
+<span class="s">img</span> {
+    <span class="p">opacity</span>: <span class="v">0.3</span>;
+}
+</pre>
+
+            <p>Makes the image faint or "ghost-like".</p>
+
+            <h3>Hover Effect</h3>
+<pre>
+<span class="s">button:hover</span> {
+    <span class="p">opacity</span>: <span class="v">0.7</span>;
+}
+</pre>
+
+            <p>Reduces the opacity of a button when hovered.</p>
+
+            <h3>Use Cases:</h3>
+            <ul>
+                <li>To create faded or subtle backgrounds</li>
+                <li>To visually disable elements without removing them</li>
+                <li>To create hover/focus effects</li>
+                <li>To layer content with transparency</li>
+            </ul>
+
+            <h3>Notes:</h3>
+            <ul>
+                <li>The <code>opacity</code> property affects the entire element including its content (text, child elements).</li>
+                <li>To make only the background transparent, use <code>rgba()</code> colors instead of opacity.</li>
+            </ul>
+
+            <div class="watch">
+                <p>🎥 Watch: Opacity</p>
+                <video controls>
+                    <source src="../../videos/box_model.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <section id="navigator">
+                <div id="cover">
+                    <div class="spacing navigator">
+                       <a href="./shadow.html" target="_self">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>previous</span>
+                       </a>
+
+                       <a href="./transform.html" target="_self">
+                        <span>next</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <p>&copy; 2025 Painless Portal. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form&Attributes</title>
+    <title>Attributes</title>
 
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/general_styles.css">
@@ -29,18 +29,129 @@
         </div>
 
         <header>
-            <h1>Form & Attributes</h1>
+            <h1>Attributes</h1>
         </header>
 
         <main>
 
+            <section id="attributes">
+                <div id="cover">
+                    <div class="spacing attributes">
+           
+            <p>
+                Attribute selectors allow you to target HTML elements based on the presence or value of their attributes. 
+                This provides precise control over your styling based on HTML attributes like <code>type</code>, <code>href</code>, 
+                <code>src</code>, <code>alt</code>, <code>title</code>, <code>data-*</code>, etc.
+            </p>
 
+            <h4>Syntax</h4>
+<pre>
+<span class="s">element[<span class="p">attribute</span>]</span> {
+    <span class="p">property</span>: <span class="v">value</span>;
+}
+</pre>
+
+            <h3>Types of Attribute Selectors and Examples</h3>
+
+            <h4>[attribute]</h4>
+            <p>Selects elements that have a specific attribute, regardless of value.</p>
+<pre>
+<span class="s">input[<span class="p">required</span>]</span> {
+  <span class="p">border</span>: <span class="v">2px</span> <span class="p">solid</span> <span class="v">red</span>;
+}
+</pre>
+  
+            <p><strong>Use Case:</strong> Style all required input fields.</p>
+
+            <h4>[attribute="value"]</h4>
+            <p>Selects elements with a specific attribute and exact value.</p>
+<pre>
+<span class="s">input[<span class="p">type</span>=<span class="v">"email"</span>]</span> {
+    <span class="p">background-color</span>: <span class="v">lightblue</span>;
+}
+</pre>
+
+            <p><strong>Use Case:</strong> Target email input fields specifically.</p>
+
+            <h3 class="bold">Some attributes are rarely seen in modern codes but it's 
+                important we mention them incase you come across them in code bases. Examples
+                of such attributes include: 
+            </h3>
+
+            <h4>[attribute~="value"]</h4>
+            <p>
+                Selects elements with an attribute containing a space-separated list of words, 
+                one of which matches the given value.
+            </p>
+<pre>
+<span class="s">div[<span class="p">class</span>~=<span class="v">"card"</span>]</span> {
+    <span class="p">border</span>: <span class="v">1px</span> <span class="p">solid</span> <span class="v">black</span>;
+}
+</pre>
+
+            <p><strong>Use Case:</strong> Select elements where the class attribute includes "card" among other classes.</p>
+
+            <h4>[attribute|="value"]</h4>
+            <p>
+                Matches elements whose attribute value is exactly the value, or starts with the value 
+                followed by a hyphen -.
+            </p>
+<pre>
+<span class="s">p[<span class="p">lang</span>|=<span class="v">"en"</span>]</span> {
+    <span class="p">font-style</span>: <span class="v">italic</span>;
+}
+</pre>
+
+            <p><strong>Use Case:</strong> Match English language values like en, en-US, etc.</p>
+
+            <h4>[attribute^="value"]</h4>
+            <p>Selects elements whose attribute value starts with a given string.</p>
+
+<pre>
+<span class="s">a[<span class="p">href</span>^=<span class="v">"https"</span>]</span> {
+    <span class="p">color</span>: <span class="v">green</span>;
+}
+</pre>
+
+            <p><strong>Use Case:</strong> Style all secure links (https://).</p>
+
+            <h4>[attribute$="value"]</h4>
+            <p>Selects elements whose attribute value ends with a given string.</p>
+<pre>
+<span class="s">img[<span class="p">src</span>$=<span class="v">".png"</span>]</span> {
+    <span class="p">border-radius</span>: <span class="v">8px</span>;
+}
+</pre>
+
+            <p><strong>Use Case:</strong> Apply styles to .png images.</p>
+
+            <h4>[attribute*="value"]</h4>
+            <p>Selects elements whose attribute value contains a given substring.</p>
+
+<pre>
+<span class="s">a[<span class="p">href</span>*=<span class="v">"example"</span>]</span> {
+    <span class="p">color</span>: <span class="v">orange</span>;
+}
+</pre>
+
+            <p><strong>Use Case:</strong> Match any link that includes "example" in the URL.</p>
+
+
+            <div class="watch">
+                <p>🎥 Watch: Attributes</p>
+                <video controls>
+                    <source src="../../videos/box_model.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
 
 
             <section id="navigator">
                 <div id="cover">
                     <div class="spacing navigator">
-                       <a href="./navbar.html" target="_self">
+                       <a href="./pseudo-element.html" target="_self">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>previous</span>
                        </a>

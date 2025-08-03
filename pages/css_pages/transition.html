@@ -34,18 +34,138 @@
 
         <main>
 
+            <section id="transition">
+                <div id="cover">
+                    <div class="spacing transition">
+                     
+            <p><strong>CSS Transitions</strong> allow you to change property values smoothly (over a given duration), instead of instantly.</p>
 
+            <h4>Syntax:</h4>
+<pre>
+<span class="s">selector</span> {
+    <span class="p">transition</span>: <span class="v">property duration timing-function delay</span>;
+}
+</pre>
+
+            <ul>
+                <li><strong>property</strong>: the CSS property you want to animate (e.g., <code>width</code>, <code>color</code>, <code>opacity</code>)</li>
+                <li><strong>duration</strong>: how long the transition takes (e.g., <code>1s</code>, <code>500ms</code>)</li>
+                <li><strong>timing-function</strong> (optional): defines the speed curve (e.g., <code>ease</code>, <code>linear</code>, <code>ease-in</code>, <code>ease-out</code>, <code>ease-in-out</code>)</li>
+                <li><strong>delay</strong> (optional): time to wait before the transition starts</li>
+            </ul>
+
+            <h4>Shorthand Example:</h4>
+<pre>
+<span class="s">div</span> {
+    <span class="p">transition</span>: <span class="v">all 0.5s ease-in-out</span>;
+}
+</pre>
+
+            <h3>Longhand Properties:</h3>
+            <ul>
+                <li><code>transition-property</code></li>
+                <li><code>transition-duration</code></li>
+                <li><code>transition-timing-function</code></li>
+                <li><code>transition-delay</code></li>
+            </ul>
+
+            <h3>Longhand Example:</h3>
+<pre>
+<span class="s">div</span> {
+  <span class="p">transition-property</span>: <span class="v">background-color, width</span>;
+  <span class="p">transition-duration</span>: <span class="v">0.3s</span>;
+  <span class="p">transition-timing-function</span>: <span class="v">ease</span>;
+  <span class="p">transition-delay</span>: <span class="v">0s</span>;
+}
+</pre>
+
+            <h3>Common Properties You Can Animate:</h3>
+            <ul>
+                <li><code>background-color</code></li>
+                <li><code>color</code></li>
+                <li><code>width</code>, <code>height</code></li>
+                <li><code>margin</code>, <code>padding</code></li>
+                <li><code>opacity</code></li>
+                <li><code>transform</code></li>
+                <li><code>box-shadow</code></li>
+                <li><code>border</code> properties</li>
+            </ul>
+
+            <h4>Examples:</h4>
+
+            <h3>Width Transition on Hover</h3>
+<pre>
+<span class="s">div</span> {
+  <span class="p">width</span>: <span class="v">100px</span>;
+  <span class="p">transition</span>: <span class="v">width 0.5s</span>;
+}
+<span class="s">div:hover</span> {
+  <span class="p">width</span>: <span class="v">200px</span>;
+}
+</pre>
+
+            <h3>Background Color Transition</h3>
+<pre>
+<span class="s">button</span> {
+  <span class="p">background-color</span>: <span class="v">red</span>;
+  <span class="p">transition</span>: <span class="v">background-color 0.3s ease-in</span>;
+}
+<span class="s">button:hover</span> {
+  <span class="p">background-color</span>: <span class="v">green</span>;
+}
+</pre>
+
+            <h3>Multiple Property Transition</h3>
+<pre>
+<span class="s">div</span> {
+  <span class="p">width</span>: <span class="v">100px</span>;
+  <span class="p">background-color</span>: <span class="v">blue</span>;
+  <span class="p">transition</span>: <span class="v">width 0.5s, background-color 1s</span>;
+}
+<span class="s">div:hover</span> {
+  <span class="p">width</span>: <span class="v">200px</span>;
+  <span class="p">background-color</span>: <span class="v">orange</span>;
+}
+</pre>
+
+            <h3>Using Transition Delay</h3>
+<pre>
+<span class="s">div</span> {
+  <span class="p">background-color</span>: <span class="v">grey</span>;
+  <span class="p">transition</span>: <span class="v">background-color 1s ease 0.5s</span>;
+}
+<span class="s">div:hover</span> {
+  <span class="p">background-color</span>: <span class="v">black</span>;
+}
+</pre>
+
+            <h3>Notes:</h3>
+            <ul>
+                <li>Transitions only occur when a property value changes.</li>
+                <li>Only animatable properties can be transitioned.</li>
+                <li>Transitions need a trigger (like <code>:hover</code>, <code>:focus</code>, class toggle, or JavaScript).</li>
+            </ul>
+
+            <div class="watch">
+                <p>🎥 Watch: Transition</p>
+                <video controls>
+                    <source src="../../videos/box_model.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
 
 
             <section id="navigator">
                 <div id="cover">
                     <div class="spacing navigator">
-                       <a href="./shadow.html" target="_self">
+                       <a href="./transform.html" target="_self">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>previous</span>
                        </a>
 
-                       <a href="#" target="_self">
+                       <a href="./animations.html" target="_self">
                         <span>next</span>
                         <i class="fa-solid fa-arrow-right"></i>
                        </a>

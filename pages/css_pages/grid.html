@@ -42,8 +42,152 @@
             <section id="grid">
                 <div id="cover">
                     <div class="spacing grid">
-                       
-                        
+                    
+                        <h3>What is CSS Grid?</h3>
+                        <p>
+                            CSS Grid Layout is a powerful 2-dimensional system that allows you to 
+                            design web layouts using rows and columns simultaneously.
+                        </p>
+
+                        <h3>Grid Container Properties</h3>
+
+                        <h4>display</h4>
+                        <p>Defines the element as a grid container.</p>
+
+<pre>
+<span class="p">display</span>: <span class="v">grid</span>;
+<span class="p">display</span>: <span class="v">inline-grid</span>;
+</pre>
+
+            <h4>grid-template-columns &amp; grid-template-rows</h4>
+            <p>Defines the number and size of the columns and rows.</p>
+<pre>
+<span class="p">grid-template-columns</span>: <span class="v">100px</span> <span class="v">200px</span> <span class="v">auto</span>;
+<span class="p">grid-template-rows</span>: <span class="v">100px</span> <span class="v">auto</span>;
+
+<span class="comments">/* OR using repeat and fraction units */</span> 
+<span class="p">grid-template-columns</span>: <span class="v">repeat(3, 1fr)</span>;
+</pre>
+
+            <h4>gap</h4>
+            <p>Sets spacing between grid rows and columns.</p>
+<pre>
+<span class="p">gap</span>: <span class="v">10px</span>;
+<span class="p">row-gap</span>: <span class="v">10px</span>;
+<span class="p">column-gap</span>: <span class="v">20px</span>;
+</pre>
+
+            <h4>justify-items</h4>
+            <p>Aligns items horizontally (along the row axis).</p>
+
+<pre>
+<span class="p">justify-items</span>: <span class="v">start</span>;
+<span class="p">justify-items</span>: <span class="v">end</span>;
+<span class="p">justify-items</span>: <span class="v">center</span>;
+<span class="p">justify-items</span>: <span class="v">stretch</span>;
+</pre>
+
+            <h4>align-items</h4>
+            <p>Aligns items vertically (along the column axis).</p>
+<pre>
+<span class="p">align-items</span>: <span class="v">start</span>;
+<span class="p">align-items</span>: <span class="v">end</span>;
+<span class="p">align-items</span>: <span class="v">center</span>;
+<span class="p">align-items</span>: <span class="v">stretch</span>;
+</pre>
+
+            <h4>justify-content and align-content</h4>
+            <p>Controls alignment of the grid itself inside the grid container.</p>
+<pre>
+<span class="p">justify-content</span>: <span class="v">start</span>;
+<span class="p">justify-content</span>: <span class="v">end</span>;
+<span class="p">justify-content</span>: <span class="v">center</span>;
+<span class="p">justify-content</span>: <span class="v">space-between</span>;
+<span class="p">justify-content</span>: <span class="v">space-around</span>;
+<span class="p">justify-content</span>: <span class="v">stretch</span>;
+
+<span class="p">align-content</span>: <span class="v">start</span>;
+<span class="p">align-content</span>: <span class="v">end</span>;
+<span class="p">align-content</span>: <span class="v">center</span>;
+<span class="p">align-content</span>: <span class="v">space-between</span>;
+<span class="p">align-content</span>: <span class="v">space-around</span>;
+<span class="p">align-content</span>: <span class="v">stretch</span>;
+</pre>
+
+            <h3>Grid Item Properties</h3>
+
+            <h4>grid-column &amp; grid-row</h4>
+            <p>
+                These properties control how many columns or rows an item should span, 
+                or where it starts and ends.
+            </p>
+
+            <h4>Syntax:</h4>
+<pre>
+<span class="p">grid-column</span>: <span class="v">start</span> / <span class="v">end</span>;
+</pre>
+
+            <h4>Example:</h4>
+<pre>
+<span class="p">grid-column</span>: <span class="v">1</span> / <span class="v">3</span>;  <span class="comments">/* spans from column 1 to column 3 */</span>
+<span class="p">grid-row</span>: <span class="v">2</span> / <span class="v">4</span>;      <span class="comments">/* spans from row 2 to row 4 */</span>
+</pre>
+
+            <h4>grid-area</h4>
+            <p>
+                Used to name a grid item so that it can be placed using 
+                <code>grid-template-areas</code>.
+            </p>
+            <p>Also works as a shorthand for <code>grid-row-start / grid-column-start 
+                / grid-row-end / grid-column-end</code>.
+            </p>
+<pre>
+<span class="p">grid-area</span>: <span class="v">header</span>;
+<span class="p">grid-area</span>: <span class="v">1</span> / <span class="v">1</span> / <span class="v">2</span> / <span class="v">3</span>;  <span class="comments">/* row-start / col-start / row-end / col-end */</span>
+</pre>
+
+            <h4>justify-self / align-self</h4>
+            <p>
+                Align a single grid item independently inside its grid area.<br>
+                They work like <code>align-self</code> in Flexbox but for both horizontal 
+                and vertical alignment.
+            </p>
+<pre>
+<span class="p">justify-self</span>: <span class="v">start</span>;
+<span class="p">justify-self</span>: <span class="v">end</span>;
+<span class="p">justify-self</span>: <span class="v">center</span>;
+<span class="p">justify-self</span>: <span class="v">stretch</span>;
+
+<span class="p">align-self</span>: <span class="v">start</span>;
+<span class="p">align-self</span>: <span class="v">end</span>;
+<span class="p">align-self</span>: <span class="v">center</span>;
+<span class="p">align-self</span>: <span class="v">stretch</span>;
+</pre>
+
+  <h3>Grid Example</h3>
+
+<pre>
+<span class="t">&lt;div</span> <span class="p">class</span>=<span class="v">"grid-container"</span><span class="t">&gt;</span>
+  <span class="t">&lt;div&gt;</span>1<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;div&gt;</span>2<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;div&gt;</span>3<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;div&gt;</span>4<span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;/div&gt;</span>
+
+<span class="s">.grid-container</span> {
+  <span class="p">display</span>: <span class="v">grid</span>;
+  <span class="p">grid-template-columns</span>: <span class="v">repeat(2, 1fr)</span>;
+  <span class="p">grid-template-rows</span>: <span class="v">auto</span> <span class="v">auto</span>;
+  <span class="p">gap</span>: <span class="v">10px</span>;
+}
+
+<span class="s">.grid-container div</span> {
+  <span class="p">background</span>: <span class="v">peachpuff</span>;
+  <span class="p">padding</span>: <span class="v">20px</span>;
+}
+</pre>
+
+            
                         <div class="watch">
                             <p>🎥 Watch: Grid</p>
                             <video controls>

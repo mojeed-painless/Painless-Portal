@@ -41,6 +41,10 @@ ul li {
     list-style-type: circle;
 }
 
+ul ul li {
+    list-style-type: square;
+}
+
 ol {
     margin-top: 1rem;
 }
@@ -165,7 +169,6 @@ blockquote {
 #quiz-form {
     
 }
-
 /* .options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
